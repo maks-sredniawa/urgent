@@ -254,7 +254,7 @@ characters, which is why some answers are shorter than the 2026-10-31 draft (`b4
   Android 16, and Urgent stayed quiet when Do Not Disturb let a call through. On Android 8, answering
   or declining stops it. The call-log declaration passed review.
 
-*Rests on* (not part of the answers): 2026-10-13, a real call on silent, R8 release build on HyperOS:
+*Rests on* (not part of the answers): 2026-10-13, two real calls on silent, R8 release build on HyperOS:
 the first call stayed silent, the second rang. 2026-10-22, *Ring at once* rang on real calls on a
 Xiaomi 24115RA8EG (HyperOS 3, Android 16), R8 release build of `main`, and Urgent stayed quiet in Do
 Not Disturb's *Priority only*. 2026-10-18, Android 8 was an **API 26 emulator, not a phone**: R8
