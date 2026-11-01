@@ -214,48 +214,45 @@ Would change: a change of type, or the service running without *Run in the backg
 
 ## Production access — the application, and the answers it was given
 
-**Submitted _<date>_.** Asked once, from the Console's Dashboard, after the closed test's 14 days.
-Record the answers **verbatim**, not summarised: the Console asks the same set again for the next app
-on this account, and an answer re-read a year later has to be the one that was given.
-
-**Drafted 2026-10-31, not yet submitted.** Edit these to what is pasted, then replace this line with
-the date. The two `_<…>_` gaps are the testers' own words, which only the owner has.
+**Submitted 2026-11-01, 17:29.** Asked once, from the Console's Dashboard, after the closed test's 14
+days. Recorded **verbatim**: the Console asks the same set again for the next app on this account, and
+an answer re-read a year later has to be the one that was given. Each box takes at most 300
+characters, which is why some answers are shorter than the 2026-10-31 draft.
 
 **About your closed test**
 
-- *How did you recruit users for your closed test?* — Through a community where Android developers
-  test each other's apps during their closed tests.
-- *How easy was it to recruit testers?* — Easy. The community exists for this.
-- *Describe the engagement you received from testers* — The app has no internet permission and no
-  analytics, so I cannot see how often testers used it. What I can see is the testers who stayed
-  opted in through the 14 days, and the messages a few of them sent.
-- *Provide a summary of the feedback that you received* — A few remarks: _<what they said>_.
+- *How did you recruit users for your closed test? For example, did you ask friends and family or use
+  a paid testing provider?* — Through a community where Android developers test each other's apps
+  during their closed tests.
+- *How easy was it to recruit testers for your app?* — Easy.
+- *Describe the engagement you received from testers during your closed test* — Urgent has no internet
+  permission and no analytics, so I can't see which features testers used or how often. What I can
+  see: testers stayed opted in through the 14 days, and their remarks in the community, which say they
+  used the app.
+- *Provide a summary of the feedback that you received from testers. Include how you collected the
+  feedback.* — Testers posted remarks in the tester community where we test each other's apps. They
+  said they liked the interface and that they had used the app.
 
 **About your app**
 
-- *Who is the intended audience?* — Adults who keep their phone on silent, on vibrate or in Do Not
-  Disturb, and still want to hear it when someone calls them twice in a row.
-- *Describe how your app provides value to users* — Android lets a repeated call ring only inside Do
-  Not Disturb; silent and vibrate mode mute it like any other call. Urgent hears a call, checks the
-  call log for an earlier call from the same number within a few minutes, and if there was one, plays
-  the ringtone at alarm volume. It never changes the phone's sound settings, has no ads, no account
-  and no server, and nothing leaves the phone.
-- *How many installs do you expect in your first year?* — 0–1,000.
+- *Who is the intended audience of your app?* — Adults who keep their phone on silent, on vibrate or in
+  Do Not Disturb, and still want to hear it when someone calls them twice in a row.
+- *Describe how your app provides value to users* — Android lets a repeated call ring only in Do Not
+  Disturb; silent and vibrate mode mute it. Urgent checks the call log for an earlier call from the
+  same number within minutes and, if there was one, rings at alarm volume. It never changes sound
+  settings. No ads, no account, nothing leaves the phone.
+- *How many installs do you expect your app to have in your first year?* — 0 – 10K.
 
 **Your production readiness**
 
-- *What changes did you make based on what you learned during your closed test?* — _<what came
-  from the testers, or "None came from tester reports">_. In the same window, from my own testing: a
-  crash on Android 8 when a repeated call arrived, fixed; and Urgent no longer rings on top of a call
-  that Do Not Disturb already lets through. Also new: a *Ring at once* list, whose callers ring on
-  their first call, and a dedicated support address.
-- *How did you decide that your app is ready for production?* — I tested the repeated-call rule with
-  real calls on a Xiaomi phone on silent, on a release build from 13 October: the first call stayed
-  silent and the second rang. On 22 October, on the release build that added *Ring at once*, real
-  calls on a Xiaomi phone running Android 16 rang for a *Ring at once* caller on silent, and when Do
-  Not Disturb let the call through, Urgent stayed quiet. On an Android 8 emulator, answering,
-  declining and the Silence button each stop the ringing. The release build was checked on a device
-  after minification, and the Play declaration for the call log passed review.
+- *What changes did you make to your app based on what you learned during your closed test?* —
+  Testers liked the interface and asked for no change. From my own testing in the same window: fixed a
+  crash on Android 8 when a repeated call came in; Urgent no longer rings over a call Do Not Disturb
+  lets through; added a Ring at once list and a dedicated support address.
+- *How did you decide that your app is ready for production?* — Real calls on Xiaomi phones, release
+  builds: on silent the first call stayed silent, the second rang; a Ring at once caller rang on
+  Android 16, and Urgent stayed quiet when Do Not Disturb let a call through. On Android 8, answering
+  or declining stops it. The call-log declaration passed review.
 
 **Three things the first app built from this template kept deliberate, so a later answer does not undo
 them:**
