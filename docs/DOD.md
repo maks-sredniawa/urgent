@@ -97,18 +97,15 @@ template's `docs/DOD.md` the day a feature adds a table.
 
 ## After the closed test
 
-- [ ] **Production access granted.** The first application (2026-11-01) was refused on 2026-11-03:
-      more testing, 12 testers for 14 more days from the review. Met on 2026-11-17; the second
-      application went in that day at 13:01, with family and friends added as testers, 0.8.0 shipped
-      mid-test and no crashes or ANRs in vitals. Answers verbatim in
-      [`play-app-content.md`](play-app-content.md). Play says seven days or less. Until it is granted
-      the production track does not exist. **If it comes back refused, read the reason before
-      changing any artifact.**
-- [ ] **Decide the first production number.** release-please never jumps to `1.0.0` by itself (with
-      the major at 0 even `feat!:` bumps the minor), so it takes a `Release-As: 1.0.0` footer
-      ([`RELEASING.md`](RELEASING.md)), or a deliberate decision to stay on 0.x. In order: production
-      access granted, *then* that version's release notes in every locale on an ordinary branch (never
-      on release-please's own, which it force-pushes), *then* the AAB and the listing go up together.
+- [x] **Production access granted** on 2026-11-18, on the second application. The first
+      (2026-11-01) was refused on 2026-11-03: more testing, 12 testers for 14 more days from the
+      review. Met on 2026-11-17; the second application went in that day at 13:01, with family and
+      friends added as testers, 0.8.0 shipped mid-test and no crashes or ANRs in vitals. Answers
+      verbatim in [`play-app-content.md`](play-app-content.md).
+- [x] **Decide the first production number.** `1.0.0`, decided 2026-11-01; on 2026-11-18 the
+      unreleased 0.9.0 was folded into it, so production starts with one build and one review. Its
+      release notes and the `Release-As: 1.0.0` footer reach `main` after production access; next the
+      release PR, *then* the AAB and the listing go up together.
 
 ## Standing checks that never close
 
