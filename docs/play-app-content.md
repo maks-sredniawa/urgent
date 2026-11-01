@@ -217,7 +217,7 @@ Would change: a change of type, or the service running without *Run in the backg
 **Submitted 2026-11-01, 17:29.** Asked once, from the Console's Dashboard, after the closed test's 14
 days. Recorded **verbatim**: the Console asks the same set again for the next app on this account, and
 an answer re-read a year later has to be the one that was given. Each box takes at most 300
-characters, which is why some answers are shorter than the 2026-10-31 draft.
+characters, which is why some answers are shorter than the 2026-10-31 draft (`b42270d`).
 
 **About your closed test**
 
@@ -253,6 +253,13 @@ characters, which is why some answers are shorter than the 2026-10-31 draft.
   builds: on silent the first call stayed silent, the second rang; a Ring at once caller rang on
   Android 16, and Urgent stayed quiet when Do Not Disturb let a call through. On Android 8, answering
   or declining stops it. The call-log declaration passed review.
+
+*Rests on* (not part of the answers): 2026-10-13, a real call on silent, R8 release build on HyperOS:
+the first call stayed silent, the second rang. 2026-10-22, *Ring at once* rang on real calls on a
+Xiaomi 24115RA8EG (HyperOS 3, Android 16), R8 release build of `main`, and Urgent stayed quiet in Do
+Not Disturb's *Priority only*. 2026-10-18, Android 8 was an **API 26 emulator, not a phone**: R8
+build, calls from `adb emu gsm call`; answering, declining and *Silence* stopped the ringing. The
+`READ_CALL_LOG` declaration passed review. All recorded in [`DOD.md`](DOD.md).
 
 **Three things the first app built from this template kept deliberate, so a later answer does not undo
 them:**
