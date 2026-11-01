@@ -309,3 +309,17 @@ Ring at once: put the people who must always reach you on this new list, and the
 ```
 Dzwoń od razu: dodaj do tej nowej listy osoby, które zawsze muszą się do ciebie dodzwonić, a już ich pierwsze połączenie zadzwoni mimo wyciszenia albo wibracji — nie muszą dzwonić drugi raz. Urgent dalej milczy, gdy telefon sam dla nich dzwoni. A w trybie Nie przeszkadzać Urgent nie dzwoni już razem z telefonem, gdy ten sam dzwoni.
 ```
+
+### 1.0.0 — the first full release
+
+**English** — 445/500:
+
+```
+Urgent call 1.0, the first full release. When the same number calls twice within a few minutes, the second call rings at alarm volume, even on silent or vibrate, and in Do Not Disturb when alarms are allowed. Choose who it rings for, and put the people who must always reach you under Ring at once. Urgent stays quiet when your phone already rings by itself, and never changes your phone's settings. No ads, no account, nothing leaves the phone.
+```
+
+**Polish** — 487/500:
+
+```
+Urgent call 1.0, pierwsze pełne wydanie. Gdy ten sam numer zadzwoni dwa razy w ciągu kilku minut, drugie połączenie dzwoni z głośnością alarmu, nawet gdy telefon jest wyciszony albo na wibracjach, a w trybie Nie przeszkadzać, gdy alarmy są dozwolone. Wybierz, od kogo ma dzwonić, i dodaj do listy „Dzwoń od razu” osoby, które zawsze muszą się do ciebie dodzwonić. Urgent milczy, gdy telefon sam dzwoni, i nigdy nie zmienia jego ustawień. Bez reklam, bez konta, nic nie opuszcza telefonu.
+```

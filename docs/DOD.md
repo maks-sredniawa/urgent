@@ -100,11 +100,9 @@ template's `docs/DOD.md` the day a feature adds a table.
       exist. The app this template was extracted from waited one day; that is one datapoint, not a
       promise. **If it comes back rejected, read the reason before changing any artifact.** Changing
       the build first leaves you arguing the reason against a different build.
-- [ ] **Decide the first production number.** release-please never jumps to `1.0.0` by itself (with
-      the major at 0 even `feat!:` bumps the minor), so it takes a `Release-As: 1.0.0` footer
-      ([`RELEASING.md`](RELEASING.md)), or a deliberate decision to stay on 0.x. In order: production
-      access granted, *then* that version's release notes in every locale on an ordinary branch (never
-      on release-please's own, which it force-pushes), *then* the AAB and the listing go up together.
+- [x] **Decide the first production number.** `1.0.0`, decided 2026-11-01. Its release notes and the
+      `Release-As: 1.0.0` footer reach `main` only after production access is granted; next the
+      release PR, *then* the AAB and the listing go up together.
 
 ## Standing checks that never close
 
