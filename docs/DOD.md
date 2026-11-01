@@ -70,8 +70,8 @@ template's `docs/DOD.md` the day a feature adds a table.
 - [x] **`LICENSE` and `README.md`** — all rights reserved, source-available, as Gloam.
 - [x] **Back up the upload keystore.** Backed up to NordPass on 2026-10-13.
 - [x] **Set up the GitHub repository.** Done 2026-10-13: ruleset `main: require CI`, rebase-only,
-      Pages, `RELEASE_PLEASE_TOKEN`. The token expires 2026-11-12: regenerate it and re-set the
-      secret before then, or no release PR appears.
+      Pages, `RELEASE_PLEASE_TOKEN`. The token, renewed 2026-11-01, expires 2027-11-01: regenerate it
+      and re-set the secret before then, or no release PR appears.
 - [x] **Set the five Play secrets and create the service account** (`docs/RELEASING.md`) — the
       service account is the one step CI cannot do for itself. No account permissions; four app
       permissions, on this app only, all granted on 2026-10-13; no expiry date.
