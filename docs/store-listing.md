@@ -104,7 +104,7 @@ PERMISSIONS
 - Notifications. The Silence button while Urgent rings, and a quiet one while Run in the background is on.
 - Foreground services. One plays the ringtone. The other runs only while Run in the background is on.
 
-Source available, built in the open: github.com/maksforge/urgent
+Source available, built in the open: github.com/maks-sredniawa/urgent
 ```
 
 ## Polish
@@ -172,7 +172,7 @@ UPRAWNIENIA
 - Powiadomienia. Przycisk Wycisz, gdy Urgent dzwoni, i ciche powiadomienie, gdy działa w tle.
 - Usługi na pierwszym planie. Jedna odtwarza dzwonek; druga działa tylko przy włączonym „Działaj w tle”.
 
-Kod źródłowy jest dostępny publicznie: github.com/maksforge/urgent
+Kod źródłowy jest dostępny publicznie: github.com/maks-sredniawa/urgent
 ```
 
 ## Release notes (Play's "What's new", 500 chars per locale)

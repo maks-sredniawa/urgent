@@ -50,4 +50,4 @@ a repeated call's number against your contacts, and keeps nothing. The details a
 
 ## The source
 
-Built in the open at **[github.com/maksforge/urgent](https://github.com/maksforge/urgent)**.
+Built in the open at **[github.com/maks-sredniawa/urgent](https://github.com/maks-sredniawa/urgent)**.
