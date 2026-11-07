@@ -208,9 +208,10 @@ Would change: a change of type, or the service running without *Run in the backg
 - **Tags:** _<tags>_.
 - **Contact email:** `urgentcall.support@maksforge.com`, public on the listing.
 - **Privacy policy:** `https://maksforge.com/urgent/privacy-policy.html`, served from `docs/` by
-  Pages. It updates on a merge to `main`, with no release, which is why it has to be right before the
-  app it describes ships rather than after. Switched in the Console on 2026-10-25 from
-  `https://maksforge.github.io/urgent/privacy-policy.html`, which still redirects here.
+  maksforge.com. It updates within about 15 minutes of a merge to `main`, with no release, which is
+  why it has to be right before the app it describes ships rather than after. Switched in the Console
+  on 2026-10-25 from `https://maksforge.github.io/urgent/privacy-policy.html`, which was retired on
+  2026-11-07 and now returns 404.
 
 ## Production access — the application, and the answers it was given
 
@@ -289,7 +290,7 @@ listing links to. Read this before adding one, because the policy text and its e
   a cut, a project is not a person), but the distinction has to survive a reviewer skimming for
   "external payment link", and a pre-launch rejection costs the closed-test window.
 - **The reach is one level out.** The first app built from this template moved its tip from the app to
-  the repository and the Pages site, then noticed that the listing's *Website* field and the last line
+  the repository and the app's site, then noticed that the listing's *Website* field and the last line
   of its full description point at exactly those pages. So "nothing the app links to" includes what
   the **listing** links to.
 - **When to revisit:** once the app is live, with a track record to appeal from. The cheapest shape

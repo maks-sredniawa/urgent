@@ -63,7 +63,9 @@ template's `docs/DOD.md` the day a feature adds a table.
 - [x] **Write the listing.** English and Polish text in `docs/store-listing.md`, `--strict` green.
 - [x] **Capture the screenshots.** Done 2026-10-17 from the release build of the redesign, English and
       Polish, in `art/play-screenshots/`.
-- [x] **Write the privacy policy** — served at `https://srednimax.github.io/urgent/privacy-policy.html`.
+- [x] **Write the privacy policy** — served at `https://maksforge.com/urgent/privacy-policy`. The
+      first URL, `https://srednimax.github.io/urgent/privacy-policy.html`, was retired on 2026-11-07
+      and now returns 404.
 - [x] **Answer the Console's App content pages and write [`play-app-content.md`](play-app-content.md)
       in the same sitting** — the reasons are in front of you then and gone a week later. It moves in
       the same commit as the privacy policy, every time.
