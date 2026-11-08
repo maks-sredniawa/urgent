@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://github.com/maks-sredniawa/urgent/compare/v0.7.0...v0.8.0) (2026-11-08)
+
+
+### Features
+
+* pause ringing for a few hours from Home ([2d99fb0](https://github.com/maks-sredniawa/urgent/commit/2d99fb04ff3cc63403538fde04096d123decfcde))
+
 ## [0.7.0](https://github.com/srednimax/urgent/compare/v0.6.1...v0.7.0) (2026-10-22)
 
 
