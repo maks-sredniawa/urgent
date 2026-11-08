@@ -120,7 +120,7 @@ The answer rests on one fact per route data could take:
 3. **Auto Backup is still "no data collected".** The platform moves the user's backup to the user's
    own Google Drive; the developer never sees it. That is Android transmitting the user's backup, not
    the app transmitting to the developer. ⚠ Every file the backup carries lands on the user's *next*
-   phone too — and here that is the settings, the chosen callers' numbers and names, and the theme (ADR-0005's amendment). Re-read on 2026-10-15 when the chosen callers landed, again when they kept names, and on 2026-10-22: the answer stands, because nothing reaches the developer.
+   phone too — and here that is the settings, the chosen callers' numbers and names, and the theme (ADR-0005's amendment). Re-read on 2026-10-15 when the chosen callers landed, again when they kept names, on 2026-10-22, and on 2026-11-08 when the pause's end time joined the settings: the answer stands, because nothing reaches the developer.
 4. **A support mail is still "no data collected", and the reason is the definition rather than an
    exemption.** A `mailto:` hands a draft to **another app**; the user reads it, can edit every line,
    and sends it from their own mail client, or does not. ⚠ **Do not write "Play exempts support
