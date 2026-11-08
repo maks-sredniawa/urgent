@@ -46,6 +46,16 @@
     <string name="home_intro">Ktoś, kto dzwoni dwa razy w ciągu kilku minut, pewnie naprawdę cię potrzebuje. Urgent zadzwoni przy tym drugim połączeniu, nawet gdy telefon jest wyciszony albo na wibracjach.</string>
     <string name="home_ring_through">Dzwoń przy powtórnym połączeniu</string>
     <string name="home_ring_through_hint">Drugie połączenie z tego samego numeru dzwoni z głośnością alarmu i wibruje. Ustawienia telefonu zostają bez zmian.</string>
+    <string name="home_ring_through_paused_hint">Wstrzymane. Żadne połączenie nie zadzwoni, dopóki nie wznowisz lub nie minie czas wstrzymania, nawet od rozmówców z listy „Dzwoń od razu”.</string>
+    <string name="home_pause_for">Wstrzymaj na</string>
+    <plurals name="home_pause_hours">
+        <item quantity="one">%d godzinę</item>
+        <item quantity="few">%d godziny</item>
+        <item quantity="many">%d godzin</item>
+        <item quantity="other">%d godziny</item>
+    </plurals>
+    <string name="home_paused_until">Wstrzymane do %s</string>
+    <string name="home_pause_resume">Wznów</string>
     <string name="home_window">Drugie połączenie w ciągu</string>
     <string name="home_count_declined">Licz odrzucone połączenia</string>
     <string name="home_count_declined_hint">Odrzucone połączenie liczy się jako pierwsze. Po wyłączeniu odrzucenie połączenia sprawia, że następne z tego numeru pozostaje ciche.</string>

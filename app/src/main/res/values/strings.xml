@@ -70,6 +70,14 @@
     <string name="home_intro">Someone who calls twice in a few minutes probably needs you. Urgent rings for that second call, even when your phone is on silent or vibrate.</string>
     <string name="home_ring_through">Ring for repeated calls</string>
     <string name="home_ring_through_hint">The second call from the same number rings at your alarm volume and vibrates. Your phone\'s own settings are left as they are.</string>
+    <string name="home_ring_through_paused_hint">Paused. Nothing rings until you resume or the pause ends, not even Ring at once callers.</string>
+    <string name="home_pause_for">Pause for</string>
+    <plurals name="home_pause_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+    <string name="home_paused_until">Paused until %s</string>
+    <string name="home_pause_resume">Resume</string>
     <string name="home_window">Second call within</string>
     <plurals name="home_window_minutes">
         <item quantity="one">%d minute</item>

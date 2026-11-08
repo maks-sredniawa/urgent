@@ -26,6 +26,8 @@ Free, ad-free, and entirely on your own phone: no account, no sign-up, no server
 - **Keeps running, if you ask.** *Run in the background* keeps Urgent running with a quiet notification,
   so Android does not stop it between calls. It runs only while *Ring for repeated calls* is on, and it
   starts again after a reboot or an update.
+- **Pauses when you need quiet.** Pause it for 1, 2, 4 or 8 hours from Home. Nothing rings until the
+  pause ends or you resume, and it comes back on by itself.
 
 ## What it cannot do
 

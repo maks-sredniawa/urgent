@@ -13,11 +13,17 @@ import app.urgent.data.AppPreferences
 import app.urgent.data.CallerRules
 import app.urgent.data.ContactScope
 import app.urgent.data.DEFAULT_REPEAT_WINDOW_MINUTES
+import app.urgent.data.isPaused
+import app.urgent.data.pauseEndMillis
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.flow.transformLatest
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
@@ -27,12 +33,26 @@ data class HomeUiState(
     val windowMinutes: Int = DEFAULT_REPEAT_WINDOW_MINUTES,
     val countDeclined: Boolean = true,
     val callers: CallerRules = CallerRules(),
+    val pausedUntilMillis: Long? = null,
 )
 
 class HomeViewModel(
     private val preferences: AppPreferences,
     private val contentResolver: ContentResolver,
 ) : ViewModel() {
+    // Kotlin note: `transformLatest` is RxJS's `switchMap`: a new stored time cancels the wait below.
+    // The wait is what flips the screen back at the moment the pause ends, with nothing stored changing.
+    @OptIn(ExperimentalCoroutinesApi::class)
+    private val runningPause: Flow<Long?> =
+        preferences.pausedUntilMillis.transformLatest { until ->
+            val now = System.currentTimeMillis()
+            if (isPaused(until, now)) {
+                emit(until)
+                delay(until - now)
+            }
+            emit(null)
+        }
+
     val state: StateFlow<HomeUiState> =
         combine(
             preferences.ringThrough,
@@ -41,10 +61,21 @@ class HomeViewModel(
             preferences.countDeclinedCalls,
             preferences.callerRules,
             ::HomeUiState,
-        ).stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), HomeUiState())
+        ).combine(runningPause) { state, until -> state.copy(pausedUntilMillis = until) }
+            .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), HomeUiState())
 
     fun setRingThrough(enabled: Boolean) {
         viewModelScope.launch { preferences.setRingThrough(enabled) }
+    }
+
+    fun pauseFor(hours: Int) {
+        viewModelScope.launch {
+            preferences.setPausedUntilMillis(pauseEndMillis(hours, System.currentTimeMillis()))
+        }
+    }
+
+    fun resume() {
+        viewModelScope.launch { preferences.setPausedUntilMillis(0L) }
     }
 
     fun setKeepAlive(enabled: Boolean) {

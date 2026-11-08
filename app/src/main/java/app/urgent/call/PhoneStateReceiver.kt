@@ -7,6 +7,7 @@ import android.telephony.PhoneNumberUtils
 import android.telephony.TelephonyManager
 import app.urgent.MainApplication
 import app.urgent.data.ContactScope
+import app.urgent.data.isPaused
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
@@ -49,6 +50,7 @@ class PhoneStateReceiver : BroadcastReceiver() {
             try {
                 val preferences = app.preferences
                 if (!preferences.ringThrough.first()) return@launch
+                if (isPaused(preferences.pausedUntilMillis.first(), System.currentTimeMillis())) return@launch
                 // Without the permission the contacts setting cannot apply, so it counts as Off, which admits
                 // anyone while the chosen list is off or empty.
                 val rules =
