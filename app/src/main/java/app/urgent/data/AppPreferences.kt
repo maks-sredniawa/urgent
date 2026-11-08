@@ -5,6 +5,7 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
+import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.core.stringSetPreferencesKey
 import kotlinx.coroutines.flow.Flow
@@ -71,6 +72,7 @@ class AppPreferences(
         val CONTACT_SCOPE = stringPreferencesKey("contact_scope")
         val RING_AT_ONCE_CALLERS = stringSetPreferencesKey("ring_at_once_callers")
         val KEEP_ALIVE = booleanPreferencesKey("keep_alive")
+        val PAUSED_UNTIL_MILLIS = longPreferencesKey("paused_until_millis")
     }
 
     /**
@@ -150,6 +152,13 @@ class AppPreferences(
     val keepAliveActive: Flow<Boolean> = combine(ringThrough, keepAlive) { ring, keep -> ring && keep }
 
     /**
+     * When the running pause ends, in wall-clock milliseconds; judge it with [isPaused]. A time rather
+     * than a switch because Auto Backup carries it to the user's next phone, where a time has already
+     * passed and a switch would keep the app silent with nothing on screen to explain why.
+     */
+    val pausedUntilMillis: Flow<Long> = store.data.map { it[Keys.PAUSED_UNTIL_MILLIS] ?: 0L }
+
+    /**
      * The theme mode, read once, before any Activity exists.
      *
      * The one place a `suspend` read is worth its cost: `MainApplication.onCreate` needs the answer
@@ -191,6 +200,10 @@ class AppPreferences(
         store.edit { it[Keys.KEEP_ALIVE] = enabled }
     }
 
+    suspend fun setPausedUntilMillis(millis: Long) {
+        store.edit { it[Keys.PAUSED_UNTIL_MILLIS] = millis }
+    }
+
     suspend fun addChosenCaller(entry: String) {
         store.edit { it[Keys.CHOSEN_CALLERS] = (it[Keys.CHOSEN_CALLERS] ?: emptySet()) + entry }
     }
@@ -211,3 +224,21 @@ class AppPreferences(
 const val DEFAULT_REPEAT_WINDOW_MINUTES = 15
 
 val REPEAT_WINDOW_CHOICES = listOf(5, 10, 15, 30)
+
+val PAUSE_HOUR_CHOICES = listOf(1, 2, 4, 8)
+
+private const val MILLIS_PER_HOUR = 3_600_000L
+
+fun pauseEndMillis(
+    hours: Int,
+    nowMillis: Long,
+): Long = nowMillis + hours * MILLIS_PER_HOUR
+
+/**
+ * Whether a pause is running. An end further away than the longest pause can only come from a clock
+ * that moved back, and counts as over: an unwanted ring costs less than a missed urgent call.
+ */
+fun isPaused(
+    pausedUntilMillis: Long,
+    nowMillis: Long,
+): Boolean = pausedUntilMillis - nowMillis in 1..PAUSE_HOUR_CHOICES.max() * MILLIS_PER_HOUR

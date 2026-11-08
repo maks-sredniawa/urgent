@@ -14,6 +14,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material3.AssistChip
+import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
@@ -300,6 +302,24 @@ fun ChoiceChip(
                 selected = selected,
                 borderColor = MaterialTheme.colorScheme.outline,
             ),
+    )
+}
+
+/**
+ * A chip that does something once and holds no selection. Looks like an unselected [ChoiceChip], but
+ * a screen reader announces it as a button rather than a checkbox.
+ */
+@Composable
+fun ActionChip(
+    label: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    AssistChip(
+        onClick = onClick,
+        label = { Text(label) },
+        modifier = modifier,
+        border = AssistChipDefaults.assistChipBorder(enabled = true, borderColor = MaterialTheme.colorScheme.outline),
     )
 }
 

@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.provider.Settings
+import android.text.format.DateFormat
 import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -70,9 +71,11 @@ import app.urgent.call.hasCallPermissions
 import app.urgent.call.hasContactsPermission
 import app.urgent.data.CallerRules
 import app.urgent.data.ContactScope
+import app.urgent.data.PAUSE_HOUR_CHOICES
 import app.urgent.data.REPEAT_WINDOW_CHOICES
 import app.urgent.theme.Spacing
 import app.urgent.ui.appViewModelExtras
+import app.urgent.ui.common.ActionChip
 import app.urgent.ui.common.CheckSwitch
 import app.urgent.ui.common.ChipGroup
 import app.urgent.ui.common.ChoiceChip
@@ -88,6 +91,7 @@ import app.urgent.work.openAutostartSettings
 import app.urgent.work.openBatteryOptimisationSettings
 import app.urgent.work.startActivitySafely
 import java.text.Collator
+import java.util.Date
 
 /**
  * The whole app, really: the switch, the window, and everything Android or the ROM must allow before
@@ -156,6 +160,7 @@ fun HomeScreen(
 
             RingThroughCard(
                 checked = state.ringThrough,
+                paused = state.pausedUntilMillis != null,
                 onChange = { enabled ->
                     viewModel.setRingThrough(enabled)
                     // The ask rides on the moment the feature is switched on, never at launch:
@@ -164,6 +169,15 @@ fun HomeScreen(
                 },
                 modifier = Modifier.padding(start = Spacing.base, end = Spacing.base, top = Spacing.section),
             )
+
+            if (state.ringThrough) {
+                PauseControl(
+                    pausedUntilMillis = state.pausedUntilMillis,
+                    onPause = viewModel::pauseFor,
+                    onResume = viewModel::resume,
+                    modifier = Modifier.padding(top = Spacing.snug),
+                )
+            }
 
             // Only while the switch is on: a warning about a grant a disabled feature would need is
             // the app asking for something it is not using.
@@ -255,15 +269,18 @@ fun HomeScreen(
 
 /**
  * The point of the app, so the one tonal block on the surface. Amber appears in a normal state only
- * here, as the ring of the mark while the switch is on.
+ * here, as the ring of the mark while the app would ring. A pause leaves the switch on, so the card
+ * keeps its colour and only the amber goes.
  */
 @Composable
 private fun RingThroughCard(
     checked: Boolean,
+    paused: Boolean,
     onChange: (Boolean) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
+    val waiting = checked && !paused
     Surface(
         color = if (checked) colors.primaryContainer else colors.surfaceContainerHighest,
         contentColor = if (checked) colors.onPrimaryContainer else colors.onSurface,
@@ -284,8 +301,13 @@ private fun RingThroughCard(
                 Mark(
                     width = 64.dp,
                     dots = if (checked) colors.onPrimaryContainer else colors.onSurfaceVariant,
-                    ring = if (checked) colors.tertiary else colors.outlineVariant,
-                    firstDotAlpha = if (checked) 0.6f else 1f,
+                    ring =
+                        when {
+                            waiting -> colors.tertiary
+                            checked -> colors.onPrimaryContainer
+                            else -> colors.outlineVariant
+                        },
+                    firstDotAlpha = if (waiting) 0.6f else 1f,
                 )
                 Text(
                     text = stringResource(R.string.home_ring_through),
@@ -295,10 +317,70 @@ private fun RingThroughCard(
                 CheckSwitch(checked = checked)
             }
             Text(
-                text = stringResource(R.string.home_ring_through_hint),
+                text =
+                    stringResource(
+                        if (checked &&
+                            paused
+                        ) {
+                            R.string.home_ring_through_paused_hint
+                        } else {
+                            R.string.home_ring_through_hint
+                        },
+                    ),
                 style = MaterialTheme.typography.bodyMedium,
                 color = if (checked) colors.onPrimaryContainer else colors.onSurfaceVariant,
             )
+        }
+    }
+}
+
+@Composable
+private fun PauseControl(
+    pausedUntilMillis: Long?,
+    onPause: (Int) -> Unit,
+    onResume: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val context = LocalContext.current
+    if (pausedUntilMillis != null) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(Spacing.base),
+            modifier =
+                modifier
+                    .fillMaxWidth()
+                    .padding(start = Spacing.base, end = Spacing.hair),
+        ) {
+            Text(
+                // The platform's formatter follows the phone's 12- or 24-hour setting.
+                text =
+                    stringResource(
+                        R.string.home_paused_until,
+                        DateFormat.getTimeFormat(context).format(Date(pausedUntilMillis)),
+                    ),
+                style = MaterialTheme.typography.bodyLarge,
+                modifier = Modifier.weight(1f),
+            )
+            TextButton(onClick = onResume) {
+                Text(stringResource(R.string.home_pause_resume))
+            }
+        }
+    } else {
+        Column(modifier = modifier) {
+            Text(
+                text = stringResource(R.string.home_pause_for),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(horizontal = Spacing.base),
+            )
+            ChipGroup(modifier = Modifier.padding(top = Spacing.tight)) {
+                for (hours in PAUSE_HOUR_CHOICES) {
+                    ActionChip(
+                        label = pluralStringResource(R.plurals.home_pause_hours, hours, hours),
+                        onClick = { onPause(hours) },
+                    )
+                }
+            }
         }
     }
 }
