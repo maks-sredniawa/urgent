@@ -352,7 +352,6 @@ private fun PauseControl(
                     .padding(start = Spacing.base, end = Spacing.hair),
         ) {
             Text(
-                // The platform's formatter follows the phone's 12- or 24-hour setting.
                 text =
                     stringResource(
                         R.string.home_paused_until,
