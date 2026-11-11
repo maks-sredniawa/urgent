@@ -20,3 +20,4 @@ description: Rings your phone when the same number calls twice within a few minu
 maksforge:
   icon: /assets/icons/urgent.webp
   status: building
+  kind: Android app
