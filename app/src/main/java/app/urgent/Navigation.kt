@@ -116,7 +116,10 @@ fun MainNavigation(modifier: Modifier = Modifier) {
                         )
                     }
                     entry<Support> {
-                        SupportScreen(onBack = { backStack.removeLastOrNull() })
+                        SupportScreen(
+                            onBack = { backStack.removeLastOrNull() },
+                            onOpenCredits = { backStack.add(Licences) },
+                        )
                     }
                     entry<Licences> {
                         LicencesScreen(

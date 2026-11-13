@@ -85,11 +85,11 @@ import app.urgent.ui.common.Mark
 import app.urgent.ui.common.SectionHeader
 import app.urgent.ui.common.SwitchRow
 import app.urgent.ui.common.WarningCard
+import app.urgent.ui.common.startActivitySafely
 import app.urgent.work.hasAutostartSettings
 import app.urgent.work.isIgnoringBatteryOptimisations
 import app.urgent.work.openAutostartSettings
 import app.urgent.work.openBatteryOptimisationSettings
-import app.urgent.work.startActivitySafely
 import java.text.Collator
 import java.util.Date
 

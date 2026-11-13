@@ -11,7 +11,6 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -20,14 +19,10 @@ import app.urgent.data.ThemeMode
 import app.urgent.ui.appViewModelExtras
 import app.urgent.ui.common.ChipGroup
 import app.urgent.ui.common.ChoiceChip
-import app.urgent.ui.common.LinkRow
-import app.urgent.ui.common.LinkTarget
 import app.urgent.ui.common.SectionHeader
 import app.urgent.ui.common.SwitchRow
-import app.urgent.ui.support.SupportRequest
-import app.urgent.ui.support.hintRes
-import app.urgent.ui.support.sendSupportMail
-import app.urgent.ui.support.titleRes
+import app.urgent.ui.support.AboutSection
+import app.urgent.ui.support.LanguageReportRow
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -39,7 +34,6 @@ fun SettingsScreen(
         viewModel(factory = SettingsViewModel.Factory, extras = appViewModelExtras()),
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
-    val context = LocalContext.current
 
     Scaffold(
         modifier = modifier,
@@ -67,19 +61,9 @@ fun SettingsScreen(
 
             SectionHeader(stringResource(R.string.settings_language))
             LanguageRow()
-            // The channel that stands in for a native read-through (docs/translator-brief.md §8),
-            // beside the picker because that is where somebody is standing the moment a translation
-            // reads wrong. Its wording lives with the other two requests, in ui/support/.
-            LinkRow(
-                title = stringResource(SupportRequest.Language.titleRes()),
-                subtitle = stringResource(SupportRequest.Language.hintRes()),
-                target = LinkTarget.Outside,
-                onClick = { context.sendSupportMail(SupportRequest.Language) },
-            )
+            LanguageReportRow()
 
-            SectionHeader(stringResource(R.string.settings_about))
-            LinkRow(stringResource(R.string.settings_support), LinkTarget.Inside, onClick = onOpenSupport)
-            LinkRow(stringResource(R.string.settings_licences), LinkTarget.Inside, onClick = onOpenLicences)
+            AboutSection(onOpenSupport, onOpenLicences)
 
             // The developer-only section. In a release build this composable is a no-op that
             // renders nothing — see `src/release/…/DebugSettings.kt`. It is a source-set seam

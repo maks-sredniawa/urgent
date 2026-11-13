@@ -59,7 +59,7 @@ template's `docs/DOD.md` the day a feature adds a table.
       the neutral to a warm grey, so the surfaces lean towards the mark's charcoal ground. Every
       contrast check passed on regeneration, the tightest being the divider (outlineVariant on
       surfaceContainerLow) at 1.55:1 against a 1.2 floor.
-- [x] **Put a real support address in `ui/support/SupportHandoff.kt`** — `urgentcall.support@maksforge.com`.
+- [x] **Put a real support address in `ui/support/SupportConfig.kt`** — `urgentcall.support@maksforge.com`.
 - [x] **Write the listing.** English and Polish text in `docs/store-listing.md`, `--strict` green.
 - [x] **Capture the screenshots.** Done 2026-10-17 from the release build of the redesign, English and
       Polish, in `art/play-screenshots/`.
