@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.9.0](https://github.com/maks-sredniawa/urgent/compare/v0.8.0...v0.9.0) (2026-11-13)
+
+
+### Features
+
+* **support:** adopt the shared Help and feedback from android-starter ([46bea5f](https://github.com/maks-sredniawa/urgent/commit/46bea5f947e001ef6ba3309b57a2209607ddeb09))
+* **support:** link licence terms and show licence names on Credits ([1b041ec](https://github.com/maks-sredniawa/urgent/commit/1b041ec73f565400ac869b217d3c18ee9e571991))
+* **support:** open Credits with the people who made the app ([889d26d](https://github.com/maks-sredniawa/urgent/commit/889d26d76df4b15fe67c491845a16f654353f469))
+* **support:** re-sync Help and feedback with android-starter's address row and copy ([a22b98a](https://github.com/maks-sredniawa/urgent/commit/a22b98a206814b5db500702c482aabed1792a7c9))
+
+
+### Bug Fixes
+
+* **support:** say when the language report finds no mail app, and keep the licence screen safe ([a8f497d](https://github.com/maks-sredniawa/urgent/commit/a8f497d7627994f66615949e6fe5ca1cd1bca73e))
+
 ## [0.8.0](https://github.com/maks-sredniawa/urgent/compare/v0.7.0...v0.8.0) (2026-11-08)
 
 
