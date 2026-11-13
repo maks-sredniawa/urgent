@@ -326,14 +326,14 @@ Potrzebujesz kilku godzin ciszy? Wstrzymaj Urgent na 1, 2, 4 albo 8 godzin na ek
 
 ### 0.9.0 — help and feedback
 
-**English** — 424/500:
+**English** — 449/500:
 
 ```
-Help and feedback now shows the support email address, ready to copy, and a new About section with the app's web page, privacy policy, more MaksForge apps and a version number you can copy. Credits now open with who made the app, and give each open-source licence its full name and a link to its terms. A problem report fills in only the app and Android versions, phone model and language, nothing you have saved in the app.
+Help and feedback now shows the support email address, ready to copy, and a new About section with the app's web page, privacy policy, more MaksForge apps and a version number you can copy. Credits now open with who made the app, and give each open-source licence its full name and a link to its terms. Report a problem now says exactly what it fills in: the app and Android versions, phone model and language, and nothing you have saved in the app.
 ```
 
-**Polish** — 459/500:
+**Polish** — 483/500:
 
 ```
-Ekran „Pomoc i opinie” pokazuje teraz adres e-mail wsparcia do skopiowania oraz nową sekcję „O aplikacji”: stronę aplikacji, politykę prywatności, inne aplikacje MaksForge i numer wersji do skopiowania. „Podziękowania” zaczynają się teraz od tego, kto zrobił aplikację, a każda licencja open source ma pełną nazwę i link do warunków. Zgłoszenie problemu wpisuje tylko wersję aplikacji i Androida, model telefonu i język, nic z tego, co zapisujesz w aplikacji.
+Ekran „Pomoc i opinie” pokazuje teraz adres e-mail wsparcia do skopiowania oraz nową sekcję „O aplikacji”: stronę aplikacji, politykę prywatności, inne aplikacje MaksForge i numer wersji do skopiowania. „Podziękowania” zaczynają się teraz od tego, kto zrobił aplikację, a każda licencja open source ma pełną nazwę i link do warunków. Przy „Zgłoś problem” widać teraz, co trafi do wiadomości: wersja aplikacji i Androida, model telefonu i język, nic z tego, co zapisujesz w aplikacji.
 ```
