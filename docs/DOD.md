@@ -97,12 +97,13 @@ template's `docs/DOD.md` the day a feature adds a table.
 
 ## After the closed test
 
-- [x] **The production-access application is in, with its answers recorded verbatim** in
-      [`play-app-content.md`](play-app-content.md). Submitted 2026-11-01; Play says seven days or less.
-      Until it is granted the production track does not exist. The app this template was extracted
-      from waited one day; that is one datapoint, not a promise. **If it comes back rejected, read
-      the reason before changing any artifact.** Changing the build first leaves you arguing the
-      reason against a different build.
+- [ ] **Production access granted.** The first application (2026-11-01) was refused on 2026-11-03:
+      more testing, 12 testers for 14 more days from the review. Met on 2026-11-17; the second
+      application went in that day at 13:01, with family and friends added as testers, 0.8.0 shipped
+      mid-test and no crashes or ANRs in vitals. Answers verbatim in
+      [`play-app-content.md`](play-app-content.md). Play says seven days or less. Until it is granted
+      the production track does not exist. **If it comes back refused, read the reason before
+      changing any artifact.**
 - [ ] **Decide the first production number.** release-please never jumps to `1.0.0` by itself (with
       the major at 0 even `feat!:` bumps the minor), so it takes a `Release-As: 1.0.0` footer
       ([`RELEASING.md`](RELEASING.md)), or a deliberate decision to stay on 0.x. In order: production
