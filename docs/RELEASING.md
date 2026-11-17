@@ -329,6 +329,11 @@ the production workflow, never runs `bundleRelease` and never materialises the u
 ⚠ **A new personal developer account cannot reach production without a closed test first**: at the
 time of writing, at least 12 testers opted in for 14 continuous days, then an access application in
 the Console. The window is measured on testers being opted in, which is what shapes this workflow.
+A refusal (*requires more testing*) adds a further condition: at least 12 testers opted in for 14
+more days counted from the review date, then a new application with an extra step, *What did you do
+differently this time?*. Urgent's first application, tested only by a tester-swap community, was
+refused that way; both applications are recorded in
+[`play-app-content.md`](play-app-content.md#production-access--the-applications-and-the-answers-they-were-given).
 
 | Input | Default | What it does |
 | --- | --- | --- |
