@@ -213,12 +213,57 @@ Would change: a change of type, or the service running without *Run in the backg
   on 2026-10-25 from `https://maksforge.github.io/urgent/privacy-policy.html`, which was retired on
   2026-11-07 and now returns 404.
 
-## Production access — the application, and the answers it was given
+## Production access — the applications, and the answers they were given
 
-**Submitted 2026-11-01, 17:29.** Asked once, from the Console's Dashboard, after the closed test's 14
-days. Recorded **verbatim**: the Console asks the same set again for the next app on this account, and
-an answer re-read a year later has to be the one that was given. Each box takes at most 300
-characters, which is why some answers are shorter than the 2026-10-31 draft (`b42270d`).
+Recorded **verbatim**: the Console asks the same set again for the next app on this account, and an
+answer re-read a year later has to be the one that was given. Each box takes at most 300 characters.
+
+### Second application — submitted 2026-11-17, 13:01
+
+The first came back on 2026-11-03 (the Console said *Reviewed Tuesday, 02:17*) as **"Your app requires
+more testing to access Google Play production"**, with a new condition: at least 12 testers opted in
+for 14 more days from the review date. That was met on 2026-11-17 and the Console opened *Apply for
+production* again, with the first application's answers pre-filled and a fourth step, *Additional
+testing*. Answers that changed:
+
+- *How did you recruit users for your closed test?* — First round: a community where Android developers
+  test each other's apps. This time I also invited family and friends: people who keep their phones on
+  silent but still want to hear the calls that matter, the same people the app is made for.
+- *Describe the engagement you received from testers during your closed test* — Urgent has no internet
+  permission or analytics, so I can't see which features were used. Play shows 28 monthly active
+  devices (+460% in 28 days), 21 first opens, and 68% of installs updated to 0.8.0 within days. Family
+  and friends ran it on their own phones in daily life.
+- *Provide a summary of the feedback that you received from testers. Include how you collected the
+  feedback.* — I asked family and friends directly, in person and by message. All of it was positive:
+  the app is clear and does what it says, and nobody reported a bug or a crash. Android vitals agree:
+  no crashes and no ANRs in the last 28 days. No private feedback came through Play.
+- *What changes did you make to your app based on what you learned during your closed test?* — No
+  tester reported a problem, so no fix came from them. From my own use during the test I added Pause:
+  1 to 8 hours of quiet that ends by itself, shipped to testers as 0.8.0 on 8 Nov. Earlier in the
+  test: fixed an Android 8 crash and added the Ring at once list.
+- *How did you decide that your app is ready for production?* — No crashes or ANRs in Android vitals
+  across 28 days of tester use. Real calls on a Xiaomi with Android 16: on silent the second call rang,
+  Ring at once rang, and Urgent stayed quiet when DND let a call ring. Pause tested with emulated calls
+  on Android 8 and 16. Call-log declaration approved.
+- *What did you do differently this time?* (new, step 4) — Last time every tester came from a developer
+  tester-swap community. This time I added family and friends who use it as real users, kept 12+
+  testers opted in for 14 more days, shipped an update mid-test (0.8.0, Pause) that 68% installed, and
+  checked vitals: no crashes or ANRs.
+
+Unchanged from the first application: recruiting was *Easy*, the audience and value answers, and
+*0 – 10K* installs.
+
+*Rests on* (not part of the answers), read in the Console on 2026-11-17: *Crashes and ANRs*, user-perceived,
+20 Oct – 17 Nov, no results; the account home's last-28-days figures for Urgent (20 device
+acquisitions, 21 first opens, 28 monthly active devices, +460%); *Latest releases*: 0.8.0 (versionCode
+115) on *Closed testing - Alpha* since 2026-11-08, 68.42% of the install base; *Testing feedback*
+empty. The family-and-friends recruiting and their feedback are the owner's account, confirmed before
+submitting. Pause's emulated calls ran on 2026-11-08 on the API 26 and API 36 emulators.
+
+### First application — submitted 2026-11-01, 17:29, refused 2026-11-03
+
+**Submitted 2026-11-01, 17:29.** Asked from the Console's Dashboard after the closed test's 14 days.
+Some answers are shorter than the 2026-10-31 draft (`b42270d`) because of the 300-character limit.
 
 **About your closed test**
 
