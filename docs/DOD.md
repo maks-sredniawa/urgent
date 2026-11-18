@@ -106,6 +106,9 @@ template's `docs/DOD.md` the day a feature adds a table.
       unreleased 0.9.0 was folded into it, so production starts with one build and one review. Its
       release notes and the `Release-As: 1.0.0` footer reach `main` after production access; next the
       release PR, *then* the AAB and the listing go up together.
+- [ ] **Promote 1.0.0 to production** from internal with `publish-play-production.yml`: a dry run
+      first, then with `update_listing` on and a staged rollout of 0.1, approved in the `production`
+      environment (the owner is its required reviewer). Widen the rollout once vitals look clean.
 
 ## Standing checks that never close
 

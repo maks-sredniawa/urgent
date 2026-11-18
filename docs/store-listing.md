@@ -336,6 +336,7 @@ Help and feedback now shows the support email address, ready to copy, and a new 
 
 ```
 Ekran „Pomoc i opinie” pokazuje teraz adres e-mail wsparcia do skopiowania oraz nową sekcję „O aplikacji”: stronę aplikacji, politykę prywatności, inne aplikacje MaksForge i numer wersji do skopiowania. „Podziękowania” zaczynają się teraz od tego, kto zrobił aplikację, a każda licencja open source ma pełną nazwę i link do warunków. Przy „Zgłoś problem” widać teraz, co trafi do wiadomości: wersja aplikacji i Androida, model telefonu i język, nic z tego, co zapisujesz w aplikacji.
+```
 
 ### 1.0.0 — the first full release
 
@@ -352,5 +353,4 @@ Urgent call 1.0, the first full release. When the same number calls twice within
 
 ```
 Urgent call 1.0, pierwsze pełne wydanie. Gdy ten sam numer zadzwoni dwa razy w ciągu kilku minut, drugie połączenie dzwoni z głośnością alarmu, nawet na wyciszeniu albo wibracjach, a w trybie Nie przeszkadzać, gdy alarmy są dozwolone. Wybierz, od kogo ma dzwonić, dodaj do „Dzwoń od razu” osoby, które zawsze muszą się dodzwonić, i wstrzymaj Urgent na kilka godzin ciszy. Urgent milczy, gdy telefon sam dzwoni, i nigdy nie zmienia jego ustawień. Bez reklam, bez konta, nic nie opuszcza telefonu.
-```
 ```
