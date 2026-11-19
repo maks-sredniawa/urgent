@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Brazilian Portuguese. Translated from **English only** — never from another translation, which
+    compounds every interpretation the first translator made.
+
+    Informal `você`, and the app is "o Urgent". A caller is "quem liga" rather than a gendered noun
+    such as "autor da chamada", so no sentence has to pick a gender (translator brief §6.2).
+
+    Note the three plural categories: Portuguese uses `one`, `many` and `other`. The `many` form is
+    CLDR's large-number category and is unreachable for these counts, but `TranslationTest` requires
+    it, so it carries the same text as `other`.
+-->
+<resources>
+    <string name="tab_home">Início</string>
+    <string name="tab_settings">Configurações</string>
+
+    <string name="action_back">Voltar</string>
+
+    <string name="settings_appearance">Aparência</string>
+    <string name="settings_theme_system">Sistema</string>
+    <string name="settings_theme_light">Claro</string>
+    <string name="settings_theme_dark">Escuro</string>
+    <string name="settings_material_you">Usar as cores do meu papel de parede</string>
+    <string name="settings_material_you_hint">Android 12 e versões mais recentes. Desativado por padrão, para o app manter a própria paleta.</string>
+    <string name="settings_language">Idioma</string>
+    <string name="settings_language_system">Sistema</string>
+
+    <!-- Home -->
+    <string name="home_intro">Quem liga duas vezes em poucos minutos provavelmente precisa de você. O Urgent toca nessa segunda chamada, mesmo com o celular no modo silencioso ou no modo vibrar.</string>
+    <string name="home_ring_through">Tocar em chamadas repetidas</string>
+    <string name="home_ring_through_hint">A segunda chamada do mesmo número toca no volume do alarme e vibra. As configurações do próprio celular ficam como estão.</string>
+    <string name="home_ring_through_paused_hint">Pausado. Nada toca até você retomar ou a pausa terminar, nem as chamadas de quem está em “Tocar na hora”.</string>
+    <string name="home_pause_for">Pausar por</string>
+    <plurals name="home_pause_hours">
+        <item quantity="one">%d hora</item>
+        <item quantity="many">%d horas</item>
+        <item quantity="other">%d horas</item>
+    </plurals>
+    <string name="home_paused_until">Pausado até %s</string>
+    <string name="home_pause_resume">Retomar</string>
+    <string name="home_window">Segunda chamada em até</string>
+    <plurals name="home_window_minutes">
+        <item quantity="one">%d minuto</item>
+        <item quantity="many">%d minutos</item>
+        <item quantity="other">%d minutos</item>
+    </plurals>
+    <string name="home_count_declined">Contar chamadas recusadas</string>
+    <string name="home_count_declined_hint">Uma chamada que você recusou conta como a primeira. Com isto desativado, recusar uma chamada deixa a próxima do mesmo número em silêncio.</string>
+    <string name="home_permissions_missing_title">Chamadas repetidas não vão tocar</string>
+    <string name="home_permissions_missing_body">Sem as permissões de telefone e registro de chamadas, o Urgent não consegue ver quem está ligando nem se já ligou antes.</string>
+    <string name="home_permissions_missing_action">Abrir permissões do app</string>
+    <string name="home_battery_title">Chamadas repetidas podem ficar em silêncio</string>
+    <string name="home_battery_body">O Android pode impedir o Urgent de tocar enquanto ele está em segundo plano. Defina o uso da bateria do Urgent como “Sem restrições”.</string>
+    <string name="home_battery_action">Abrir configurações de bateria</string>
+    <string name="home_xiaomi">Xiaomi</string>
+    <string name="home_autostart">Permitir inicialização automática</string>
+    <string name="home_autostart_hint">Em celulares Xiaomi, o Urgent só fica sabendo de uma chamada se a inicialização automática estiver ativada. Abre a lista de inicialização automática da Xiaomi; o celular não informa ao Urgent o que você escolheu.</string>
+    <string name="home_callers">Quem liga</string>
+    <string name="home_callers_anyone">Chamadas repetidas de qualquer pessoa tocam. Escolha quem liga para tocar só para essas pessoas.</string>
+    <string name="home_callers_chosen">Só tocam chamadas repetidas de quem está na lista abaixo.</string>
+    <string name="home_callers_contacts_only">Só tocam chamadas repetidas dos seus contatos.</string>
+    <string name="home_callers_contacts_and_chosen">Tocam chamadas repetidas dos seus contatos e de quem está na lista abaixo.</string>
+    <string name="home_callers_starred_only">Só tocam chamadas repetidas dos seus contatos marcados com estrela.</string>
+    <string name="home_callers_starred_and_chosen">Tocam chamadas repetidas dos seus contatos marcados com estrela e de quem está na lista abaixo.</string>
+    <string name="home_use_chosen">Incluir quem está na lista abaixo</string>
+    <string name="home_use_chosen_hint">Desativado, a lista fica guardada, mas é ignorada até você ativar isto de novo.</string>
+    <string name="home_contacts_scope">Dos seus contatos</string>
+    <string name="home_contacts_scope_hint">Chamadas repetidas de contatos salvos tocam, ou só dos marcados com estrela. O Urgent lê seus contatos no celular para verificar cada chamada repetida.</string>
+    <string name="home_scope_off">Desativado</string>
+    <string name="home_scope_everyone">Todos os seus contatos</string>
+    <string name="home_scope_starred">Contatos marcados com estrela</string>
+    <string name="home_contacts_missing_title">Os contatos não são verificados</string>
+    <string name="home_contacts_missing_body">Sem acesso aos seus contatos, o Urgent não consegue saber quem está neles, então a configuração não faz nada até você permitir.</string>
+    <string name="home_keep_alive">Executar em segundo plano</string>
+    <string name="home_keep_alive_hint">Mantém o Urgent em execução com uma notificação silenciosa, para o Android não encerrá-lo entre as chamadas. Em celulares Xiaomi, bloqueie também o Urgent em Recentes.</string>
+    <string name="home_contacts_ring_denied">O Urgent precisa de acesso aos seus contatos para tocar nas chamadas deles. Você pode permitir em Configurações.</string>
+    <string name="home_callers_from_contacts">Adicionar dos contatos</string>
+    <string name="home_callers_search">Pesquisar contatos</string>
+    <string name="home_callers_type">Número de telefone</string>
+    <string name="home_callers_add">Adicionar</string>
+    <string name="home_callers_remove">Remover</string>
+    <string name="home_callers_contacts_denied">O Urgent precisa de acesso aos seus contatos para escolher quem liga. Você pode permitir em Configurações.</string>
+    <string name="home_ring_at_once">Tocar na hora</string>
+    <string name="home_ring_at_once_hint">As chamadas de quem está aqui tocam já na primeira vez, sem precisar de repetição, mesmo quando as regras acima deixam essas pessoas de fora.</string>
+
+    <!-- Ringing -->
+    <string name="channel_ringing_name">Tocando</string>
+    <string name="channel_ringing_description">Aparece enquanto o Urgent toca por uma chamada repetida ou por uma chamada de quem está em “Tocar na hora”, com um botão para parar.</string>
+    <string name="channel_keep_alive_name">Em execução em segundo plano</string>
+    <string name="channel_keep_alive_description">Aparece enquanto o Urgent está em execução em segundo plano, esperando chamadas repetidas.</string>
+    <string name="keep_alive_title">O Urgent está em execução</string>
+    <string name="keep_alive_body">Esperando chamadas repetidas. Toque para abrir.</string>
+    <string name="ringing_title">Chamada repetida</string>
+    <string name="ringing_body">Tocando porque o mesmo número ligou de novo.</string>
+    <string name="ringing_at_once_title">Tocar na hora</string>
+    <string name="ringing_at_once_body">Tocando porque quem liga está na sua lista “Tocar na hora”.</string>
+    <string name="ringing_silence">Silenciar</string>
+
+    <!-- shared:support begin. Synced into every app by android-starter's scripts/sync-support.py:
+         change it there, never in an app. -->
+    <string name="settings_about">Sobre</string>
+    <string name="settings_support">Ajuda e feedback</string>
+    <string name="settings_licences">Licenças de código aberto</string>
+    <string name="settings_language_report">Alguma coisa soa errada?</string>
+    <string name="settings_language_report_hint">Me conta se alguma palavra não está certa no seu idioma. Abre o seu app de e-mail com o idioma em que você está lendo já preenchido.</string>
+    <string name="support_title">Ajuda e feedback</string>
+    <string name="support_report">Relatar um problema</string>
+    <string name="support_report_hint">Abre o seu app de e-mail com a versão do app, a versão do Android, o modelo do celular e o idioma já preenchidos, e nada do que você registra no app. Nada é enviado até você tocar em enviar.</string>
+    <string name="support_feature">Sugerir um recurso</string>
+    <string name="support_feature_hint">Conte o que você gostaria que o app fizesse e para que você usaria.</string>
+    <string name="support_body_bug">O que aconteceu e o que você esperava que acontecesse:</string>
+    <string name="support_body_feature">O que você gostaria que o app fizesse?</string>
+    <string name="support_body_language">Qual palavra soa errada, e em qual tela?</string>
+    <string name="support_no_mail_app">Nenhum app de e-mail neste celular para abrir. Você pode copiar o endereço acima.</string>
+    <string name="support_no_mail_app_write_to">Nenhum app de e-mail neste celular para abrir. Você pode escrever para %1$s.</string>
+    <string name="support_address_hint">Escreva diretamente. Toque para copiar o endereço.</string>
+    <string name="support_rate">Avaliar este app no Google Play</string>
+    <string name="support_rate_hint">Abre este app no Google Play. Avaliar é opcional e não desbloqueia nada.</string>
+    <string name="support_no_play">Nem Google Play nem navegador neste celular para abrir.</string>
+    <string name="licence_text_missing">O texto desta licença não vem junto com o app.</string>
+    <string name="licences_intro">Este app é construído sobre as bibliotecas abaixo. A lista vem do próprio build, então ela nomeia tudo o que esta cópia do app realmente contém.</string>
+    <string name="licences_read">Ler a licença</string>
+    <string name="licences_open_terms">Abrir os termos</string>
+    <string name="licences_unavailable">Não foi possível ler a lista de licenças deste build.</string>
+    <string name="support_no_browser">Nenhum navegador neste celular para abrir.</string>
+    <string name="support_site">Página do app na web</string>
+    <string name="support_privacy">Política de privacidade</string>
+    <string name="support_privacy_hint">Abre no navegador.</string>
+    <string name="support_credits">Créditos</string>
+    <string name="support_credits_hint">Quem fez o app e licenças de código aberto</string>
+    <string name="credits_made_by">Quem fez o app</string>
+    <string name="credits_creator">Ideia e desenvolvimento</string>
+    <string name="credits_helped_by">Com a ajuda de</string>
+    <string name="support_more_apps">Mais apps MaksForge</string>
+    <string name="support_more_apps_hint">Outros apps gratuitos do mesmo desenvolvedor.</string>
+    <string name="support_version">Versão %1$s</string>
+    <string name="support_version_hint">Toque para copiar.</string>
+    <string name="support_copied">Copiado.</string>
+    <!-- shared:support end -->
+</resources>

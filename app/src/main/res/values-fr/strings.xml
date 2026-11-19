@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    French. Translated from **English only** — never from another translation, which compounds every
+    interpretation the first translator made.
+
+    Note the three plural categories: CLDR gives French `one`, `many` and `other`. `one` covers 0 and
+    1; `many` is the large-number form (1 000 000 and up) and is unreachable for the hours and
+    minutes here, but `TranslationTest` requires it.
+
+    Android's own French words are kept as Android shows them: mode silencieux, vibreur, Ne pas
+    déranger, volume des alarmes, Paramètres, Journaux d’appels, Sans restriction, contacts favoris.
+    "Caller" is never used in the singular, which French would have to give a gender.
+-->
+<resources>
+    <string name="tab_home">Accueil</string>
+    <string name="tab_settings">Paramètres</string>
+
+    <string name="action_back">Retour</string>
+
+    <string name="settings_appearance">Apparence</string>
+    <string name="settings_theme_system">Système</string>
+    <string name="settings_theme_light">Clair</string>
+    <string name="settings_theme_dark">Sombre</string>
+    <string name="settings_material_you">Utiliser les couleurs de mon fond d’écran</string>
+    <string name="settings_material_you_hint">Android 12 et versions ultérieures. Désactivé par défaut, pour que l’application garde sa propre palette.</string>
+    <string name="settings_language">Langue</string>
+    <string name="settings_language_system">Système</string>
+
+    <!-- Home -->
+    <string name="home_intro">Quelqu’un qui appelle deux fois en quelques minutes a probablement besoin de toi. Urgent sonne pour ce deuxième appel, même quand ton téléphone est en mode silencieux ou vibreur.</string>
+    <string name="home_ring_through">Sonner pour les appels répétés</string>
+    <string name="home_ring_through_hint">Le deuxième appel du même numéro sonne au volume des alarmes et vibre. Les paramètres de ton téléphone restent inchangés.</string>
+    <string name="home_ring_through_paused_hint">En pause. Rien ne sonne jusqu’à ce que tu reprennes ou que la pause se termine, pas même les appelants de la liste « Sonnerie immédiate ».</string>
+    <string name="home_pause_for">Mettre en pause pendant</string>
+    <plurals name="home_pause_hours">
+        <item quantity="one">%d heure</item>
+        <item quantity="many">%d heures</item>
+        <item quantity="other">%d heures</item>
+    </plurals>
+    <string name="home_paused_until">En pause jusqu’à %s</string>
+    <string name="home_pause_resume">Reprendre</string>
+    <string name="home_window">Deuxième appel en moins de</string>
+    <plurals name="home_window_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="many">%d minutes</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <string name="home_count_declined">Compter les appels refusés</string>
+    <string name="home_count_declined_hint">Un appel que tu as refusé compte comme premier appel. Si tu désactives cette option, refuser un appel laisse silencieux le prochain appel de la même personne.</string>
+    <string name="home_permissions_missing_title">Les appels répétés ne sonneront pas</string>
+    <string name="home_permissions_missing_body">Sans les autorisations Téléphone et Journaux d’appels, Urgent ne peut pas voir qui appelle, ni si cette personne a déjà appelé.</string>
+    <string name="home_permissions_missing_action">Ouvrir les autorisations de l’application</string>
+    <string name="home_battery_title">Les appels répétés peuvent rester silencieux</string>
+    <string name="home_battery_body">Android peut empêcher Urgent de sonner quand il est en arrière-plan. Règle l’utilisation de la batterie d’Urgent sur « Sans restriction ».</string>
+    <string name="home_battery_action">Ouvrir les paramètres de la batterie</string>
+    <string name="home_xiaomi">Xiaomi</string>
+    <string name="home_autostart">Autoriser le démarrage automatique</string>
+    <string name="home_autostart_hint">Sur les téléphones Xiaomi, Urgent n’apprend l’arrivée d’un appel que si le démarrage automatique est activé. Ouvre la liste Démarrage automatique de Xiaomi ; le téléphone ne dit pas à Urgent ce que tu as choisi.</string>
+    <string name="home_callers">Appelants</string>
+    <string name="home_callers_anyone">Les appels répétés de n’importe qui sonnent. Choisis des appelants pour que seuls leurs appels sonnent.</string>
+    <string name="home_callers_chosen">Seuls les appels répétés des appelants ci-dessous sonnent.</string>
+    <string name="home_callers_contacts_only">Seuls les appels répétés de tes contacts sonnent.</string>
+    <string name="home_callers_contacts_and_chosen">Les appels répétés de tes contacts et des appelants ci-dessous sonnent.</string>
+    <string name="home_callers_starred_only">Seuls les appels répétés de tes contacts favoris sonnent.</string>
+    <string name="home_callers_starred_and_chosen">Les appels répétés de tes contacts favoris et des appelants ci-dessous sonnent.</string>
+    <string name="home_use_chosen">Inclure les appelants ci-dessous</string>
+    <string name="home_use_chosen_hint">Désactivée, cette option garde la liste, mais l’ignore jusqu’à ce que tu la réactives.</string>
+    <string name="home_contacts_scope">De tes contacts</string>
+    <string name="home_contacts_scope_hint">Les appels répétés des contacts enregistrés sonnent, ou seulement ceux des contacts favoris. Urgent lit tes contacts sur le téléphone pour vérifier chaque appel répété.</string>
+    <string name="home_scope_off">Désactivé</string>
+    <string name="home_scope_everyone">Tous tes contacts</string>
+    <string name="home_scope_starred">Contacts favoris</string>
+    <string name="home_contacts_missing_title">Les contacts ne sont pas vérifiés</string>
+    <string name="home_contacts_missing_body">Sans accès à tes contacts, Urgent ne peut pas savoir qui en fait partie : ce paramètre n’a donc aucun effet tant que tu n’autorises pas cet accès.</string>
+    <string name="home_keep_alive">Fonctionner en arrière-plan</string>
+    <string name="home_keep_alive_hint">Garde Urgent actif avec une notification silencieuse, pour qu’Android ne l’arrête pas entre deux appels. Sur Xiaomi, verrouille aussi Urgent dans les applications récentes.</string>
+    <string name="home_contacts_ring_denied">Urgent a besoin d’accéder à tes contacts pour faire sonner leurs appels. Tu peux l’autoriser dans les Paramètres.</string>
+    <string name="home_callers_from_contacts">Ajouter depuis les contacts</string>
+    <string name="home_callers_search">Rechercher des contacts</string>
+    <string name="home_callers_type">Numéro de téléphone</string>
+    <string name="home_callers_add">Ajouter</string>
+    <string name="home_callers_remove">Retirer</string>
+    <string name="home_callers_contacts_denied">Urgent a besoin d’accéder à tes contacts pour y choisir des appelants. Tu peux l’autoriser dans les Paramètres.</string>
+    <string name="home_ring_at_once">Sonnerie immédiate</string>
+    <string name="home_ring_at_once_hint">Ces appelants sonnent dès leur premier appel, sans répétition nécessaire, même quand les règles ci-dessus les excluent.</string>
+
+    <!-- Ringing -->
+    <string name="channel_ringing_name">Sonnerie</string>
+    <string name="channel_ringing_description">Affichée pendant qu’Urgent sonne pour un appel répété ou pour un appel de la liste « Sonnerie immédiate », avec un bouton pour l’arrêter.</string>
+    <string name="channel_keep_alive_name">Fonctionnement en arrière-plan</string>
+    <string name="channel_keep_alive_description">Affichée pendant qu’Urgent fonctionne en arrière-plan, prêt pour les appels répétés.</string>
+    <string name="keep_alive_title">Urgent fonctionne</string>
+    <string name="keep_alive_body">En attente d’appels répétés. Touche pour ouvrir.</string>
+    <string name="ringing_title">Appel répété</string>
+    <string name="ringing_body">Ça sonne parce que le même numéro a rappelé.</string>
+    <string name="ringing_at_once_title">Sonnerie immédiate</string>
+    <string name="ringing_at_once_body">Ça sonne parce que ce numéro est dans ta liste « Sonnerie immédiate ».</string>
+    <string name="ringing_silence">Couper le son</string>
+
+    <!-- shared:support begin. Synced into every app by android-starter's scripts/sync-support.py:
+         change it there, never in an app. -->
+    <string name="settings_about">À propos</string>
+    <string name="settings_support">Aide et avis</string>
+    <string name="settings_licences">Licences open source</string>
+    <string name="settings_language_report">Quelque chose sonne faux ?</string>
+    <string name="settings_language_report_hint">Dis-moi si un mot ne va pas dans ta langue. Ouvre ton application de messagerie avec la langue dans laquelle tu lis déjà indiquée.</string>
+    <string name="support_title">Aide et avis</string>
+    <string name="support_report">Signaler un problème</string>
+    <string name="support_report_hint">Ouvre ton application de messagerie avec la version de l’application, la version d’Android, le modèle du téléphone et la langue déjà indiqués, et rien de ce que tu enregistres dans l’application. Rien n’est envoyé tant que tu ne touches pas « envoyer ».</string>
+    <string name="support_feature">Proposer une fonction</string>
+    <string name="support_feature_hint">Dis ce que tu aimerais que l’application fasse, et à quoi ça te servirait.</string>
+    <string name="support_body_bug">Ce qui s’est passé, et ce qui aurait dû se passer à la place :</string>
+    <string name="support_body_feature">Qu’aimerais-tu que l’application fasse ?</string>
+    <string name="support_body_language">Quel mot sonne faux, et sur quel écran ?</string>
+    <string name="support_no_mail_app">Aucune application de messagerie à ouvrir sur ce téléphone. Tu peux copier l’adresse ci-dessus.</string>
+    <string name="support_no_mail_app_write_to">Aucune application de messagerie à ouvrir sur ce téléphone. Tu peux écrire à %1$s.</string>
+    <string name="support_address_hint">Écris directement. Touche pour copier l’adresse.</string>
+    <string name="support_rate">Noter cette application sur Google Play</string>
+    <string name="support_rate_hint">Ouvre cette application sur Google Play. La note est facultative et ne débloque rien.</string>
+    <string name="support_no_play">Ni Google Play ni navigateur à ouvrir sur ce téléphone.</string>
+    <string name="licence_text_missing">Le texte de cette licence n’est pas fourni avec l’application.</string>
+    <string name="licences_intro">Cette application est construite sur les bibliothèques ci-dessous. La liste vient du build lui-même : elle nomme donc tout ce que cette copie de l’application contient vraiment.</string>
+    <string name="licences_read">Lire la licence</string>
+    <string name="licences_open_terms">Ouvrir les conditions</string>
+    <string name="licences_unavailable">La liste des licences n’a pas pu être lue depuis ce build.</string>
+    <string name="support_no_browser">Aucun navigateur à ouvrir sur ce téléphone.</string>
+    <string name="support_site">Page web de l’application</string>
+    <string name="support_privacy">Politique de confidentialité</string>
+    <string name="support_privacy_hint">S’ouvre dans le navigateur.</string>
+    <string name="support_credits">Crédits</string>
+    <string name="support_credits_hint">Qui a fait l’application, et licences open source</string>
+    <string name="credits_made_by">Qui a fait l’application</string>
+    <string name="credits_creator">Idée et réalisation</string>
+    <string name="credits_helped_by">Avec l’aide de</string>
+    <string name="support_more_apps">Plus d’applications MaksForge</string>
+    <string name="support_more_apps_hint">D’autres applications gratuites du même développeur.</string>
+    <string name="support_version">Version %1$s</string>
+    <string name="support_version_hint">Touche pour copier.</string>
+    <string name="support_copied">Copié.</string>
+    <!-- shared:support end -->
+</resources>

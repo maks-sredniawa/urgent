@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    German. Translated from **English only** — never from another translation, which compounds every
+    interpretation the first translator made.
+
+    Informal "du" throughout. German uses the plural categories `one` and `other`, as English does;
+    CLDR decides that, and `TranslationTest` enforces it.
+
+    "Caller" is "Anrufende" (plural participle), never "Anrufer": the app knows nobody's gender.
+    Where a singular is needed, the sentence names the number or the call instead of the person.
+-->
+<resources>
+    <string name="tab_home">Start</string>
+    <string name="tab_settings">Einstellungen</string>
+
+    <string name="action_back">Zurück</string>
+
+    <string name="settings_appearance">Darstellung</string>
+    <string name="settings_theme_system">System</string>
+    <string name="settings_theme_light">Hell</string>
+    <string name="settings_theme_dark">Dunkel</string>
+    <string name="settings_material_you">Farben meines Hintergrundbilds verwenden</string>
+    <string name="settings_material_you_hint">Ab Android 12. Standardmäßig aus, damit die App ihre eigene Farbpalette behält.</string>
+    <string name="settings_language">Sprache</string>
+    <string name="settings_language_system">System</string>
+
+    <!-- Home -->
+    <string name="home_intro">Wer innerhalb weniger Minuten zweimal anruft, braucht dich wahrscheinlich. Urgent klingelt bei diesem zweiten Anruf, auch wenn dein Handy auf lautlos oder Vibration gestellt ist.</string>
+    <string name="home_ring_through">Bei wiederholten Anrufen klingeln</string>
+    <string name="home_ring_through_hint">Der zweite Anruf von derselben Nummer klingelt in deiner Weckerlautstärke und vibriert. Die Einstellungen deines Handys bleiben, wie sie sind.</string>
+    <string name="home_ring_through_paused_hint">Pausiert. Nichts klingelt, bis du fortsetzt oder die Pause endet, auch nicht bei Anrufenden aus „Sofort klingeln“.</string>
+    <string name="home_pause_for">Pausieren für</string>
+    <plurals name="home_pause_hours">
+        <item quantity="one">%d Stunde</item>
+        <item quantity="other">%d Stunden</item>
+    </plurals>
+    <string name="home_paused_until">Pausiert bis %s</string>
+    <string name="home_pause_resume">Fortsetzen</string>
+    <string name="home_window">Zweiter Anruf innerhalb von</string>
+    <plurals name="home_window_minutes">
+        <item quantity="one">%d Minute</item>
+        <item quantity="other">%d Minuten</item>
+    </plurals>
+    <string name="home_count_declined">Abgelehnte Anrufe mitzählen</string>
+    <string name="home_count_declined_hint">Ein abgelehnter Anruf zählt als erster Anruf. Ist das aus, bleibt nach einer Ablehnung der nächste Anruf derselben Nummer still.</string>
+    <string name="home_permissions_missing_title">Wiederholte Anrufe klingeln nicht</string>
+    <string name="home_permissions_missing_body">Ohne die Berechtigungen für Telefon und Anrufliste kann Urgent nicht sehen, wer anruft oder ob die Nummer schon vorher angerufen hat.</string>
+    <string name="home_permissions_missing_action">App-Berechtigungen öffnen</string>
+    <string name="home_battery_title">Wiederholte Anrufe bleiben möglicherweise still</string>
+    <string name="home_battery_body">Android kann Urgent am Klingeln hindern, während es im Hintergrund läuft. Stell die Akkunutzung von Urgent auf „Uneingeschränkt“.</string>
+    <string name="home_battery_action">Akku-Einstellungen öffnen</string>
+    <string name="home_xiaomi">Xiaomi</string>
+    <string name="home_autostart">Autostart erlauben</string>
+    <string name="home_autostart_hint">Auf Xiaomi-Handys erfährt Urgent nur von einem Anruf, wenn Autostart an ist. Öffnet die Autostart-Liste von Xiaomi; das Handy teilt Urgent nicht mit, was du gewählt hast.</string>
+    <string name="home_callers">Anrufende</string>
+    <string name="home_callers_anyone">Wiederholte Anrufe klingeln, egal von wem. Wähle Anrufende aus, damit es nur bei ihnen klingelt.</string>
+    <string name="home_callers_chosen">Nur wiederholte Anrufe von den Anrufenden unten klingeln.</string>
+    <string name="home_callers_contacts_only">Nur wiederholte Anrufe von deinen Kontakten klingeln.</string>
+    <string name="home_callers_contacts_and_chosen">Wiederholte Anrufe von deinen Kontakten und von den Anrufenden unten klingeln.</string>
+    <string name="home_callers_starred_only">Nur wiederholte Anrufe von deinen markierten Kontakten klingeln.</string>
+    <string name="home_callers_starred_and_chosen">Wiederholte Anrufe von deinen markierten Kontakten und von den Anrufenden unten klingeln.</string>
+    <string name="home_use_chosen">Anrufende unten einbeziehen</string>
+    <string name="home_use_chosen_hint">Aus behält die Liste, ignoriert sie aber, bis du das wieder einschaltest.</string>
+    <string name="home_contacts_scope">Aus deinen Kontakten</string>
+    <string name="home_contacts_scope_hint">Wiederholte Anrufe von gespeicherten Kontakten klingeln, oder nur die von markierten. Urgent liest deine Kontakte auf dem Handy, um jeden wiederholten Anruf zu prüfen.</string>
+    <string name="home_scope_off">Aus</string>
+    <string name="home_scope_everyone">Alle in deinen Kontakten</string>
+    <string name="home_scope_starred">Markierte Kontakte</string>
+    <string name="home_contacts_missing_title">Kontakte werden nicht geprüft</string>
+    <string name="home_contacts_missing_body">Ohne Zugriff auf deine Kontakte kann Urgent nicht erkennen, wer darin steht, deshalb bewirkt die Einstellung nichts, bis du den Zugriff erlaubst.</string>
+    <string name="home_keep_alive">Im Hintergrund ausführen</string>
+    <string name="home_keep_alive_hint">Hält Urgent mit einer stillen Benachrichtigung am Laufen, damit Android es zwischen Anrufen nicht beendet. Sperre Urgent auf Xiaomi außerdem in „Kürzliche Apps“.</string>
+    <string name="home_contacts_ring_denied">Urgent braucht Zugriff auf deine Kontakte, um für sie zu klingeln. Du kannst ihn in den Einstellungen erlauben.</string>
+    <string name="home_callers_from_contacts">Aus Kontakten hinzufügen</string>
+    <string name="home_callers_search">Kontakte durchsuchen</string>
+    <string name="home_callers_type">Telefonnummer</string>
+    <string name="home_callers_add">Hinzufügen</string>
+    <string name="home_callers_remove">Entfernen</string>
+    <string name="home_callers_contacts_denied">Urgent braucht Zugriff auf deine Kontakte, um Anrufende daraus auszuwählen. Du kannst ihn in den Einstellungen erlauben.</string>
+    <string name="home_ring_at_once">Sofort klingeln</string>
+    <string name="home_ring_at_once_hint">Bei diesen Anrufenden klingelt schon der erste Anruf, ohne Wiederholung, auch wenn die Regeln oben sie ausschließen.</string>
+
+    <!-- Ringing -->
+    <string name="channel_ringing_name">Klingeln</string>
+    <string name="channel_ringing_description">Wird angezeigt, während Urgent für einen wiederholten Anruf oder einen Anruf aus „Sofort klingeln“ klingelt, mit einer Schaltfläche, die es beendet.</string>
+    <string name="channel_keep_alive_name">Im Hintergrund aktiv</string>
+    <string name="channel_keep_alive_description">Wird angezeigt, während Urgent im Hintergrund läuft und für wiederholte Anrufe bereit ist.</string>
+    <string name="keep_alive_title">Urgent läuft</string>
+    <string name="keep_alive_body">Wartet auf wiederholte Anrufe. Zum Öffnen tippen.</string>
+    <string name="ringing_title">Wiederholter Anruf</string>
+    <string name="ringing_body">Klingelt, weil dieselbe Nummer noch einmal angerufen hat.</string>
+    <string name="ringing_at_once_title">Sofort klingeln</string>
+    <string name="ringing_at_once_body">Klingelt, weil diese Nummer auf deiner Liste „Sofort klingeln“ steht.</string>
+    <string name="ringing_silence">Stummschalten</string>
+
+    <!-- shared:support begin. Synced into every app by android-starter's scripts/sync-support.py:
+         change it there, never in an app. -->
+    <string name="settings_about">Über die App</string>
+    <string name="settings_support">Hilfe und Feedback</string>
+    <string name="settings_licences">Open-Source-Lizenzen</string>
+    <string name="settings_language_report">Klingt etwas falsch?</string>
+    <string name="settings_language_report_hint">Schreib mir, wenn ein Wort in deiner Sprache nicht stimmt. Öffnet deine Mail-App, in der die Sprache, in der du liest, schon eingetragen ist.</string>
+    <string name="support_title">Hilfe und Feedback</string>
+    <string name="support_report">Problem melden</string>
+    <string name="support_report_hint">Öffnet deine Mail-App mit App-Version, Android-Version, Handymodell und Sprache schon eingetragen, aber nichts von dem, was du in der App festhältst. Nichts wird gesendet, bevor du auf Senden tippst.</string>
+    <string name="support_feature">Funktion vorschlagen</string>
+    <string name="support_feature_hint">Schreib, was die App können soll und wofür du es nutzen würdest.</string>
+    <string name="support_body_bug">Was ist passiert, und was hättest du stattdessen erwartet:</string>
+    <string name="support_body_feature">Was soll die App können?</string>
+    <string name="support_body_language">Welches Wort klingt falsch, und auf welchem Bildschirm?</string>
+    <string name="support_no_mail_app">Keine Mail-App auf diesem Handy, die sich öffnen lässt. Du kannst die Adresse oben kopieren.</string>
+    <string name="support_no_mail_app_write_to">Keine Mail-App auf diesem Handy, die sich öffnen lässt. Du kannst an %1$s schreiben.</string>
+    <string name="support_address_hint">Schreib direkt. Tippen kopiert die Adresse.</string>
+    <string name="support_rate">Diese App auf Google Play bewerten</string>
+    <string name="support_rate_hint">Öffnet die App auf Google Play. Bewerten ist freiwillig und schaltet nichts frei.</string>
+    <string name="support_no_play">Weder Google Play noch ein Browser auf diesem Handy, der sich öffnen lässt.</string>
+    <string name="licence_text_missing">Der Text dieser Lizenz liegt der App nicht bei.</string>
+    <string name="licences_intro">Diese App baut auf den Bibliotheken unten auf. Die Liste kommt aus dem Build selbst und nennt daher alles, was diese Kopie der App wirklich enthält.</string>
+    <string name="licences_read">Lizenz lesen</string>
+    <string name="licences_open_terms">Bedingungen öffnen</string>
+    <string name="licences_unavailable">Die Lizenzliste ließ sich aus diesem Build nicht lesen.</string>
+    <string name="support_no_browser">Kein Browser auf diesem Handy, der sich öffnen lässt.</string>
+    <string name="support_site">Webseite der App</string>
+    <string name="support_privacy">Datenschutzerklärung</string>
+    <string name="support_privacy_hint">Öffnet sich im Browser.</string>
+    <string name="support_credits">Mitwirkende</string>
+    <string name="support_credits_hint">Wer die App gemacht hat, und Open-Source-Lizenzen</string>
+    <string name="credits_made_by">Gemacht von</string>
+    <string name="credits_creator">Idee und Umsetzung</string>
+    <string name="credits_helped_by">Mit Hilfe von</string>
+    <string name="support_more_apps">Weitere MaksForge-Apps</string>
+    <string name="support_more_apps_hint">Weitere kostenlose Apps vom selben Entwickler.</string>
+    <string name="support_version">Version %1$s</string>
+    <string name="support_version_hint">Tippen zum Kopieren.</string>
+    <string name="support_copied">Kopiert.</string>
+    <!-- shared:support end -->
+</resources>

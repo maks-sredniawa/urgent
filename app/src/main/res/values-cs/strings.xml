@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Czech. Translated from **English only** — never from another translation, which compounds every
+    interpretation the first translator made.
+
+    Note the four plural categories: Czech uses `one`, `few`, `many` and `other` where English uses
+    two. `many` is CLDR's form for fractions (1,5 hodiny), unreachable for these integer counts but
+    required all the same. Which categories a language needs is CLDR's decision, and
+    `TranslationTest` enforces it.
+
+    Past-tense verbs in Czech carry the subject's gender, so no string puts the user or a caller in
+    the past tense; see the translator brief, §6.2.
+-->
+<resources>
+    <string name="tab_home">Domů</string>
+    <string name="tab_settings">Nastavení</string>
+
+    <string name="action_back">Zpět</string>
+
+    <string name="settings_appearance">Vzhled</string>
+    <string name="settings_theme_system">Podle systému</string>
+    <string name="settings_theme_light">Světlý</string>
+    <string name="settings_theme_dark">Tmavý</string>
+    <string name="settings_material_you">Použít barvy tapety</string>
+    <string name="settings_material_you_hint">Android 12 a novější. Ve výchozím stavu vypnuto, aby si aplikace ponechala vlastní paletu.</string>
+    <string name="settings_language">Jazyk</string>
+    <string name="settings_language_system">Podle systému</string>
+
+    <!-- Home -->
+    <string name="home_intro">Kdo volá dvakrát během pár minut, nejspíš tě potřebuje. Urgent při tom druhém hovoru zazvoní, i když je telefon v tichém režimu nebo na vibrace.</string>
+    <string name="home_ring_through">Zvonit při opakovaných hovorech</string>
+    <string name="home_ring_through_hint">Druhý hovor ze stejného čísla zazvoní hlasitostí budíků a zavibruje. Vlastní nastavení telefonu zůstane beze změny.</string>
+    <string name="home_ring_through_paused_hint">Pozastaveno. Nic nezazvoní, dokud zvonění neobnovíš nebo pozastavení neskončí, ani pro volající ze seznamu „Zvonit hned“.</string>
+    <string name="home_pause_for">Pozastavit na</string>
+    <!-- Accusative, after home_pause_for: "Pozastavit na 1 hodinu / 2 hodiny / 5 hodin". -->
+    <plurals name="home_pause_hours">
+        <item quantity="one">%d hodinu</item>
+        <item quantity="few">%d hodiny</item>
+        <item quantity="many">%d hodiny</item>
+        <item quantity="other">%d hodin</item>
+    </plurals>
+    <string name="home_paused_until">Pozastaveno do %s</string>
+    <string name="home_pause_resume">Obnovit</string>
+    <string name="home_window">Druhý hovor během</string>
+    <!-- Genitive, after home_window: "během 1 minuty / 2 minut / 5 minut". -->
+    <plurals name="home_window_minutes">
+        <item quantity="one">%d minuty</item>
+        <item quantity="few">%d minut</item>
+        <item quantity="many">%d minuty</item>
+        <item quantity="other">%d minut</item>
+    </plurals>
+    <string name="home_count_declined">Počítat odmítnuté hovory</string>
+    <string name="home_count_declined_hint">Odmítnutý hovor se počítá jako první. Když tohle vypneš, po odmítnutí zůstane další hovor ze stejného čísla tichý.</string>
+    <string name="home_permissions_missing_title">Opakované hovory nebudou zvonit</string>
+    <string name="home_permissions_missing_body">Bez oprávnění Telefon a Seznamy hovorů Urgent nevidí, kdo volá, ani jestli to číslo už volalo dřív.</string>
+    <string name="home_permissions_missing_action">Otevřít oprávnění aplikace</string>
+    <string name="home_battery_title">Opakované hovory mohou zůstat tiché</string>
+    <string name="home_battery_body">Android může aplikaci Urgent bránit ve zvonění, když běží na pozadí. Nastav u aplikace Urgent využití baterie na „Neomezeno“.</string>
+    <string name="home_battery_action">Otevřít nastavení baterie</string>
+    <string name="home_xiaomi">Xiaomi</string>
+    <string name="home_autostart">Povolit automatické spouštění</string>
+    <string name="home_autostart_hint">Na telefonech Xiaomi se Urgent o hovoru dozví, jen když je zapnuté automatické spouštění. Otevře seznam automatického spouštění Xiaomi; telefon aplikaci Urgent nesdělí, co zvolíš.</string>
+    <string name="home_callers">Volající</string>
+    <string name="home_callers_anyone">Zvoní opakované hovory od kohokoli. Když vybereš volající, zvoní jen jejich.</string>
+    <string name="home_callers_chosen">Zvoní jen opakované hovory od volajících níže.</string>
+    <string name="home_callers_contacts_only">Zvoní jen opakované hovory od tvých kontaktů.</string>
+    <string name="home_callers_contacts_and_chosen">Zvoní opakované hovory od tvých kontaktů a od volajících níže.</string>
+    <string name="home_callers_starred_only">Zvoní jen opakované hovory od tvých kontaktů označených hvězdičkou.</string>
+    <string name="home_callers_starred_and_chosen">Zvoní opakované hovory od tvých kontaktů označených hvězdičkou a od volajících níže.</string>
+    <string name="home_use_chosen">Zahrnout volající níže</string>
+    <string name="home_use_chosen_hint">Vypnutím se seznam zachová, ale bude se ignorovat, dokud tohle znovu nezapneš.</string>
+    <string name="home_contacts_scope">Z tvých kontaktů</string>
+    <string name="home_contacts_scope_hint">Zvoní opakované hovory od uložených kontaktů, nebo jen od těch označených hvězdičkou. Urgent čte tvoje kontakty v telefonu kvůli ověření každého opakovaného hovoru.</string>
+    <string name="home_scope_off">Vypnuto</string>
+    <string name="home_scope_everyone">Všichni z tvých kontaktů</string>
+    <string name="home_scope_starred">Kontakty označené hvězdičkou</string>
+    <string name="home_contacts_missing_title">Kontakty se neověřují</string>
+    <string name="home_contacts_missing_body">Bez přístupu ke kontaktům Urgent nepozná, kdo v nich je, takže tohle nastavení nic nedělá, dokud přístup nepovolíš.</string>
+    <string name="home_keep_alive">Běžet na pozadí</string>
+    <string name="home_keep_alive_hint">Nechá Urgent běžet s tichým oznámením, aby ho Android mezi hovory nezastavil. Na Xiaomi ještě Urgent uzamkni v posledních aplikacích.</string>
+    <string name="home_contacts_ring_denied">Ke zvonění pro kontakty potřebuje Urgent přístup k nim. Povolit ho můžeš v Nastavení.</string>
+    <string name="home_callers_from_contacts">Přidat z kontaktů</string>
+    <string name="home_callers_search">Hledat v kontaktech</string>
+    <string name="home_callers_type">Telefonní číslo</string>
+    <string name="home_callers_add">Přidat</string>
+    <string name="home_callers_remove">Odstranit</string>
+    <string name="home_callers_contacts_denied">K výběru volajícího potřebuje Urgent přístup ke kontaktům. Povolit ho můžeš v Nastavení.</string>
+    <string name="home_ring_at_once">Zvonit hned</string>
+    <string name="home_ring_at_once_hint">Hovory od těchto volajících zvoní už napoprvé, bez opakování, i když je pravidla výše vynechávají.</string>
+
+    <!-- Ringing -->
+    <string name="channel_ringing_name">Zvonění</string>
+    <string name="channel_ringing_description">Zobrazuje se, když Urgent zvoní kvůli opakovanému hovoru nebo volajícímu ze seznamu „Zvonit hned“, s tlačítkem, které zvonění zastaví.</string>
+    <string name="channel_keep_alive_name">Běh na pozadí</string>
+    <string name="channel_keep_alive_description">Zobrazuje se, když Urgent běží na pozadí a čeká na opakované hovory.</string>
+    <string name="keep_alive_title">Urgent běží</string>
+    <string name="keep_alive_body">Čeká na opakované hovory. Klepnutím otevřeš.</string>
+    <string name="ringing_title">Opakovaný hovor</string>
+    <string name="ringing_body">Zvoní, protože stejné číslo zavolalo znovu.</string>
+    <string name="ringing_at_once_title">Zvonit hned</string>
+    <string name="ringing_at_once_body">Zvoní, protože volající je na tvém seznamu „Zvonit hned“.</string>
+    <string name="ringing_silence">Ztišit</string>
+
+    <!-- shared:support begin. Synced into every app by android-starter's scripts/sync-support.py:
+         change it there, never in an app. -->
+    <string name="settings_about">O aplikaci</string>
+    <string name="settings_support">Nápověda a zpětná vazba</string>
+    <string name="settings_licences">Licence open source</string>
+    <string name="settings_language_report">Zní něco špatně?</string>
+    <string name="settings_language_report_hint">Napiš mi, jestli je nějaké slovo ve tvém jazyce špatně. Otevře poštovní aplikaci s už vyplněným jazykem, ve kterém čteš.</string>
+    <string name="support_title">Nápověda a zpětná vazba</string>
+    <string name="support_report">Nahlásit problém</string>
+    <string name="support_report_hint">Otevře poštovní aplikaci s vyplněnou verzí aplikace, verzí Androidu, modelem telefonu a jazykem, bez ničeho, co v aplikaci zaznamenáváš. Nic se neodešle, dokud neklepneš na odeslat.</string>
+    <string name="support_feature">Navrhnout funkci</string>
+    <string name="support_feature_hint">Napiš, co má aplikace umět a k čemu ti to poslouží.</string>
+    <string name="support_body_bug">Co se stalo a co se mělo stát místo toho:</string>
+    <string name="support_body_feature">Co by aplikace měla umět?</string>
+    <string name="support_body_language">Které slovo zní špatně a na které obrazovce?</string>
+    <string name="support_no_mail_app">V tomhle telefonu není poštovní aplikace, kterou by šlo otevřít. Adresu nahoře můžeš zkopírovat.</string>
+    <string name="support_no_mail_app_write_to">V tomhle telefonu není poštovní aplikace, kterou by šlo otevřít. Můžeš napsat na %1$s.</string>
+    <string name="support_address_hint">Napiš přímo. Klepnutím adresu zkopíruješ.</string>
+    <string name="support_rate">Ohodnotit aplikaci na Google Play</string>
+    <string name="support_rate_hint">Otevře aplikaci na Google Play. Hodnocení je dobrovolné a nic neodemyká.</string>
+    <string name="support_no_play">V tomhle telefonu není Google Play ani prohlížeč, který by šel otevřít.</string>
+    <string name="licence_text_missing">Text téhle licence není součástí aplikace.</string>
+    <string name="licences_intro">Tahle aplikace stojí na knihovnách níž. Seznam pochází přímo ze sestavení, takže jmenuje všechno, co tahle kopie aplikace opravdu obsahuje.</string>
+    <string name="licences_read">Přečíst licenci</string>
+    <string name="licences_open_terms">Otevřít podmínky</string>
+    <string name="licences_unavailable">Seznam licencí se z tohohle sestavení nepodařilo přečíst.</string>
+    <string name="support_no_browser">V tomhle telefonu není prohlížeč, který by šel otevřít.</string>
+    <string name="support_site">Webová stránka aplikace</string>
+    <string name="support_privacy">Zásady ochrany soukromí</string>
+    <string name="support_privacy_hint">Otevře se v prohlížeči.</string>
+    <string name="support_credits">Poděkování</string>
+    <string name="support_credits_hint">Kdo aplikaci vytvořil a licence open source</string>
+    <string name="credits_made_by">Kdo aplikaci vytvořil</string>
+    <string name="credits_creator">Nápad a provedení</string>
+    <string name="credits_helped_by">Pomoc</string>
+    <string name="support_more_apps">Další aplikace MaksForge</string>
+    <string name="support_more_apps_hint">Další bezplatné aplikace od stejného vývojáře.</string>
+    <string name="support_version">Verze %1$s</string>
+    <string name="support_version_hint">Klepnutím zkopíruješ.</string>
+    <string name="support_copied">Zkopírováno.</string>
+    <!-- shared:support end -->
+</resources>

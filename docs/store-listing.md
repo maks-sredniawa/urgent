@@ -175,6 +175,475 @@ UPRAWNIENIA
 Kod źródłowy: github.com/maks-sredniawa/urgent
 ```
 
+## German
+
+Informal *du* throughout, "Handy" for phone as in the shared Help and feedback block, and "Anrufende" (never "Anrufer") for callers so no gender is assumed; to fit 4000 characters the full description names "Alle in deinen Kontakten" and "Markierte Kontakte" once as "Kontaktoption" and refers back to that.
+
+### App name — 11/30
+
+```
+Urgent call
+```
+
+### Short description — 80/80
+
+```
+Klingelt, wenn dieselbe Nummer zweimal anruft, auch wenn dein Handy lautlos ist.
+```
+
+### Full description — 3997/4000
+
+```
+Wer in wenigen Minuten zweimal anruft, braucht dich wahrscheinlich. Urgent klingelt beim zweiten Anruf, auch auf lautlos oder Vibration.
+
+SO GEHT ES
+
+Bei einem Anruf sucht Urgent in deiner Anrufliste dieselbe Nummer aus den letzten 5, 10, 15 oder 30 Minuten, du wählst. Rief sie schon an und bliebe dein Handy still, spielt Urgent deinen Klingelton in Weckerlautstärke und vibriert. Darf es den Klingelton nicht lesen, spielt es deinen Weckerton. Es endet, wenn der Anruf angenommen, abgelehnt oder beendet wird, sonst nach einer Minute; „Stummschalten“ beendet es früher.
+
+Der erste Anruf bleibt so leise wie eingestellt. Nur der zweite klingelt, außer die Nummer steht auf „Sofort klingeln“: Dann klingelt schon der erste. Auch ein abgelehnter Anruf zählt als erster, außer du schaltest das aus. Wähle Anrufende, für die es klingelt, oder eine Kontaktoption: „Alle in deinen Kontakten“ oder „Markierte Kontakte“. Bis dahin klingelt es bei allen. Ruhe nötig? Pausiere es bis zu 8 Stunden.
+
+ES KLINGELT NUR, WENN DEIN HANDY SCHWEIGT
+
+- Klingelton an: Dein Handy klingelt selbst, Urgent bleibt still.
+- Lautlos oder Vibration: Urgent klingelt.
+- Bitte nicht stören: Urgent klingelt nur, wenn Wecker erlaubt sind, und bleibt still, wenn dein Handy den Anruf schon klingeln lässt, per „Wiederholte Anrufer“ oder für alle. Lässt Bitte nicht stören nur Kontakte oder nur markierte durch, bleibt Urgent bei ihnen still, solange eine Kontaktoption gewählt ist, da dein Handy ohnehin klingelt. Ohne Kontaktoption schlägt Urgent sie nicht nach und kann für sie klingeln, auch wenn dein Handy ebenfalls klingelt.
+- Im Gespräch: Urgent bleibt still.
+
+IM HINTERGRUND, WENN DU WILLST
+
+„Im Hintergrund ausführen“ hält Urgent mit einer stillen Benachrichtigung aktiv, damit Android es zwischen Anrufen nicht beendet. Nur solange „Bei wiederholten Anrufen klingeln“ an ist; nach Neustart oder Update startet es wieder.
+
+DEINE EINSTELLUNGEN BLEIBEN
+
+Urgent ändert nie Klingeltonmodus, Klingeltonlautstärke oder Bitte nicht stören. Es spielt über den Weckerkanal, den der Lautlos-Modus nicht stummschaltet.
+
+KOSTENLOS, NICHTS VERLÄSST DEIN HANDY
+
+Keine Werbung. Kein Konto. Kein Server. Kein Abo. Ohne Internetberechtigung kann Urgent nichts irgendwohin senden. Klingelt ein Anruf, liest es die letzten Minuten deiner Anrufliste, vergleicht eine Nummer und speichert nichts. Mit einer Kontaktoption gleicht es zudem die Nummer mit deinen Kontakten ab und speichert nichts. Es speichert nur seine Einstellungen: an oder pausiert, wie viele Minuten als „noch einmal“ zählen, ob abgelehnte Anrufe zählen, deine Kontaktoption, ob es im Hintergrund läuft, gewählte Nummern und Namen, Design und Sprache.
+
+WAS ES NICHT KANN
+
+Urgent weiß nicht, warum jemand anruft. Zwei Anrufe hintereinander klingeln, ob wichtig oder nicht, und ein einzelner bleibt still, außer die Nummer steht auf „Sofort klingeln“.
+
+Ein Anruf mit unterdrückter Nummer ist nicht zuzuordnen und klingelt nie durch.
+
+Manche Handys halten es auf. Akkuoptimierung kann Urgent im Hintergrund am Klingeln hindern; die App öffnet sie. Auf Xiaomi erfährt Urgent nur mit Autostart von Anrufen; auch dorthin führt die App.
+
+Urgent ist eine zweite Chance, keine Garantie. Darfst du einen Anruf nicht verpassen, lass den Klingelton an.
+
+BERECHTIGUNGEN
+
+- Telefon. Meldet Urgent, dass ein Anruf klingelt.
+- Anrufliste. Die Nummer und ob sie in den letzten Minuten schon anrief. Auf dem Handy gelesen, nie gespeichert, nie gesendet.
+- Kontakte. Angefragt bei „Aus Kontakten hinzufügen“, „Alle in deinen Kontakten“ oder „Markierte Kontakte“. Auf dem Handy gelesen. Bei den letzten beiden wird die Nummer mit ihnen abgeglichen. Gespeichert werden nur Anrufende, die du antippst.
+- Benachrichtigungen. „Stummschalten“ beim Klingeln und eine stille, solange „Im Hintergrund ausführen“ an ist.
+- Vordergrunddienste. Einer spielt den Klingelton, der andere läuft nur bei „Im Hintergrund ausführen“.
+
+Quelltext verfügbar, offen entwickelt: github.com/maks-sredniawa/urgent
+```
+
+## Spanish
+
+Informal *tú* throughout, Spain-neutral wording, Spanish « » quotes. "Repeated call" is *llamada repetida*, Android's own Do Not Disturb term; callers are *quien llama* / *personas que llaman* to avoid gendered nouns; *Ring at once* is *Sonar a la primera*.
+
+### App name — 11/30
+
+```
+Urgent call
+```
+
+### Short description — 78/80
+
+```
+Suena si el mismo número llama dos veces, incluso con tu teléfono en silencio.
+```
+
+### Full description — 3998/4000
+
+```
+Si alguien llama dos veces en pocos minutos, probablemente te necesita. Urgent suena con esa segunda llamada, incluso cuando tu teléfono está en silencio o en vibración.
+
+CÓMO FUNCIONA
+
+Al entrar una llamada, Urgent busca ese número en tu registro de llamadas de los últimos minutos: 5, 10, 15 o 30, tú eliges. Si ya llamó y tu teléfono la dejaría en silencio, Urgent pone tu tono con tu volumen de alarmas y vibra. Si Android no le deja leer tu tono, usa tu sonido de alarma. Para al contestar, rechazar o terminar la llamada, o al minuto; «Silenciar» lo para antes.
+
+La primera llamada sigue como la tengas configurada. Solo suena la segunda, salvo si quien llama está en «Sonar a la primera»: entonces suena ya la primera. Una llamada rechazada también cuenta como primera, salvo que lo desactives. Puedes elegir para quién suena, o activar «Todos tus contactos» o «Contactos destacados». Hasta que elijas algo, suena para cualquiera. ¿Necesitas silencio? Páusalo hasta 8 horas.
+
+SOLO SUENA SI TU TELÉFONO NO LO HARÍA
+
+- Sonido activado: suena tu teléfono, así que Urgent no.
+- Silencio o vibración: Urgent suena.
+- No molestar: solo suena si se permiten las alarmas, y calla si tu teléfono ya deja sonar la llamada, por su regla de llamadas repetidas o para todos. Si No molestar solo deja pasar a tus contactos, o solo a los destacados, Urgent no suena con ellos si tienes «Todos tus contactos» o «Contactos destacados», porque tu teléfono ya suena. Sin ninguno, Urgent no los busca y puede sonar con ellos aunque tu teléfono también suene.
+- En otra llamada: Urgent no suena.
+
+EN SEGUNDO PLANO, SI LO PIDES
+
+«Ejecutar en segundo plano» mantiene Urgent activo con una notificación silenciosa para que Android no lo detenga entre llamadas. Solo funciona con «Sonar con llamadas repetidas» activado, y vuelve tras reiniciar o actualizar.
+
+TUS AJUSTES NO SE TOCAN
+
+Urgent nunca cambia tu modo de sonido, el volumen de tonos ni No molestar. Suena en el canal de alarmas, que el modo Silencio no silencia.
+
+GRATIS, Y NADA SALE DE TU TELÉFONO
+
+Sin anuncios. Sin cuenta. Sin servidor. Sin suscripción. Urgent no tiene permiso de internet, así que no puede enviar nada. Al sonar una llamada, lee los últimos minutos de tu registro de llamadas, compara un número y no guarda nada. Con «Todos tus contactos» o «Contactos destacados» activado, también busca el número de quien llama en tus contactos, y no guarda nada. Solo guarda sus propios ajustes: si está activado o en pausa, cuántos minutos cuentan como «otra vez», si cuentan las rechazadas, tu elección de contactos, si se ejecuta en segundo plano, los números y nombres elegidos, tu tema y tu idioma.
+
+LO QUE NO PUEDE HACER
+
+Urgent no puede saber por qué alguien llama. Dos llamadas seguidas suenan importen o no, y una sola sigue en silencio salvo si quien llama está en «Sonar a la primera».
+
+Una llamada con número oculto no se puede comparar y nunca suena.
+
+Algunos teléfonos lo detienen. La optimización de batería puede impedir que suene en segundo plano, y la app abre ese ajuste. En Xiaomi solo se entera de una llamada con el inicio automático activado, y la app también lo abre.
+
+Urgent es una segunda oportunidad, no una garantía. Si no puedes perderte una llamada, mantén el sonido activado.
+
+PERMISOS
+
+- Teléfono. Avisa a Urgent de que suena una llamada.
+- Registros de llamadas. El número de quien llama y si llamó en los últimos minutos. Se lee en el teléfono, nunca se guarda ni se envía.
+- Contactos. Se piden al pulsar «Añadir de los contactos» o elegir «Todos tus contactos» o «Contactos destacados». Se leen en el teléfono. Con cualquiera de los dos, se busca en ellos el número de quien llama. Solo se guarda a quien tocas.
+- Notificaciones. El botón «Silenciar» mientras suena, y una silenciosa con «Ejecutar en segundo plano» activado.
+- Servicios en primer plano. Uno reproduce el tono. El otro solo funciona con «Ejecutar en segundo plano» activado.
+
+Código disponible, hecho en abierto: github.com/maks-sredniawa/urgent
+```
+
+## French
+
+Informal *tu*, as in the app, with Android's own French words (mode silencieux, vibreur, Ne pas déranger, volume des alarmes, contacts favoris, démarrage automatique). "Caller" appears only in the plural (*appelants*, Android's own word) or is rebuilt around *numéro*, so no sentence needs a gender; UI labels go unquoted in prose, as in English, to fit 4000.
+
+### App name — 11/30
+
+```
+Urgent call
+```
+
+### Short description — 70/80
+
+```
+Sonne quand le même numéro appelle deux fois, même en mode silencieux.
+```
+
+### Full description — 3997/4000
+
+```
+Quelqu’un qui appelle deux fois en quelques minutes a probablement besoin de toi. Urgent sonne pour ce deuxième appel, même en mode silencieux ou vibreur.
+
+COMMENT ÇA MARCHE
+
+À chaque appel, Urgent cherche le numéro dans ton journal d’appels des dernières minutes : 5, 10, 15 ou 30, au choix. S’il a déjà appelé et que ton téléphone resterait muet, Urgent joue ta sonnerie au volume des alarmes et vibre. Si Android lui refuse ta sonnerie, il joue ton son d’alarme. Il s’arrête quand l’appel est pris, refusé ou fini, ou après une minute ; Couper le son l’arrête avant.
+
+Le premier appel reste aussi discret que tu l’as réglé. Seul le deuxième sonne, sauf pour ta liste Sonnerie immédiate, qui sonne dès le premier. Un appel refusé compte aussi comme premier, sauf si tu désactives l’option. Choisis pour quels appelants il sonne, ou active Tous tes contacts ou Contacts favoris. Sinon, il sonne pour tous. Besoin de calme ? Pause jusqu’à 8 heures.
+
+IL NE SONNE QUE SI TON TÉLÉPHONE SE TAIT
+
+- Sonnerie activée : ton téléphone sonne seul, Urgent se tait.
+- Silencieux ou vibreur : Urgent sonne.
+- Ne pas déranger : Urgent ne sonne que si les alarmes sont autorisées, et se tait si ton téléphone laisse déjà sonner l’appel (appels répétés, ou tout le monde). Si Ne pas déranger ne laisse passer que tes contacts, ou les favoris, Urgent se tait pour eux tant que Tous tes contacts ou Contacts favoris est choisi : ton téléphone les fait déjà sonner. Sinon, Urgent ne les cherche pas et peut sonner pour eux, même si ton téléphone sonne aussi.
+- En communication : Urgent se tait.
+
+EN ARRIÈRE-PLAN, SI TU LE DEMANDES
+
+Fonctionner en arrière-plan garde Urgent actif avec une notification silencieuse, pour qu’Android ne l’arrête pas entre deux appels. Seulement si Sonner pour les appels répétés est activé ; il repart après un redémarrage ou une mise à jour.
+
+TES PARAMÈTRES RESTENT INCHANGÉS
+
+Urgent ne modifie jamais ton mode de sonnerie, le volume de sonnerie ni Ne pas déranger. Il joue sur le flux des alarmes, que le mode silencieux ne coupe pas.
+
+GRATUIT, ET RIEN NE SORT DU TÉLÉPHONE
+
+Sans pub, sans compte, sans serveur, sans abonnement. Sans autorisation Internet, Urgent ne peut rien envoyer. Quand un appel sonne, il lit les dernières minutes de ton journal d’appels, compare un numéro et ne garde rien. Avec Tous tes contacts ou Contacts favoris, il cherche aussi le numéro dans tes contacts, sans rien garder. Il ne stocke que ses réglages : activé ou en pause, minutes qui comptent comme « à nouveau », appels refusés comptés ou non, choix de contacts, arrière-plan ou non, numéros et noms choisis, thème et langue.
+
+CE QU’IL NE PEUT PAS FAIRE
+
+Urgent ne peut pas savoir pourquoi on t’appelle. Deux appels de suite sonnent, importants ou non, et un appel unique reste muet sauf si son numéro est dans Sonnerie immédiate.
+
+Un numéro masqué ne peut pas être reconnu : il ne sonne jamais.
+
+Certains téléphones l’arrêtent. L’optimisation de la batterie peut empêcher Urgent de sonner en arrière-plan ; l’appli ouvre ce réglage. Sur Xiaomi, Urgent n’apprend un appel qu’avec le démarrage automatique activé ; l’appli l’ouvre aussi.
+
+Urgent est une seconde chance, pas une garantie. Si tu ne dois rater aucun appel, laisse ta sonnerie activée.
+
+AUTORISATIONS
+
+- Téléphone. Indique à Urgent qu’un appel sonne.
+- Journaux d’appels. Le numéro qui appelle, et s’il a appelé ces dernières minutes. Lu sur le téléphone, jamais stocké ni envoyé.
+- Contacts. Demandée pour « Ajouter depuis les contacts », « Tous tes contacts » ou « Contacts favoris ». Lus sur le téléphone ; avec l’un de ces choix, le numéro y est recherché. Seuls les appelants que tu touches sont gardés.
+- Notifications. Le bouton « Couper le son » quand Urgent sonne, et une notification silencieuse avec « Fonctionner en arrière-plan ».
+- Services de premier plan. L’un joue la sonnerie, l’autre ne tourne qu’avec « Fonctionner en arrière-plan ».
+
+Code source disponible, développé en public : github.com/maks-sredniawa/urgent
+```
+
+## Italian
+
+Informal *tu* throughout. Android's own Italian terms: starred contacts are *Contatti speciali* (Do Not Disturb's wording), the repeated call is *chiamata ripetuta* (Do Not Disturb's *Chiamate ripetute*), alarm volume is *volume della sveglia*. Callers are written as *chi chiama* / *chi è nell'elenco* rather than the gendered *chiamante*, and the full description lists the four "No …" lines as one sentence to fit under 4000.
+
+### App name — 11/30
+
+```
+Urgent call
+```
+
+### Short description — 77/80
+
+```
+Suona se lo stesso numero chiama due volte, anche con il telefono silenzioso.
+```
+
+### Full description — 3989/4000
+
+```
+Chi chiama due volte in pochi minuti probabilmente ha bisogno di te. Urgent suona per quella seconda chiamata, anche con il telefono silenzioso o in vibrazione.
+
+COME FUNZIONA
+
+A ogni chiamata, Urgent cerca lo stesso numero nel registro chiamate degli ultimi minuti: 5, 10, 15 o 30, scegli tu. Se ha già chiamato e il telefono non suonerebbe, Urgent riproduce la tua suoneria al volume della sveglia e vibra. Se Android non consente di leggere la suoneria, usa il suono della sveglia. Smette quando rispondi, rifiuti o la chiamata finisce, o dopo un minuto; Silenzia lo ferma prima.
+
+La prima chiamata resta come l’hai impostata. Suona solo la seconda, salvo per chi è in Suona subito: per loro suona già la prima. Anche una chiamata rifiutata conta come prima, se non lo disattivi. Puoi scegliere per chi suona, o attivare Tutti i tuoi contatti o Contatti speciali. Finché non scegli, suona per chiunque. Ti serve silenzio? Mettilo in pausa fino a 8 ore.
+
+SUONA SOLO SE IL TELEFONO NON LO FA
+
+- Suoneria attiva: il telefono suona da solo, quindi Urgent tace.
+- Silenzioso o vibrazione: Urgent suona.
+- Non disturbare: Urgent suona solo se le sveglie sono consentite, e tace se il telefono fa già suonare la chiamata, per la regola Chiamate ripetute o per tutti. Se Non disturbare lascia passare solo i contatti, o solo quelli speciali, Urgent tace per loro se hai scelto Tutti i tuoi contatti o Contatti speciali: il telefono suona già. Senza nessuna delle due, Urgent non li cerca e può suonare anche per loro, pure se suona il telefono.
+- Durante un’altra chiamata: Urgent tace.
+
+IN BACKGROUND, SE LO CHIEDI
+
+Esegui in background tiene attivo Urgent con una notifica silenziosa, così Android non lo ferma tra le chiamate. Funziona solo con Suona per le chiamate ripetute attivo, e riparte dopo un riavvio o un aggiornamento.
+
+LE TUE IMPOSTAZIONI NON CAMBIANO
+
+Urgent non cambia mai la modalità suoneria, il volume della suoneria o Non disturbare. Suona sul flusso audio delle sveglie, che la modalità silenziosa non silenzia.
+
+GRATIS, E NIENTE ESCE DAL TELEFONO
+
+Niente pubblicità, account, server o abbonamento. Urgent non ha l’autorizzazione internet, quindi non può inviare niente. A ogni chiamata legge gli ultimi minuti del registro chiamate, confronta un numero e non conserva nulla. Con Tutti i tuoi contatti o Contatti speciali, confronta anche il numero con i contatti, senza conservare nulla. Salva solo le sue impostazioni: se è attivo o in pausa, quanti minuti valgono come «di nuovo», se le chiamate rifiutate contano, la tua scelta sui contatti, se funziona in background, i numeri e i nomi scelti, il tema e la lingua.
+
+COSA NON PUÒ FARE
+
+Urgent non può sapere perché qualcuno chiama. Due chiamate di fila suonano, importanti o no, e una chiamata singola resta silenziosa, salvo per chi è in Suona subito.
+
+Una chiamata da numero nascosto non si può abbinare, quindi non suona mai.
+
+Alcuni telefoni lo fermano. L’ottimizzazione della batteria può impedire a Urgent di suonare in background, e l’app la apre. Su Xiaomi Urgent sa di una chiamata solo con l’avvio automatico attivo, e l’app apre anche quello.
+
+Urgent è una seconda possibilità, non una garanzia. Se non puoi perdere una chiamata, tieni la suoneria attiva.
+
+AUTORIZZAZIONI
+
+- Telefono. Dice a Urgent che una chiamata sta squillando.
+- Registri chiamate. Il numero di chi chiama, e se ha chiamato negli ultimi minuti. Letto sul telefono, mai memorizzato, mai inviato.
+- Contatti. Chiesta quando premi «Aggiungi dai contatti» o scegli «Tutti i tuoi contatti» o «Contatti speciali». Letti sul telefono. Con una delle due, il numero di chi chiama è confrontato con essi. Si conservano solo le voci che tocchi.
+- Notifiche. Il pulsante Silenzia mentre Urgent suona, e una notifica silenziosa con Esegui in background attivo.
+- Servizi in primo piano. Uno riproduce la suoneria. L’altro funziona solo con Esegui in background attivo.
+
+Sorgente consultabile, sviluppato in pubblico: github.com/maks-sredniawa/urgent
+```
+
+## Brazilian Portuguese
+
+Informal `você`, as in the app, with "o Urgent" for the app and "quem liga" for a caller, so no sentence needs a gendered noun (translator brief §6.2). Android's own pt-BR words throughout ("Não perturbe", "modo silencioso", "Vibrar", "registro de chamadas", "Sem restrições"); the full description was tightened to fit, with every claim kept.
+
+### App name — 11/30
+
+```
+Urgent call
+```
+
+### Short description — 69/80
+
+```
+Toca quando o mesmo número liga duas vezes, mesmo no modo silencioso.
+```
+
+### Full description — 3978/4000
+
+```
+Quem liga duas vezes em poucos minutos provavelmente precisa de você. O Urgent toca nessa segunda chamada, mesmo no modo silencioso ou vibrar.
+
+COMO FUNCIONA
+
+A cada chamada, o Urgent procura no registro de chamadas o mesmo número nos últimos 5, 10, 15 ou 30 minutos, à sua escolha. Se ele já ligou e o celular silenciaria a chamada, reproduz o seu toque no volume do alarme e vibra. Se o Android não deixar ler o toque, usa o som do alarme. Para quando a chamada é atendida, recusada ou termina, ou após um minuto; Silenciar para antes.
+
+A primeira chamada fica como você configurou. Só a segunda toca, exceto para quem está em Tocar na hora: aí já toca a primeira. Uma chamada recusada também conta como a primeira, se não desativar isso. Escolha para quem ele toca ou ative Todos os seus contatos ou Contatos marcados com estrela. Até lá, toca para qualquer pessoa. Precisa de silêncio? Pause por até 8 horas.
+
+SÓ TOCA QUANDO O CELULAR NÃO TOCARIA
+
+- Som ativado: o celular já toca, então o Urgent fica quieto.
+- Silencioso ou vibrar: o Urgent toca.
+- Não perturbe: o Urgent só toca se os alarmes forem permitidos, e fica quieto se o celular já deixa a chamada tocar, pela regra de chamadas repetidas ou para todos. Se o Não perturbe só deixa passar seus contatos, ou só os marcados com estrela, o Urgent fica quieto para eles com Todos os seus contatos ou Contatos marcados com estrela escolhido, pois o celular já toca para eles. Sem nenhum dos dois, o Urgent não os consulta e pode tocar junto com o celular.
+- Em outra chamada: o Urgent fica quieto.
+
+EM SEGUNDO PLANO, SE QUISER
+
+Executar em segundo plano mantém o Urgent ativo com uma notificação silenciosa, para o Android não fechá-lo entre chamadas. Só funciona com Tocar em chamadas repetidas ativado e volta após reiniciar ou atualizar.
+
+SUAS CONFIGURAÇÕES NÃO MUDAM
+
+O Urgent nunca muda o modo de som, o volume do toque nem o Não perturbe. Toca pelo canal de alarme, que o modo silencioso não silencia.
+
+GRÁTIS, E NADA SAI DO CELULAR
+
+Sem anúncios, conta, servidor nem assinatura. O Urgent não tem permissão de internet, então não pode enviar nada. Quando uma chamada toca, lê os últimos minutos do registro de chamadas, compara um número e não guarda nada. Com Todos os seus contatos ou Contatos marcados com estrela ativado, também confere nos seus contatos o número de quem liga, sem guardar nada. Só guarda as próprias configurações: se está ativado ou pausado, quantos minutos contam como “de novo”, se chamadas recusadas contam, sua escolha de contatos, se executa em segundo plano, os números e nomes que você escolheu, seu tema e seu idioma.
+
+O QUE ELE NÃO CONSEGUE FAZER
+
+O Urgent não sabe por que alguém está ligando. Duas chamadas seguidas tocam, importantes ou não, e uma chamada única só toca se vier de quem está em Tocar na hora.
+
+Uma chamada de número oculto não pode ser comparada, então o Urgent nunca toca.
+
+Alguns celulares o bloqueiam. A otimização de bateria pode impedir o Urgent de tocar em segundo plano, e o app abre essa configuração. Na Xiaomi, o Urgent só sabe de uma chamada com a inicialização automática ativada; o app também abre essa.
+
+O Urgent é uma segunda chance, não uma garantia. Se não pode perder uma chamada, deixe o som ativado.
+
+PERMISSÕES
+
+- Telefone. Avisa o Urgent quando uma chamada toca.
+- Registro de chamadas. O número de quem liga e se já ligou nos últimos minutos. Lido no celular, nunca guardado, nunca enviado.
+- Contatos. Pedida ao tocar em “Adicionar dos contatos” ou escolher “Todos os seus contatos” ou “Contatos marcados com estrela”. Lidos no celular. Com uma das duas, o número de quem liga é conferido neles. Só os contatos em que você toca ficam guardados.
+- Notificações. O botão Silenciar enquanto o Urgent toca, e uma silenciosa com Executar em segundo plano ativado.
+- Serviços em primeiro plano. Um reproduz o toque. O outro só funciona com Executar em segundo plano ativado.
+
+Código disponível, feito às claras: github.com/maks-sredniawa/urgent
+```
+
+## Czech
+
+Informal *ty* throughout, and no past-tense verb with the user or a caller as subject, since Czech past tense marks gender (§6.2). Android terms follow AOSP Czech (Nerušit, Tichý režim, Hlasitost budíků, Seznamy hovorů, Kontakty označené hvězdičkou); Xiaomi's autostart is "automatické spouštění".
+
+### App name — 11/30
+
+```
+Urgent call
+```
+
+### Short description — 71/80
+
+```
+Zazvoní, když stejné číslo volá podruhé, i s telefonem v tichém režimu.
+```
+
+### Full description — 3981/4000
+
+```
+Kdo volá dvakrát během pár minut, nejspíš tě potřebuje. Urgent při tom druhém hovoru zazvoní, i když je telefon v tichém režimu nebo na vibrace.
+
+JAK TO FUNGUJE
+
+Když přijde hovor, Urgent se podívá do seznamu hovorů, jestli stejné číslo nevolalo v posledních pár minutách: 5, 10, 15 nebo 30, vybereš si. Pokud ano a telefon by hovor nechal tichý, Urgent přehraje tvoje vyzvánění hlasitostí budíků a zavibruje. Když Android nedovolí vyzvánění přečíst, přehraje místo něj zvuk budíku. Přestane, když se hovor přijme, odmítne nebo skončí, případně po minutě; „Ztišit“ ho zastaví dřív.
+
+První hovor zůstane tak tichý, jak ho máš nastavený. Zazvoní až druhý, s výjimkou volajících ze seznamu „Zvonit hned“: u nich zvoní už první. Odmítnutý hovor se taky počítá jako první, pokud to nevypneš. Můžeš vybrat volající, pro které zvoní, nebo zapnout „Všichni z tvých kontaktů“ či „Kontakty označené hvězdičkou“. Dokud nic z toho nevybereš, zvoní pro kohokoli. Potřebuješ klid? Pozastav ho až na 8 hodin.
+
+ZVONÍ, JEN KDYŽ BY TELEFON NEZAZVONIL
+
+- Vyzvánění zapnuté: telefon zvoní sám, takže Urgent zůstane potichu.
+- Tichý režim nebo vibrace: Urgent zazvoní.
+- Nerušit: Urgent zazvoní, jen pokud jsou povolené budíky, a zůstane potichu, když telefon hovor sám nechá zazvonit, ať podle pravidla pro opakovaná volání, nebo pro kohokoli. Pokud Nerušit propouští jen tvoje kontakty nebo jen ty s hvězdičkou, Urgent u nich zůstane potichu, dokud máš vybrané „Všichni z tvých kontaktů“ nebo „Kontakty označené hvězdičkou“, protože pro ně telefon zvoní stejně. Bez této volby je Urgent nevyhledává, takže pro ně může zazvonit spolu s telefonem.
+- Během jiného hovoru: Urgent zůstane potichu.
+
+BĚŽÍ NA POZADÍ, KDYŽ CHCEŠ
+
+„Běžet na pozadí“ nechá Urgent běžet s tichým oznámením, aby ho Android mezi hovory nezastavil. Běží jen se zapnutým „Zvonit při opakovaných hovorech“ a spustí se znovu po restartu nebo aktualizaci.
+
+TVOJE NASTAVENÍ ZŮSTANE, JAK JE
+
+Urgent nikdy nemění režim vyzvánění, hlasitost vyzvánění ani Nerušit. Hraje přes kanál budíků, který tichý režim neztlumí.
+
+ZDARMA A NIC NEOPOUŠTÍ TELEFON
+
+Žádné reklamy. Žádný účet. Žádný server. Žádné předplatné. Urgent nemá oprávnění k internetu, takže nemůže nic nikam poslat. Když hovor zvoní, přečte posledních pár minut seznamu hovorů, porovná jedno číslo a nic si neuchová. Pokud je zapnuté „Všichni z tvých kontaktů“ nebo „Kontakty označené hvězdičkou“, porovná číslo volajícího taky s tvými kontakty a nic si neuchová. Ukládá jen vlastní nastavení: jestli je zapnutý nebo pozastavený, kolik minut se počítá jako „znovu“, jestli se počítají odmítnuté hovory, tvoji volbu kontaktů, jestli běží na pozadí, vybraná čísla a jména, motiv a jazyk.
+
+CO NEDOKÁŽE
+
+Urgent nepozná, proč někdo volá. Dva hovory po sobě zazvoní, ať na nich záleží, nebo ne, a jediný hovor zůstane tichý, pokud volající není na seznamu „Zvonit hned“.
+
+Hovor ze skrytého čísla nejde porovnat, takže nikdy nezazvoní.
+
+Některé telefony ho zastaví. Optimalizace baterie může Urgentu bránit ve zvonění na pozadí a aplikace to nastavení otevře. Na Xiaomi se Urgent o hovoru dozví, jen když je zapnuté automatické spouštění, a aplikace otevře i to.
+
+Urgent je druhá šance, ne záruka. Pokud nesmíš zmeškat hovor, nech vyzvánění zapnuté.
+
+OPRÁVNĚNÍ
+
+- Telefon. Dá Urgentu vědět, že zvoní hovor.
+- Seznamy hovorů. Číslo volajícího a jestli z něj přišel hovor v posledních pár minutách. Čte se v telefonu, nikdy se neukládá ani neodesílá.
+- Kontakty. Žádá o ně, když klepneš na „Přidat z kontaktů“ nebo vybereš „Všichni z tvých kontaktů“ či „Kontakty označené hvězdičkou“. Čtou se v telefonu. Při jedné z těchto voleb se s nimi porovná číslo volajícího. Uchovají se jen volající, na které klepneš.
+- Oznámení. Tlačítko „Ztišit“, když Urgent zvoní, a tiché oznámení, dokud je zapnuté „Běžet na pozadí“.
+- Služby v popředí. Jedna přehrává vyzvánění. Druhá běží, jen když je zapnuté „Běžet na pozadí“.
+
+Zdrojový kód je k dispozici, vzniká veřejně: github.com/maks-sredniawa/urgent
+```
+
+## Ukrainian
+
+Informal `ти`, as in the app, and no gendered past tense with `ти` (brief §6.2): "a call you declined" is "відхилений тобою дзвінок". Android's own Ukrainian words throughout: «Без звуку», «Вібросигнал», «Не турбувати», «Журнали викликів», «Без обмежень», «Контакти із зірочкою»; "app" is «застосунок», as in Binky and Gloam, where AOSP still says «додаток».
+
+### App name — 11/30
+
+```
+Urgent call
+```
+
+### Short description — 79/80
+
+```
+Дзвонить, коли той самий номер телефонує вдруге, навіть якщо телефон без звуку.
+```
+
+### Full description — 3994/4000
+
+```
+Хто телефонує двічі за кілька хвилин, той, мабуть, потребує тебе. Urgent дзвонить при другому дзвінку, навіть коли телефон у режимі без звуку чи вібросигналу.
+
+ЯК ЦЕ ПРАЦЮЄ
+
+Коли надходить дзвінок, Urgent шукає цей номер у журналі викликів за останні 5, 10, 15 чи 30 хвилин, на твій вибір. Якщо він уже дзвонив, а телефон лишив би дзвінок тихим, Urgent грає твій сигнал дзвінка з гучністю будильника й вібрує. Якщо Android не дає прочитати сигнал дзвінка, лунає сигнал будильника. Звук стихає, коли дзвінок прийнято, відхилено чи завершено, або через хвилину; «Вимкнути звук» зупиняє раніше.
+
+Перший дзвінок тихий, як налаштовано. Лунає лише другий, хіба що абонент у списку «Дзвонити одразу»: тоді вже перший. Відхилений тобою дзвінок теж вважається першим, якщо це не вимкнути. Можна вибрати, для кого Urgent дзвонить, або ввімкнути «Усі з твоїх контактів» чи «Контакти із зірочкою». Без жодного з цих виборів він дзвонить для всіх. Потрібна тиша? Призупини його на строк до 8 годин.
+
+ДЗВОНИТЬ, ЛИШЕ КОЛИ ТЕЛЕФОН МОВЧАВ БИ
+
+- Дзвінок увімкнено: телефон дзвонить сам, тож Urgent мовчить.
+- Без звуку чи вібросигнал: Urgent дзвонить.
+- Не турбувати: Urgent дзвонить, лише якщо дозволено будильники, і мовчить, коли телефон сам пропускає дзвінок (правило повторних дзвінків чи для всіх). Якщо «Не турбувати» пропускає лише контакти чи контакти із зірочкою, Urgent мовчить для них, поки вибрано «Усі з твоїх контактів» чи «Контакти із зірочкою»: телефон і так їм дзвонить. Без цього вибору Urgent їх не перевіряє, тож може дзвонити й для них, навіть коли дзвонить і телефон.
+- Під час іншої розмови: Urgent мовчить.
+
+ПРАЦЮЄ У ФОНІ, ЯКЩО ПОПРОСИШ
+
+«Працювати у фоні» тримає Urgent запущеним із тихим сповіщенням, щоб Android не зупиняв його між дзвінками. Діє, лише поки ввімкнено «Дзвонити при повторних дзвінках», і відновлюється після перезавантаження чи оновлення.
+
+ТВОЇ НАЛАШТУВАННЯ НЕ ЗМІНЮЮТЬСЯ
+
+Urgent ніколи не змінює режим дзвінка, гучність дзвінка чи «Не турбувати». Він грає через потік будильника, якого режим без звуку не вимикає.
+
+БЕЗКОШТОВНО, І НІЩО НЕ ЗАЛИШАЄ ТЕЛЕФОН
+
+Без реклами, облікового запису, сервера й підписки. Urgent не має дозволу на інтернет, тож не може нікуди нічого надіслати. Під час дзвінка він читає останні кілька хвилин журналу викликів, порівнює один номер і нічого не зберігає. Якщо ввімкнено «Усі з твоїх контактів» чи «Контакти із зірочкою», він також звіряє номер абонента з контактами й нічого не зберігає. Зберігає лише свої налаштування: чи він увімкнений або призупинений, скільки хвилин означає «знову», чи враховуються відхилені дзвінки, вибір щодо контактів, чи працює у фоні, вибрані тобою номери та імена, тему й мову.
+
+ЧОГО ВІН НЕ ВМІЄ
+
+Urgent не знає, чому хтось телефонує. Два дзвінки поспіль лунають, важливі вони чи ні, а одиночний лишається тихим, якщо абонента немає у списку «Дзвонити одразу».
+
+Дзвінок із прихованого номера неможливо зіставити, тож він ніколи не пролунає.
+
+Деякі телефони його зупиняють. Оптимізація акумулятора може не дати Urgent дзвонити у фоні; застосунок відкриває це налаштування. На Xiaomi Urgent дізнається про дзвінок, лише коли ввімкнено автозапуск, і застосунок відкриває й це.
+
+Urgent — це другий шанс, а не гарантія. Якщо дзвінок не можна пропустити, не вимикай звук дзвінка.
+
+ДОЗВОЛИ
+
+- Телефон. Повідомляє Urgent, що надходить дзвінок.
+- Журнали викликів. Номер абонента і чи телефонували з нього за останні кілька хвилин. Читаються на телефоні, ніколи не зберігаються й не надсилаються.
+- Контакти. Запитуються після «Додати з контактів» або вибору «Усі з твоїх контактів» чи «Контакти із зірочкою». Читаються на телефоні. Коли вибрано один із двох, номер абонента звіряється з ними. Зберігаються лише вибрані тобою абоненти.
+- Сповіщення. Кнопка «Вимкнути звук», поки Urgent дзвонить, і тихе — поки ввімкнено «Працювати у фоні».
+- Пріоритетні служби. Одна відтворює сигнал дзвінка. Інша працює, лише поки ввімкнено «Працювати у фоні».
+
+Код доступний, розробка відкрита: github.com/maks-sredniawa/urgent
+```
+
 ## Release notes (Play's "What's new", 500 chars per locale)
 
 **Don't paste these by hand.** The Console takes all languages in one textarea, tagged by locale,
@@ -353,4 +822,60 @@ Urgent call 1.0, the first full release. When the same number calls twice within
 
 ```
 Urgent call 1.0, pierwsze pełne wydanie. Gdy ten sam numer zadzwoni dwa razy w ciągu kilku minut, drugie połączenie dzwoni z głośnością alarmu, nawet na wyciszeniu albo wibracjach, a w trybie Nie przeszkadzać, gdy alarmy są dozwolone. Wybierz, od kogo ma dzwonić, dodaj do „Dzwoń od razu” osoby, które zawsze muszą się dodzwonić, i wstrzymaj Urgent na kilka godzin ciszy. Urgent milczy, gdy telefon sam dzwoni, i nigdy nie zmienia jego ustawień. Bez reklam, bez konta, nic nie opuszcza telefonu.
+```
+
+### 1.1.0 — seven more languages
+
+**English** — 211/500:
+
+```
+Urgent call now speaks Czech, German, Spanish, French, Italian, Brazilian Portuguese and Ukrainian, alongside English and Polish. It follows your phone's language, or you can pick one in Settings under Language.
+```
+
+**Polish** — 211/500:
+
+```
+Urgent call mówi teraz również po czesku, niemiecku, hiszpańsku, francusku, włosku, portugalsku (w odmianie brazylijskiej) i ukraińsku. Używa języka telefonu, a inny możesz wybrać w Ustawieniach, w sekcji Język.
+```
+
+**German** — 258/500:
+
+```
+Urgent call spricht jetzt Tschechisch, Deutsch, Spanisch, Französisch, Italienisch, brasilianisches Portugiesisch und Ukrainisch, zusätzlich zu Englisch und Polnisch. Es folgt der Sprache deines Handys, oder du wählst eine in „Einstellungen“ unter „Sprache“.
+```
+
+**Spanish** — 203/500:
+
+```
+Urgent call ya está en checo, alemán, español, francés, italiano, portugués de Brasil y ucraniano, además de en inglés y polaco. Sigue el idioma de tu teléfono, o puedes elegir uno en Ajustes, en Idioma.
+```
+
+**French** — 238/500:
+
+```
+Urgent call parle désormais tchèque, allemand, espagnol, français, italien, portugais du Brésil et ukrainien, en plus de l’anglais et du polonais. Il suit la langue de ton téléphone, ou tu peux en choisir une dans Paramètres, sous Langue.
+```
+
+**Italian** — 218/500:
+
+```
+Urgent call ora parla ceco, tedesco, spagnolo, francese, italiano, portoghese brasiliano e ucraino, oltre a inglese e polacco. Segue la lingua del telefono, oppure puoi sceglierne una in Impostazioni, alla voce Lingua.
+```
+
+**Brazilian Portuguese** — 213/500:
+
+```
+O Urgent call agora fala tcheco, alemão, espanhol, francês, italiano, português do Brasil e ucraniano, além de inglês e polonês. Ele segue o idioma do celular, ou você pode escolher um em Configurações, em Idioma.
+```
+
+**Czech** — 230/500:
+
+```
+Urgent call je teď dostupný v češtině, němčině, španělštině, francouzštině, italštině, brazilské portugalštině a ukrajinštině, vedle angličtiny a polštiny. Řídí se jazykem telefonu, nebo si jazyk vybereš v Nastavení v části Jazyk.
+```
+
+**Ukrainian** — 253/500:
+
+```
+Urgent call тепер розмовляє чеською, німецькою, іспанською, французькою, італійською, бразильською португальською та українською, а також англійською й польською. Застосунок використовує мову телефона, або ти можеш вибрати мову: «Налаштування» → «Мова».
 ```
