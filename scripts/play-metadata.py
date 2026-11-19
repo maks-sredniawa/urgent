@@ -89,6 +89,8 @@ FIELDS = {
 # The locale tag a screenshot filename carries (see screenshots.py's locale_tag) -> Play's code.
 APP_TAG = {
     "en": "en-US",
+    # A run without --locale names its files after the phone's own locale, read back in full.
+    "en-US": "en-US",
     "pl": "pl-PL",
     "cs": "cs-CZ",
     "de": "de-DE",
