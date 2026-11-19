@@ -11,10 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       changes_not_sent_for_review:
-        # Play refuses to send an edit for review by itself while the app has a rejected update or
-        # changes waiting in the Console ("Changes cannot be sent for review automatically"). On,
-        # the edit is committed but held, and *Send changes for review* in the Console's Publishing
-        # overview sends it with everything else pending, as one review.
+        # docs/RELEASING.md, "When Play will not send a change for review by itself".
         description: 'Commit without sending for review — send it from the Console'
         type: boolean
         default: false
