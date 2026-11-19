@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Spanish. Translated from **English only** — never from another translation, which compounds every
+    interpretation the first translator made.
+
+    Note the three plural categories: Spanish uses `one`, `many` and `other` where English uses two.
+    CLDR gives `many` to round millions ("un millón de horas"); the counts here never reach it, but
+    `TranslationTest` requires every category the language has.
+
+    "Repeated call" is "llamada repetida", the noun Android's own Do Not Disturb uses for its
+    repeat-callers rule. Callers are "personas que llaman" or "quien llama", never a gendered noun.
+-->
+<resources>
+    <string name="tab_home">Inicio</string>
+    <string name="tab_settings">Ajustes</string>
+
+    <string name="action_back">Atrás</string>
+
+    <string name="settings_appearance">Aspecto</string>
+    <string name="settings_theme_system">El del teléfono</string>
+    <string name="settings_theme_light">Claro</string>
+    <string name="settings_theme_dark">Oscuro</string>
+    <string name="settings_material_you">Usar los colores de mi fondo de pantalla</string>
+    <string name="settings_material_you_hint">Android 12 y posteriores. Desactivado de forma predeterminada, para que la app mantenga su propia paleta.</string>
+    <string name="settings_language">Idioma</string>
+    <string name="settings_language_system">El del teléfono</string>
+
+    <!-- Home -->
+    <string name="home_intro">Si alguien llama dos veces en pocos minutos, probablemente te necesita. Urgent suena con esa segunda llamada, incluso cuando tu teléfono está en silencio o en vibración.</string>
+    <string name="home_ring_through">Sonar con llamadas repetidas</string>
+    <string name="home_ring_through_hint">La segunda llamada del mismo número suena con tu volumen de alarmas y vibra. Los ajustes de tu teléfono se quedan como están.</string>
+    <string name="home_ring_through_paused_hint">En pausa. No suena nada hasta que reanudes o termine la pausa, ni siquiera quien esté en «Sonar a la primera».</string>
+    <string name="home_pause_for">Pausar durante</string>
+    <plurals name="home_pause_hours">
+        <item quantity="one">%d hora</item>
+        <item quantity="many">%d horas</item>
+        <item quantity="other">%d horas</item>
+    </plurals>
+    <string name="home_paused_until">En pausa hasta las %s</string>
+    <string name="home_pause_resume">Reanudar</string>
+    <string name="home_window">Segunda llamada en un plazo de</string>
+    <plurals name="home_window_minutes">
+        <item quantity="one">%d minuto</item>
+        <item quantity="many">%d minutos</item>
+        <item quantity="other">%d minutos</item>
+    </plurals>
+    <string name="home_count_declined">Contar llamadas rechazadas</string>
+    <string name="home_count_declined_hint">Una llamada que rechazas cuenta como primera llamada. Si lo desactivas, al rechazar una llamada, la siguiente de ese número sigue en silencio.</string>
+    <string name="home_permissions_missing_title">Las llamadas repetidas no sonarán</string>
+    <string name="home_permissions_missing_body">Sin los permisos de teléfono y de registros de llamadas, Urgent no puede ver quién llama ni si ya ha llamado antes.</string>
+    <string name="home_permissions_missing_action">Abrir permisos de la aplicación</string>
+    <string name="home_battery_title">Puede que las llamadas repetidas no suenen</string>
+    <string name="home_battery_body">Android puede impedir que Urgent suene mientras está en segundo plano. Configura el uso de batería de Urgent como «Sin restricciones».</string>
+    <string name="home_battery_action">Abrir ajustes de batería</string>
+    <string name="home_xiaomi">Xiaomi</string>
+    <string name="home_autostart">Permitir inicio automático</string>
+    <string name="home_autostart_hint">En los teléfonos Xiaomi, Urgent solo se entera de una llamada si el inicio automático está activado. Abre la lista de inicio automático de Xiaomi; el teléfono no le dice a Urgent qué has elegido.</string>
+    <string name="home_callers">Personas que llaman</string>
+    <string name="home_callers_anyone">Suenan las llamadas repetidas de cualquiera. Elige personas que llaman para que suenen solo las suyas.</string>
+    <string name="home_callers_chosen">Suenan solo las llamadas repetidas de las personas de abajo.</string>
+    <string name="home_callers_contacts_only">Suenan solo las llamadas repetidas de tus contactos.</string>
+    <string name="home_callers_contacts_and_chosen">Suenan las llamadas repetidas de tus contactos y de las personas de abajo.</string>
+    <string name="home_callers_starred_only">Suenan solo las llamadas repetidas de tus contactos destacados.</string>
+    <string name="home_callers_starred_and_chosen">Suenan las llamadas repetidas de tus contactos destacados y de las personas de abajo.</string>
+    <string name="home_use_chosen">Incluir a las personas de abajo</string>
+    <string name="home_use_chosen_hint">Desactivado, la lista se conserva, pero se ignora hasta que vuelvas a activar esta opción.</string>
+    <string name="home_contacts_scope">De tus contactos</string>
+    <string name="home_contacts_scope_hint">Suenan las llamadas repetidas de los contactos guardados, o solo de los destacados. Urgent lee tus contactos en el teléfono para comprobar cada llamada repetida.</string>
+    <string name="home_scope_off">Desactivado</string>
+    <string name="home_scope_everyone">Todos tus contactos</string>
+    <string name="home_scope_starred">Contactos destacados</string>
+    <string name="home_contacts_missing_title">Los contactos no se comprueban</string>
+    <string name="home_contacts_missing_body">Sin acceso a tus contactos, Urgent no puede saber quién está en ellos, así que este ajuste no hace nada hasta que lo permitas.</string>
+    <string name="home_keep_alive">Ejecutar en segundo plano</string>
+    <string name="home_keep_alive_hint">Mantiene Urgent en ejecución con una notificación silenciosa, para que Android no lo detenga entre llamadas. En Xiaomi, bloquea también Urgent en Aplicaciones recientes.</string>
+    <string name="home_contacts_ring_denied">Urgent necesita acceso a tus contactos para sonar con sus llamadas. Puedes permitirlo en Ajustes.</string>
+    <string name="home_callers_from_contacts">Añadir de los contactos</string>
+    <string name="home_callers_search">Buscar contactos</string>
+    <string name="home_callers_type">Número de teléfono</string>
+    <string name="home_callers_add">Añadir</string>
+    <string name="home_callers_remove">Quitar</string>
+    <string name="home_callers_contacts_denied">Urgent necesita acceso a tus contactos para que elijas a una persona que llama. Puedes permitirlo en Ajustes.</string>
+    <string name="home_ring_at_once">Sonar a la primera</string>
+    <string name="home_ring_at_once_hint">Las llamadas de estas personas suenan a la primera, sin que haga falta repetir, aunque las reglas de arriba las dejen fuera.</string>
+
+    <!-- Ringing -->
+    <string name="channel_ringing_name">Sonando</string>
+    <string name="channel_ringing_description">Se muestra mientras Urgent suena por una llamada repetida o por alguien de «Sonar a la primera», con un botón para detenerlo.</string>
+    <string name="channel_keep_alive_name">Ejecución en segundo plano</string>
+    <string name="channel_keep_alive_description">Se muestra mientras Urgent se ejecuta en segundo plano, a la espera de llamadas repetidas.</string>
+    <string name="keep_alive_title">Urgent se está ejecutando</string>
+    <string name="keep_alive_body">Esperando llamadas repetidas. Toca para abrir.</string>
+    <string name="ringing_title">Llamada repetida</string>
+    <string name="ringing_body">Suena porque el mismo número ha vuelto a llamar.</string>
+    <string name="ringing_at_once_title">Sonar a la primera</string>
+    <string name="ringing_at_once_body">Suena porque quien llama está en tu lista «Sonar a la primera».</string>
+    <string name="ringing_silence">Silenciar</string>
+
+    <!-- shared:support begin. Synced into every app by android-starter's scripts/sync-support.py:
+         change it there, never in an app. -->
+    <string name="settings_about">Acerca de</string>
+    <string name="settings_support">Ayuda y comentarios</string>
+    <string name="settings_licences">Licencias de código abierto</string>
+    <string name="settings_language_report">¿Algo suena mal?</string>
+    <string name="settings_language_report_hint">Dime si alguna palabra no está bien en tu idioma. Abre tu app de correo con el idioma en el que lees ya indicado.</string>
+    <string name="support_title">Ayuda y comentarios</string>
+    <string name="support_report">Informar de un problema</string>
+    <string name="support_report_hint">Abre tu app de correo con la versión de la app, la versión de Android, el modelo del teléfono y el idioma ya indicados, y nada de lo que registras en la app. No se envía nada hasta que toques enviar.</string>
+    <string name="support_feature">Sugerir una función</string>
+    <string name="support_feature_hint">Cuenta qué te gustaría que hiciera la app y para qué lo usarías.</string>
+    <string name="support_body_bug">Qué pasó y qué esperabas que pasara en su lugar:</string>
+    <string name="support_body_feature">¿Qué te gustaría que hiciera la app?</string>
+    <string name="support_body_language">¿Qué palabra suena mal y en qué pantalla?</string>
+    <string name="support_no_mail_app">No hay ninguna app de correo en este teléfono que se pueda abrir. Puedes copiar la dirección de arriba.</string>
+    <string name="support_no_mail_app_write_to">No hay ninguna app de correo en este teléfono que se pueda abrir. Puedes escribir a %1$s.</string>
+    <string name="support_address_hint">Escribe directamente. Toca para copiar la dirección.</string>
+    <string name="support_rate">Valorar esta app en Google Play</string>
+    <string name="support_rate_hint">Abre esta app en Google Play. Valorarla es opcional y no desbloquea nada.</string>
+    <string name="support_no_play">No hay Google Play ni ningún navegador en este teléfono que se pueda abrir.</string>
+    <string name="licence_text_missing">El texto de esta licencia no viene incluido en la app.</string>
+    <string name="licences_intro">Esta app está construida sobre las bibliotecas de abajo. La lista sale de la propia compilación, así que nombra todo lo que esta copia de la app contiene de verdad.</string>
+    <string name="licences_read">Leer la licencia</string>
+    <string name="licences_open_terms">Abrir los términos</string>
+    <string name="licences_unavailable">No se pudo leer la lista de licencias de esta compilación.</string>
+    <string name="support_no_browser">No hay ningún navegador en este teléfono que se pueda abrir.</string>
+    <string name="support_site">Página web de la app</string>
+    <string name="support_privacy">Política de privacidad</string>
+    <string name="support_privacy_hint">Se abre en el navegador.</string>
+    <string name="support_credits">Créditos</string>
+    <string name="support_credits_hint">Quién hizo la app y licencias de código abierto</string>
+    <string name="credits_made_by">Quién hizo la app</string>
+    <string name="credits_creator">Idea y desarrollo</string>
+    <string name="credits_helped_by">Con la ayuda de</string>
+    <string name="support_more_apps">Más apps de MaksForge</string>
+    <string name="support_more_apps_hint">Otras apps gratuitas del mismo desarrollador.</string>
+    <string name="support_version">Versión %1$s</string>
+    <string name="support_version_hint">Toca para copiar.</string>
+    <string name="support_copied">Copiado.</string>
+    <!-- shared:support end -->
+</resources>

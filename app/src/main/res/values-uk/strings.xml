@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Ukrainian. Translated from **English only** — never from another translation, which compounds every
+    interpretation the first translator made.
+
+    Note the four plural categories: Ukrainian uses `one`, `few`, `many` and `other` where English uses
+    two. Which categories a language needs is CLDR's decision, and `TranslationTest` enforces it.
+    The hour chips follow "Призупинити на" (accusative), the minute chips follow "Другий дзвінок
+    протягом" (genitive).
+-->
+<resources>
+    <string name="tab_home">Головна</string>
+    <string name="tab_settings">Налаштування</string>
+
+    <string name="action_back">Назад</string>
+
+    <string name="settings_appearance">Вигляд</string>
+    <string name="settings_theme_system">Системна</string>
+    <string name="settings_theme_light">Світла</string>
+    <string name="settings_theme_dark">Темна</string>
+    <string name="settings_material_you">Використовувати кольори шпалер</string>
+    <string name="settings_material_you_hint">Android 12 і новіші версії. За замовчуванням вимкнено, тож застосунок зберігає власну палітру.</string>
+    <string name="settings_language">Мова</string>
+    <string name="settings_language_system">Системна</string>
+
+    <!-- Home -->
+    <string name="home_intro">Хто телефонує двічі за кілька хвилин, той, мабуть, потребує тебе. Urgent дзвонить при цьому другому дзвінку, навіть коли телефон у режимі без звуку чи вібросигналу.</string>
+    <string name="home_ring_through">Дзвонити при повторних дзвінках</string>
+    <string name="home_ring_through_hint">Другий дзвінок із того самого номера лунає з гучністю будильника та з вібрацією. Налаштування самого телефона залишаються без змін.</string>
+    <string name="home_ring_through_paused_hint">Призупинено. Ніщо не дзвонитиме, доки ти не відновиш роботу або не скінчиться призупинення, навіть для абонентів зі списку «Дзвонити одразу».</string>
+    <string name="home_pause_for">Призупинити на</string>
+    <plurals name="home_pause_hours">
+        <item quantity="one">%d годину</item>
+        <item quantity="few">%d години</item>
+        <item quantity="many">%d годин</item>
+        <item quantity="other">%d години</item>
+    </plurals>
+    <string name="home_paused_until">Призупинено до %s</string>
+    <string name="home_pause_resume">Відновити</string>
+    <string name="home_window">Другий дзвінок протягом</string>
+    <plurals name="home_window_minutes">
+        <item quantity="one">%d хвилини</item>
+        <item quantity="few">%d хвилин</item>
+        <item quantity="many">%d хвилин</item>
+        <item quantity="other">%d хвилини</item>
+    </plurals>
+    <string name="home_count_declined">Враховувати відхилені дзвінки</string>
+    <string name="home_count_declined_hint">Відхилений тобою дзвінок вважається першим. Якщо це вимкнути, після відхилення наступний дзвінок від того самого абонента залишиться тихим.</string>
+    <string name="home_permissions_missing_title">Повторні дзвінки не лунатимуть</string>
+    <string name="home_permissions_missing_body">Без дозволів «Телефон» і «Журнали викликів» Urgent не бачить, хто телефонує і чи телефонували з цього номера раніше.</string>
+    <string name="home_permissions_missing_action">Відкрити дозволи застосунку</string>
+    <string name="home_battery_title">Повторні дзвінки можуть залишитися тихими</string>
+    <string name="home_battery_body">Android може не дати Urgent дзвонити, поки він працює у фоні. Установи для Urgent використання заряду «Без обмежень».</string>
+    <string name="home_battery_action">Відкрити налаштування акумулятора</string>
+    <string name="home_xiaomi">Xiaomi</string>
+    <string name="home_autostart">Дозволити автозапуск</string>
+    <string name="home_autostart_hint">На телефонах Xiaomi Urgent дізнається про дзвінок, лише коли ввімкнено автозапуск. Відкриває список автозапуску Xiaomi; телефон не повідомляє Urgent про твій вибір.</string>
+    <string name="home_callers">Абоненти</string>
+    <string name="home_callers_anyone">Лунають повторні дзвінки від будь-кого. Обери абонентів, щоб лунали лише їхні.</string>
+    <string name="home_callers_chosen">Лунають повторні дзвінки лише від абонентів нижче.</string>
+    <string name="home_callers_contacts_only">Лунають повторні дзвінки лише від твоїх контактів.</string>
+    <string name="home_callers_contacts_and_chosen">Лунають повторні дзвінки від твоїх контактів і від абонентів нижче.</string>
+    <string name="home_callers_starred_only">Лунають повторні дзвінки лише від контактів із зірочкою.</string>
+    <string name="home_callers_starred_and_chosen">Лунають повторні дзвінки від контактів із зірочкою і від абонентів нижче.</string>
+    <string name="home_use_chosen">Враховувати абонентів нижче</string>
+    <string name="home_use_chosen_hint">Якщо вимкнути, список залишиться, але не враховуватиметься, доки ти знову це не ввімкнеш.</string>
+    <string name="home_contacts_scope">З твоїх контактів</string>
+    <string name="home_contacts_scope_hint">Лунають повторні дзвінки від збережених контактів або лише від контактів із зірочкою. Urgent читає твої контакти на телефоні, щоб перевірити кожен повторний дзвінок.</string>
+    <string name="home_scope_off">Вимкнено</string>
+    <string name="home_scope_everyone">Усі з твоїх контактів</string>
+    <string name="home_scope_starred">Контакти із зірочкою</string>
+    <string name="home_contacts_missing_title">Контакти не перевіряються</string>
+    <string name="home_contacts_missing_body">Без доступу до твоїх контактів Urgent не може визначити, хто в них є, тож це налаштування нічого не робить, доки ти не дозволиш доступ.</string>
+    <string name="home_keep_alive">Працювати у фоні</string>
+    <string name="home_keep_alive_hint">Тримає Urgent запущеним із тихим сповіщенням, щоб Android не зупиняв його між дзвінками. На Xiaomi також закріпи Urgent у нещодавніх застосунках.</string>
+    <string name="home_contacts_ring_denied">Urgent потрібен доступ до твоїх контактів, щоб дзвонити, коли телефонують вони. Дозволити його можна в Налаштуваннях.</string>
+    <string name="home_callers_from_contacts">Додати з контактів</string>
+    <string name="home_callers_search">Шукати в контактах</string>
+    <string name="home_callers_type">Номер телефону</string>
+    <string name="home_callers_add">Додати</string>
+    <string name="home_callers_remove">Прибрати</string>
+    <string name="home_callers_contacts_denied">Urgent потрібен доступ до твоїх контактів, щоб вибрати абонента. Дозволити його можна в Налаштуваннях.</string>
+    <string name="home_ring_at_once">Дзвонити одразу</string>
+    <string name="home_ring_at_once_hint">Для цих абонентів лунає вже перший дзвінок, без повтору, навіть якщо правила вище їх не охоплюють.</string>
+
+    <!-- Ringing -->
+    <string name="channel_ringing_name">Дзвоніння</string>
+    <string name="channel_ringing_description">Показується, коли Urgent дзвонить при повторному дзвінку або дзвінку від абонента зі списку «Дзвонити одразу», з кнопкою, що зупиняє звук.</string>
+    <string name="channel_keep_alive_name">Робота у фоні</string>
+    <string name="channel_keep_alive_description">Показується, коли Urgent працює у фоні й чекає на повторні дзвінки.</string>
+    <string name="keep_alive_title">Urgent працює</string>
+    <string name="keep_alive_body">Чекає на повторні дзвінки. Натисни, щоб відкрити.</string>
+    <string name="ringing_title">Повторний дзвінок</string>
+    <string name="ringing_body">Дзвонить, бо з того самого номера зателефонували знову.</string>
+    <string name="ringing_at_once_title">Дзвонити одразу</string>
+    <string name="ringing_at_once_body">Дзвонить, бо цей абонент є у твоєму списку «Дзвонити одразу».</string>
+    <string name="ringing_silence">Вимкнути звук</string>
+
+    <!-- shared:support begin. Synced into every app by android-starter's scripts/sync-support.py:
+         change it there, never in an app. -->
+    <string name="settings_about">Про застосунок</string>
+    <string name="settings_support">Довідка та відгуки</string>
+    <string name="settings_licences">Ліцензії з відкритим кодом</string>
+    <string name="settings_language_report">Щось звучить не так?</string>
+    <string name="settings_language_report_hint">Напиши, якщо якесь слово у твоїй мові виглядає неправильно. Відкриває поштовий застосунок, де вже вказано мову, якою ти читаєш.</string>
+    <string name="support_title">Довідка та відгуки</string>
+    <string name="support_report">Повідомити про проблему</string>
+    <string name="support_report_hint">Відкриває поштовий застосунок, де вже вказано версію застосунку, версію Android, модель телефона та мову, і нічого з того, що ти записуєш у застосунку. Нічого не надсилається, доки ти не натиснеш «Надіслати».</string>
+    <string name="support_feature">Запропонувати функцію</string>
+    <string name="support_feature_hint">Напиши, що має вміти застосунок і для чого це тобі знадобиться.</string>
+    <string name="support_body_bug">Що сталося і що мало статися натомість:</string>
+    <string name="support_body_feature">Що має вміти застосунок?</string>
+    <string name="support_body_language">Яке слово звучить неправильно і на якому екрані?</string>
+    <string name="support_no_mail_app">На цьому телефоні немає поштового застосунку, який можна відкрити. Адресу вище можна скопіювати.</string>
+    <string name="support_no_mail_app_write_to">На цьому телефоні немає поштового застосунку, який можна відкрити. Можна написати на %1$s.</string>
+    <string name="support_address_hint">Напиши напряму. Натисни, щоб скопіювати адресу.</string>
+    <string name="support_rate">Оцінити застосунок у Google Play</string>
+    <string name="support_rate_hint">Відкриває застосунок у Google Play. Оцінка необов’язкова й нічого не розблоковує.</string>
+    <string name="support_no_play">На цьому телефоні немає ні Google Play, ні браузера, який можна відкрити.</string>
+    <string name="licence_text_missing">Текст цієї ліцензії не вкладено в застосунок.</string>
+    <string name="licences_intro">Цей застосунок побудовано на бібліотеках нижче. Список береться із самого складання, тож він називає все, що справді містить ця копія застосунку.</string>
+    <string name="licences_read">Прочитати ліцензію</string>
+    <string name="licences_open_terms">Відкрити умови</string>
+    <string name="licences_unavailable">Не вдалося прочитати список ліцензій із цього складання.</string>
+    <string name="support_no_browser">На цьому телефоні немає браузера, який можна відкрити.</string>
+    <string name="support_site">Вебсторінка застосунку</string>
+    <string name="support_privacy">Політика конфіденційності</string>
+    <string name="support_privacy_hint">Відкривається в браузері.</string>
+    <string name="support_credits">Подяки</string>
+    <string name="support_credits_hint">Хто створив застосунок, і ліцензії з відкритим кодом</string>
+    <string name="credits_made_by">Хто створив застосунок</string>
+    <string name="credits_creator">Ідея та втілення</string>
+    <string name="credits_helped_by">Допомога</string>
+    <string name="support_more_apps">Більше застосунків MaksForge</string>
+    <string name="support_more_apps_hint">Інші безкоштовні застосунки того самого розробника.</string>
+    <string name="support_version">Версія %1$s</string>
+    <string name="support_version_hint">Натисни, щоб скопіювати.</string>
+    <string name="support_copied">Скопійовано.</string>
+    <!-- shared:support end -->
+</resources>
