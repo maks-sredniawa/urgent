@@ -48,7 +48,7 @@ Usage:
     python3 scripts/play-metadata.py --out DIR --strict   # the listing-upload run
 
 Exits non-zero when a field is over Play's limit, and - with `--strict` - when any shipped language's
-listing is incomplete. Release-note completeness is `play-whatsnew.py`'s, on every path, and is not
+listing is incomplete or a screenshot's locale tag matches no shipped language. Release-note completeness is `play-whatsnew.py`'s, on every path, and is not
 relaxed by anything here.
 """
 
@@ -89,8 +89,6 @@ FIELDS = {
 # The locale tag a screenshot filename carries (see screenshots.py's locale_tag) -> Play's code.
 APP_TAG = {
     "en": "en-US",
-    # A run without --locale names its files after the phone's own locale, read back in full.
-    "en-US": "en-US",
     "pl": "pl-PL",
     "cs": "cs-CZ",
     "de": "de-DE",
@@ -155,23 +153,34 @@ def parse_listings(text: str) -> dict[str, dict[str, str]]:
     return listings
 
 
-def copy_screenshots(out: Path) -> dict[str, int]:
+def play_locale(tag: str) -> str | None:
+    """Play's code for a filename's locale tag, or None when no shipped language matches it.
+
+    A run without --locale names its files after the phone's own locale, read back in full
+    (`en-US`, `pl-PL`), so a tag missing from APP_TAG falls back to its language subtag.
+    """
+    return APP_TAG.get(tag) or APP_TAG.get(tag.split("-")[0])
+
+
+def copy_screenshots(out: Path) -> tuple[dict[str, int], list[str]]:
     """Fan `art/play-screenshots/1_home-pl.png` out into supply's per-locale image directories.
 
-    Returns `{play locale: count}`. Missing entirely is not an error: the directory does not exist
-    until the listing set has been re-shot, and a metadata run that only updates text is legitimate.
+    Returns `{play locale: count}` and the files whose locale tag matched no shipped language.
+    Missing entirely is not an error: the directory does not exist until the listing set has been
+    re-shot, and a metadata run that only updates text is legitimate.
     """
     counts: dict[str, int] = {}
+    unknown: list[str] = []
     if not SCREENSHOTS.is_dir():
-        return counts
+        return counts, unknown
     for png in sorted(SCREENSHOTS.glob("*.png")):
         m = SHOT.match(png.name)
         if not m:
             print(f"-- skipping {png.name}: not <order>_<scene>-<locale>.png", file=sys.stderr)
             continue
-        locale = APP_TAG.get(m.group("tag"))
+        locale = play_locale(m.group("tag"))
         if locale is None:
-            print(f"-- skipping {png.name}: unknown locale tag {m.group('tag')!r}", file=sys.stderr)
+            unknown.append(png.name)
             continue
         target = out / locale / "images" / "phoneScreenshots"
         target.mkdir(parents=True, exist_ok=True)
@@ -179,7 +188,7 @@ def copy_screenshots(out: Path) -> dict[str, int]:
         # prefix is what it sorts on.
         shutil.copy2(png, target / f"{m.group('order') or ''}{m.group('scene')}.png")
         counts[locale] = counts.get(locale, 0) + 1
-    return counts
+    return counts, unknown
 
 
 def main() -> int:
@@ -225,7 +234,9 @@ def main() -> int:
             changelogs.mkdir(exist_ok=True)
             (changelogs / f"{code}.txt").write_text(notes[locale] + "\n", encoding="utf-8")
 
-    shots = copy_screenshots(args.out)
+    shots, unknown_shots = copy_screenshots(args.out)
+    for name in unknown_shots:
+        gaps.append(f"{name} has a locale tag no shipped language matches - not uploaded")
     complete = sorted(locale for locale, fields in listings.items() if all(fields.get(f) for f in LIMITS))
     incomplete = sorted(set(listings) - set(complete))
     print(
