@@ -404,6 +404,13 @@ And a fourth for the first run: **`dry_run` defaults to true**, which passes `--
 Play validates the whole edit and discards it. Nothing publishes, nothing is sent for review. Untick
 it when you mean it.
 
+⚠️ **A track's first release cannot be staged.** Play refuses it with `The first release on a track
+cannot be staged`, even on a dry run, and the Console offers no percentage for it either. The first
+production release therefore goes at `rollout: 1.0` or from the Console. Urgent's 1.0.0 went from the
+Console on 2026-11-19, which is also where production's countries/regions were set: the track
+starts with none, and a release on it reaches nobody until they are added. Every later release can
+use the staged default.
+
 ### It promotes; it does not build
 
 The artifact that reaches production is the **exact one `publish-play.yml` already put on the
