@@ -117,6 +117,15 @@ template's `docs/DOD.md` the day a feature adds a table.
       and screenshots in both locales, since `update_listing` has never run against production. The
       next production release run with `update_listing: true` pushes them anyway
       ([`RELEASING.md`](RELEASING.md)).
+- [ ] **Ship 1.1.0 with `update_listing: true`.** It carries seven more languages (cs, de, es, fr, it,
+      pt-BR, uk) and their listings, and all nine screenshot sets retaken on the `pixel-api36`
+      emulator on 2026-11-19. Before that run English screenshots never reached Play:
+      `play-metadata.py` did not know their `en-US` filename tag.
+- [ ] **Read Xiaomi's own words in each new language on a HyperOS phone.** The translators took the
+      AOSP terms from source, but Xiaomi's *autostart*, *Recents* and its battery option name could
+      not be checked from a document in cs, de, es, fr, it, pt-BR and uk. Set the phone to each
+      language, open those screens, and fix `home_autostart*` and `home_keep_alive_hint` where they
+      differ.
 
 ## Standing checks that never close
 
