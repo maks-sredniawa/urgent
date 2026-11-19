@@ -111,22 +111,18 @@ template's `docs/DOD.md` the day a feature adds a table.
       declared core functionality, and the reviewer could not verify it in the app, asking for an
       updated declaration with steps to verify and a video. The build itself was not faulted.
       Details and the answer in [`play-app-content.md`](play-app-content.md#sms-and-call-log-permissions).
-- [ ] **Production, second attempt.** The listing in all nine locales now leads with the user-set
-      rule and its automatic action; the declaration carries numbered steps and an emulator video.
-      Ship 1.1.0 with `update_listing: true` and `rollout: 1.0` (still a first release), so build,
-      listing and declaration go up as one review. Once it is live, update the public status together:
-      the README *Status* section, the `maksforge:` `status` in [`_config.yml`](_config.yml), the entry
-      in the home page repo's `apps/web/src/app/catalog/projects.ts`, and the profile README. If it is
-      refused again, read the reason before changing anything; the fallback stays distribution off
-      Play.
-- [ ] **Confirm the Console listing matches [`store-listing.md`](store-listing.md).** Descriptions
-      and screenshots in all nine locales, since `update_listing` has never run against production. The
-      next production release run with `update_listing: true` pushes them anyway
-      ([`RELEASING.md`](RELEASING.md)).
-- [ ] **Ship 1.1.0 with `update_listing: true`.** It carries seven more languages (cs, de, es, fr, it,
-      pt-BR, uk) and their listings, and all nine screenshot sets retaken on the `pixel-api36`
-      emulator on 2026-11-19. Before that run English screenshots never reached Play:
-      `play-metadata.py` did not know their `en-US` filename tag.
+- [ ] **Production, second attempt: ship 1.1.0 with `update_listing: true` and `rollout: 1.0`.**
+      Still a first release, so build, listing and the already-saved declaration (numbered steps and
+      an emulator video) go up as one review. The build carries seven more languages (cs, de, es, fr,
+      it, pt-BR, uk); the listing, now leading with the user-set rule and its automatic action, goes
+      up in all nine locales with all nine screenshot sets, retaken on the `pixel-api36` emulator on
+      2026-11-19. Before this run English screenshots never reached Play (`play-metadata.py` did not
+      know their `en-US` filename tag), and `update_listing` has never run against production, so
+      check the Console listing matches [`store-listing.md`](store-listing.md) once it is up. Once it
+      is live, update the public status together: the README *Status* section, the `maksforge:`
+      `status` in [`_config.yml`](_config.yml), the entry in the home page repo's
+      `apps/web/src/app/catalog/projects.ts`, and the profile README. If it is refused again, read the
+      reason before changing anything; the fallback stays distribution off Play.
 - [ ] **Read Xiaomi's own words in each new language on a HyperOS phone.** The translators took the
       AOSP terms from source, but Xiaomi's *autostart*, *Recents* and its battery option name could
       not be checked from a document in cs, de, es, fr, it, pt-BR and uk. Set the phone to each

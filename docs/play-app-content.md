@@ -188,7 +188,7 @@ The previous text, saved for *Ring at once* on 2026-10-22, never mentioned the b
 > READ_CALL_LOG; CallScreeningService skips contacts unless default dialer. Test: turn it on, set
 > silent, call twice.
 
-Would change: a refusal (Plan B is distribution off Play), the window choices, a new trigger, or any
+Would change: a second refusal (Plan B is distribution off Play), the window choices, a new trigger, or any
 use of the call log beyond comparing one number.
 
 ## Foreground service permissions
