@@ -36,7 +36,7 @@
         <item quantity="many">%d horas</item>
         <item quantity="other">%d horas</item>
     </plurals>
-    <string name="home_paused_until">En pausa hasta las %s</string>
+    <string name="home_paused_until">En pausa hasta: %s</string>
     <string name="home_pause_resume">Reanudar</string>
     <string name="home_window">Segunda llamada en un plazo de</string>
     <plurals name="home_window_minutes">
