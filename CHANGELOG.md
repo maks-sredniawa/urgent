@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.1.0](https://github.com/maks-sredniawa/urgent/compare/v1.0.0...v1.1.0) (2026-11-19)
+
+
+### Features
+
+* speak Czech, German, Spanish, French, Italian, Brazilian Portuguese and Ukrainian ([98d177b](https://github.com/maks-sredniawa/urgent/commit/98d177b0c67a7ab0e7c202eadf042bdde7f4fb73))
+
+
+### Bug Fixes
+
+* **a11y:** tag each language chip with its own locale for TalkBack ([c0dbe9a](https://github.com/maks-sredniawa/urgent/commit/c0dbe9af003edb628bbbb78ce74908ba0b58e857))
+* **es:** word the pause end so it reads right at one o'clock ([c413aac](https://github.com/maks-sredniawa/urgent/commit/c413aac2a59c2efbea8e004fec32f32ac83c1714))
+* **listing:** map device-locale screenshot tags by language and fail --strict on unknown ones ([eccd577](https://github.com/maks-sredniawa/urgent/commit/eccd577d4204f40fc4a628c9ffd06c1ec6e1d9cf))
+* **listing:** upload the English screenshots, whose filenames carry en-US ([f218513](https://github.com/maks-sredniawa/urgent/commit/f218513c758e6102eecfece0d17872a7ba5e46da))
+
 ## [1.0.0](https://github.com/maks-sredniawa/urgent/compare/v0.8.0...v1.0.0) (2026-11-18)
 
 
