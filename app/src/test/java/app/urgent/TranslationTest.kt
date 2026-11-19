@@ -224,9 +224,15 @@ class TranslationTest {
      * The alternative is `getString(R.string.other)` interpolation, which cannot drift and needs no
      * entry here. It is not free: it forces the quoted string into whatever case and grammar the host
      * sentence needs, which is wrong in most inflecting languages for a heading being cited. So a
-     * composed sentence is allowed, and **an entry here is what it costs**. Empty until the first one.
+     * composed sentence is allowed, and **an entry here is what it costs**.
      */
-    private val quotedPairs: List<Pair<String, String>> = emptyList()
+    private val quotedPairs: List<Pair<String, String>> =
+        listOf(
+            "home_ring_at_once" to "ringing_at_once_title",
+            "home_ring_at_once" to "ringing_at_once_body",
+            "home_ring_at_once" to "home_ring_through_paused_hint",
+            "home_ring_at_once" to "channel_ringing_description",
+        )
 
     @Test
     fun `a string that quotes another by name still contains it in every locale`() {
