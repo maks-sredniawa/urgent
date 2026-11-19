@@ -5,8 +5,10 @@ title: Urgent call
 
 # Urgent call
 
-**Rings your phone when the same number calls twice in a few minutes, even on silent or vibrate.**
-Free, ad-free, and entirely on your own phone: no account, no sign-up, no server.
+**Automates one rule on your phone: when the same number calls again within the minutes you set, it
+rings, even on silent or vibrate.** You set the trigger (the time window, and whose calls count) and
+Urgent carries out the action. Free, ad-free, and entirely on your own phone: no account, no sign-up,
+no server.
 
 ## What it does
 

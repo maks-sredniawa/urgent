@@ -110,6 +110,10 @@ template's `docs/DOD.md` the day a feature adds a table.
       because the workflow's staged rollout is refused on a track's first release
       ([`RELEASING.md`](RELEASING.md#going-to-production-manual-gated-staged)), so `update_listing`
       did not run with it: the descriptions and screenshots on Play are whatever the Console held.
+      **Rejected the same day** over the `READ_CALL_LOG` declaration: the listing and the in-app
+      experience did not read as *Device automation*
+      ([`play-app-content.md`](play-app-content.md#sms-and-call-log-permissions)). Resent with the
+      listing opening on the rule and its action, and step-by-step review instructions with a video.
       Once it is live, update the public status together: the README *Status* section, the
       `maksforge:` `status` in [`_config.yml`](_config.yml), the entry in the home page repo's
       `apps/web/src/app/catalog/projects.ts`, and the profile README.

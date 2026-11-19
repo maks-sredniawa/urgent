@@ -164,6 +164,25 @@ allows only `SEND_SMS`, and *Caller ID, spam detection and blocking* describes a
 > READ_CALL_LOG; CallScreeningService skips contacts unless default dialer. Test: turn it on, set
 > silent, call twice.
 
+**Rejected for production on 2026-11-19**, with 1.0.0, on two counts under *Device Automation*:
+*"Your store listing information does not match the core functionality for your declared use case"*
+and *"Your in-app experience does not match the core functionality… submit an updated Permissions
+Declaration Form that includes instructions on how to verify your declared functionality"*, with a
+video if parts of the app are hard to reach. The same declaration had passed review on the testing
+tracks. The answer was the listing and the site opening on the rule and its action
+([`store-listing.md`](store-listing.md)), and these instructions, saved the same day (495 of 500
+characters):
+
+> Device automation. User-set trigger, set on Home: the same number calls again within 5, 10, 15 or
+> 30 min, or a caller on the Ring at once list. Automatic action: Urgent rings at alarm volume
+> through silent or vibrate. To verify: 1. Turn on Ring for repeated calls; allow all. 2. Tap the
+> battery card, set Unrestricted (else Android 12+ blocks it). 3. Set the phone to silent. 4. Call it
+> from another phone; hang up. 5. Call again: it rings, with a Silence notification. Call log stays
+> on-device.
+
+Video instructions: https://drive.google.com/file/d/1m858AD7Vp46hSNSznfW_KmfRPVg-R3Nl/view — keep it
+viewable by anyone with the link while this declaration is on file.
+
 Would change: a refusal (Plan B is distribution off Play), the window choices, a new trigger, or any
 use of the call log beyond comparing one number.
 
