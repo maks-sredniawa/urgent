@@ -39,6 +39,7 @@ import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import app.urgent.R
@@ -288,6 +289,15 @@ private fun RowText(
 fun ChoiceChip(
     selected: Boolean,
     label: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+) = ChoiceChip(selected, AnnotatedString(label), onClick, modifier)
+
+/** Takes styled text, so a label can carry its own language for TalkBack (see the language row). */
+@Composable
+fun ChoiceChip(
+    selected: Boolean,
+    label: AnnotatedString,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
