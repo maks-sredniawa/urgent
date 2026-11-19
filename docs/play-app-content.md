@@ -174,9 +174,10 @@ dialogs, battery set to *Unrestricted*, the 5-minute rule, silent mode, a silent
 second call ringing with Urgent's *Silence* notification (84 s, no sound; the debug build's name
 shows as *Urgent call debug*). Link: https://drive.google.com/file/d/1m858AD7Vp46hSNSznfW_KmfRPVg-R3Nl/view
 
-*Instructions for review*, as saved on 2026-11-19 (497 of 500 characters):
+*Instructions for review*, as saved on 2026-11-19 (495 of 500 characters), with the video in the
+form's own *Video instructions* field:
 
-> Device automation. User-set trigger (Home): same number calls again in 5-30 min, or a Ring at once caller. Action: rings at alarm volume on silent/vibrate. Verify: 1. Turn on Ring for repeated calls; allow all. 2. Battery card: set Unrestricted (else Android 12+ blocks it). 3. Set silent. 4. Call from another phone; hang up. 5. Call again: it rings, with a Silence notification. Call log stays on-device; no INTERNET. Video: https://drive.google.com/file/d/1m858AD7Vp46hSNSznfW_KmfRPVg-R3Nl/view
+> Device automation. User-set trigger, set on Home: the same number calls again within 5, 10, 15 or 30 min, or a caller on the Ring at once list. Automatic action: Urgent rings at alarm volume through silent or vibrate. To verify: 1. Turn on Ring for repeated calls; allow all. 2. Tap the battery card, set Unrestricted (else Android 12+ blocks it). 3. Set the phone to silent. 4. Call it from another phone; hang up. 5. Call again: it rings, with a Silence notification. Call log stays on-device.
 
 The previous text, saved for *Ring at once* on 2026-10-22, never mentioned the battery setting:
 

@@ -120,7 +120,7 @@ template's `docs/DOD.md` the day a feature adds a table.
       refused again, read the reason before changing anything; the fallback stays distribution off
       Play.
 - [ ] **Confirm the Console listing matches [`store-listing.md`](store-listing.md).** Descriptions
-      and screenshots in both locales, since `update_listing` has never run against production. The
+      and screenshots in all nine locales, since `update_listing` has never run against production. The
       next production release run with `update_listing: true` pushes them anyway
       ([`RELEASING.md`](RELEASING.md)).
 - [ ] **Ship 1.1.0 with `update_listing: true`.** It carries seven more languages (cs, de, es, fr, it,
