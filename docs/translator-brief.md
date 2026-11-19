@@ -12,34 +12,73 @@ translator made gets compounded, silently.
 
 ## 1. What the app is, in one paragraph
 
-<Write this. A translator who does not know what the app is *for* will produce fluent sentences that
-are wrong about the thing. Say who uses it and in what situation — copy for someone worried at 2am
-reads differently from copy for a productivity tool.>
+Urgent call is a free, ad-free Android app made by one person. It rings the phone for a **repeated
+call**, meaning the same number calling again within a few minutes, while the phone is on silent, on
+vibrate or in Do Not Disturb. The reasoning is that someone who calls twice probably needs you. The
+second call rings at the **alarm** volume, because the ringer mode does not mute alarms. The user
+picks whose repeated calls ring (anyone, their contacts, starred contacts, or callers they choose)
+and can put a few people under *Ring at once*, whose first call already rings. There is no account
+and no server; nothing leaves the phone. The reader has just missed a call that mattered, or is
+setting the app up so they will not: write for someone calm but serious about being reachable.
 
 ## 2. The rules that outrank fluency
 
-<Write these. They are the promises the copy makes that a translator must not soften, sharpen, or
-"improve". Number them, and say what each one protects — a translator will follow a rule they
-understand the reason for and will helpfully fix one they do not. Shapes that recur:
+A fluent translation that breaks one of these is worse than a clumsy one that keeps it, because the
+failure is invisible to everyone who cannot read the language.
 
-- *Never state something the app does not know.* Where a value is absent because nobody entered it,
-  the copy says so — it does not say everything is fine.
-- *The app observes; it never advises.* A verb that becomes an imperative in translation changes what
-  the app claims to be, and in some domains that is a regulatory question rather than a stylistic one.
-- *A unit that is always shown one way stays that way*, however unnatural it reads, because the whole
-  point is that a small change stays visible.>
+### 2.1 Urgent never changes the phone's settings
+
+It does not touch the ringer mode, the ring volume or Do Not Disturb; it plays its own ringtone *at*
+the alarm volume. `home_ring_through_hint` says so: *"Your phone's own settings are left as they
+are."* No string may say or imply that Urgent turns the sound on, raises the volume, switches off
+silent mode or overrides Do Not Disturb. *"Rings at your alarm volume"* names a level that already
+exists; it must not become "raises the volume to the alarm level".
+
+### 2.2 Hedged claims stay hedged
+
+The app cannot always know what Android or the phone maker will do, and the copy says exactly as
+much as it knows.
+
+- `home_intro`: someone who calls twice *probably* needs you. Not "needs you".
+- `home_battery_title`: repeated calls *may* stay silent. Not "will".
+- `home_autostart_hint`: *"the phone does not tell Urgent what you chose"* is a fact the user needs.
+- `support_rate_hint`: rating *"unlocks nothing"*. Keep it.
+
+### 2.3 Privacy sentences are exact
+
+`home_contacts_scope_hint` (reads contacts *on the phone*, only *to check each repeated call*),
+`home_permissions_missing_body` and `support_report_hint` (*"nothing you have recorded in the app"*,
+*"Nothing is sent until you tap send"*) state what the app reads and why. Translate each claim; do
+not drop one, merge two, or add a reassurance the English does not make.
+
+### 2.4 Android's words are Android's
+
+The user will look for these on their own phone, so use the words **Android itself uses in your
+language** (AOSP's system strings and the Settings app), not a fresh translation: *silent*,
+*vibrate*, *Do Not Disturb*, *alarm volume*, *Settings*, *app permissions*, *call log*, *battery
+use* and its *Unrestricted* option, *Recents*, *starred* contacts, *notification*. Xiaomi's
+*autostart* is Xiaomi's word: use what MIUI and HyperOS show in your language.
+
+### 2.5 A label quoted elsewhere keeps its exact words
+
+The UI names some of its own controls inside other sentences, and each quotation must match the
+label letter for letter.
+
+- *Ring at once*: `home_ring_at_once` (the list), `ringing_at_once_title`, `ringing_at_once_body`,
+  `home_ring_through_paused_hint`, `channel_ringing_description`.
+- *Repeated call*: `ringing_title`, and the same noun in every sentence about it.
 
 ## 3. Register
 
-Decide it once and write it down, because it is the thing a translator most needs told and most
-often guesses.
-
-- **Who the app addresses, and how formally.** Many languages force a choice English does not: `du`
-  or `Sie`, `ty` or `Pan/Pani`, `tu` or `vous`. Pick one and hold it across every string.
-- **Whether the app speaks as "we" or is invisible.** "We couldn't save that" and "That couldn't be
-  saved" are different products.
-- **Sentence case or title case** in buttons and headings. English tolerates both; most languages do
-  not use title case at all, so a translated title-cased heading reads as a mistake.
+- **Source is British English** (*colours*, *licences*). Use your language's standard written form.
+- **Second person, informal, as in every MaksForge app:** de *du*, fr *tu*, it *tu*, es *tú*, pt-BR
+  *você*, cs *ty*, uk *ти*, pl *ty*. Hold it across every string.
+- **The app is "Urgent" in sentences**, never "we". The developer speaks as "I" only in
+  `settings_language_report_hint` (*"Tell me if…"*).
+- **Sentence case** for buttons, titles and labels. Not Title Case, and not ALL CAPS.
+- **Calm and plain.** No exclamation marks and no emoji.
+- Use your language's own quotation marks: German „ “, French « », Polish „ ”, Czech „ “,
+  Ukrainian « », Italian and Spanish « », Portuguese “ ”.
 
 ## 4. Do not translate
 
@@ -77,6 +116,14 @@ most languages.
 | English | Resource ids | Why they differ | Example |
 | --- | --- | --- | --- |
 | Ring at once | `home_ring_at_once`, `ringing_at_once_title`, `ringing_at_once_body` | One name everywhere: the list's name, quoted in the notification | pl: *Dzwoń od razu* |
+| repeated call | `ringing_title`, `home_ring_through`, every `home_callers_*` | The app's one concept: the same number calling again. One noun everywhere | pl: *powtórne połączenie* |
+| caller, callers | `home_callers`, `home_callers_*`, `home_ring_at_once_hint` | Whoever is calling, a person or a number. Not a contact entry | pl: *rozmówca* |
+| ring, ringing | `home_ring_through`, `ringing_*`, `channel_ringing_*` | What the phone does audibly. Not "call", not "notify" | pl: *dzwonić* |
+| silent, vibrate | `home_intro` | Android's ringer modes, in Android's words (§2.4) | pl: *wyciszony*, *wibracje* |
+| contacts, starred contacts | `home_scope_*`, `home_callers_*`, `home_contacts_*` | Android's Contacts and its star, in Android's words | pl: *kontakty*, *oznaczone gwiazdką* |
+| Pause, Paused, Resume | `home_pause_for`, `home_paused_until`, `home_ring_through_paused_hint`, `home_pause_resume` | One verb pair everywhere | pl: *Wstrzymaj*, *Wznów* |
+| Settings | `tab_settings`, `home_*_denied` | In a sentence it is the phone's Settings app; capitalise as your Android does | pl: *Ustawienia* |
+| Help and feedback | `settings_support`, `support_title` | One name, shared by every MaksForge app | |
 
 Words that genuinely *are* one word everywhere — *Settings*, *Close*, *Edit*, *Delete* — belong in
 the same table with a note saying so, otherwise someone will vary them for variety.
