@@ -460,6 +460,17 @@ two edits, two reviews and two waits.
 Release notes always accompany the build; they are scoped to a version and mean nothing without it.
 `update_listing` governs only the descriptions, screenshots and graphics.
 
+### When Play will not send a change for review by itself
+
+While the app has a rejected update, or changes waiting in the Console (a declaration edited after a
+rejection, say), every API commit fails with `Changes cannot be sent for review automatically. Please
+set the query parameter changesNotSentForReview to true`. All three publish workflows take
+`changes_not_sent_for_review` for that: the edit is committed but held, and **Send changes for
+review** in the Console's Publishing overview sends it together with everything else pending, as one
+review. It is off by default, and a release event (which has no inputs) always runs with it off, so
+the next ordinary release still sends itself. Urgent first needed it on 2026-11-19, after 1.0.0's
+production rejection.
+
 ### Why fastlane here and Python everywhere else
 
 `scripts/play-metadata.py` renders `docs/store-listing.md` into the tree `supply` expects, at run

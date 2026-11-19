@@ -61,6 +61,14 @@ on:
         description: 'Validate against Play, publish nothing — leave ON for a first run'
         type: boolean
         default: true
+      changes_not_sent_for_review:
+        # Play refuses to send an edit for review by itself while the app has a rejected update or
+        # changes waiting in the Console ("Changes cannot be sent for review automatically"). On,
+        # the edit is committed but held, and *Send changes for review* in the Console's Publishing
+        # overview sends it with everything else pending, as one review.
+        description: 'Commit without sending for review — send it from the Console'
+        type: boolean
+        default: false
 
 concurrency:
   group: publish-play-production
@@ -184,5 +192,8 @@ jobs:
             # sent for review — the honest way to prove this workflow before trusting it.
             args+=(--validate_only)
             echo "::notice::DRY RUN — validating against Play, committing nothing"
+          fi
+          if [ '${{ inputs.changes_not_sent_for_review }}' = 'true' ]; then
+            args+=(--changes_not_sent_for_review true)
           fi
           bundle exec fastlane supply "${args[@]}"
