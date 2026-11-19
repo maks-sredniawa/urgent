@@ -9,6 +9,15 @@ on:
   # For a retry after a Play-side or credential failure, without cutting a version
   # nobody wanted. Pick the tag in the Run workflow dialog.
   workflow_dispatch:
+    inputs:
+      changes_not_sent_for_review:
+        # Play refuses to send an edit for review by itself while the app has a rejected update or
+        # changes waiting in the Console ("Changes cannot be sent for review automatically"). On,
+        # the edit is committed but held, and *Send changes for review* in the Console's Publishing
+        # overview sends it with everything else pending, as one review.
+        description: 'Commit without sending for review — send it from the Console'
+        type: boolean
+        default: false
 
 # The upload is not idempotent: Play permanently refuses a versionCode it has already
 # seen, so a second run of the same release fails at the last step having done all the
@@ -109,6 +118,8 @@ jobs:
           releaseFiles: app/build/outputs/bundle/release/app-release.aab
           track: internal
           status: completed
+          # Always false on a release event, which has no inputs.
+          changesNotSentForReview: ${{ inputs.changes_not_sent_for_review == true }}
           # R8 is on from 1.9.0, so without this every Play crash report is unreadable
           # obfuscated frames. The mapping is only useful alongside the exact build it came
           # from, which is why it goes up in the same call rather than being kept for later.
