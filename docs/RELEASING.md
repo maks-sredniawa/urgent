@@ -341,6 +341,7 @@ refused that way; both applications are recorded in
 | `version_code` | *(blank)* | which build to promote; blank asks Play what is on internal |
 | `release_version` | *(blank)* | which release's notes go up; blank takes the newest in `docs/store-listing.md` |
 | `dry_run` | `false` | validate against Play, commit nothing |
+| `changes_not_sent_for_review` | `false` | commit the edit held; send it from the Console ([why](#when-play-will-not-send-a-change-for-review-by-itself)) |
 
 The source track is hardcoded to `internal`. That is the whole point of a second workflow: it is the
 one promotion made over and over during a closed test, and a dialog field whose only correct answer
@@ -438,6 +439,7 @@ promotion: it moves the release already sitting on `from_track` instead of looki
 | `version_code` | *(blank)* | which build to promote; blank asks Play what is on `from_track` |
 | `update_listing` | `false` | push descriptions + screenshots as well |
 | `dry_run` | `true` | validate against Play, commit nothing |
+| `changes_not_sent_for_review` | `false` | commit the edit held; send it from the Console ([why](#when-play-will-not-send-a-change-for-review-by-itself)) |
 
 **The versionCode comes from Play, not from git.** Every other workflow derives it from the commit
 count, and doing that here is wrong in a way that looks right: the count describes the *checkout*,
@@ -470,6 +472,12 @@ review** in the Console's Publishing overview sends it together with everything 
 review. It is off by default, and a release event (which has no inputs) always runs with it off, so
 the next ordinary release still sends itself. Urgent first needed it on 2026-11-19, after 1.0.0's
 production rejection.
+
+With the input off, every workflow fails on that error rather than going green with an edit nobody
+sent. The internal upload fails because the action passes the error through. The closed-testing and
+production runs fail because they pass `--rescue_changes_not_sent_for_review false`: fastlane
+`supply` defaults that option to `true`, which catches this error and quietly recommits the edit
+held. With the input on, they pass `--changes_not_sent_for_review true` instead.
 
 ### Why fastlane here and Python everywhere else
 
