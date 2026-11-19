@@ -154,8 +154,31 @@ Play's list of permitted uses decides this, and Urgent fits none of it cleanly. 
 the ring. *Physical safety/emergency alert*
 allows only `SEND_SMS`, and *Caller ID, spam detection and blocking* describes a different app.
 
-*Instructions for review*, as saved for *Ring at once* and sent for review on 2026-10-22 (496 of
-500 characters):
+**Rejected from production on 2026-11-19** (1.0.0, the first production release), with two findings
+under *Policy Declaration for SMS/Call Log*, both naming *Device automation*: *Requested permissions
+do not match core functionality* — "your store listing information does not match the core
+functionality for your declared use case" — and *Unable to verify core functionality* — "your in-app
+experience does not match", with a request for an updated declaration that says how to verify it and
+links a video. The same declaration had passed every testing-track review since 0.1.0.
+
+The likely reason the reviewer saw nothing: on Android 12+ Urgent cannot start its ringing service
+from the background while its battery use is *Optimized* (`ForegroundServiceStartNotAllowedException`
+from `RingThroughService.start`), so a test without the Home screen's battery card done stays
+silent. The old instructions never said so.
+
+The answer, 2026-11-19: the listing in all nine locales now opens with the rule the user sets and the
+automatic action ([`store-listing.md`](store-listing.md)); the declaration keeps *Device automation*
+with numbered steps that include the battery setting; and a new video, recorded on the `pixel-api36`
+emulator with real `adb emu gsm call` calls, shows the whole path — switch on, the three permission
+dialogs, battery set to *Unrestricted*, the 5-minute rule, silent mode, a silent first call, and the
+second call ringing with Urgent's *Silence* notification (84 s, no sound; the debug build's name
+shows as *Urgent call debug*). Link: https://drive.google.com/file/d/1m858AD7Vp46hSNSznfW_KmfRPVg-R3Nl/view
+
+*Instructions for review*, as saved on 2026-11-19 (497 of 500 characters):
+
+> Device automation. User-set trigger (Home): same number calls again in 5-30 min, or a Ring at once caller. Action: rings at alarm volume on silent/vibrate. Verify: 1. Turn on Ring for repeated calls; allow all. 2. Battery card: set Unrestricted (else Android 12+ blocks it). 3. Set silent. 4. Call from another phone; hang up. 5. Call again: it rings, with a Silence notification. Call log stays on-device; no INTERNET. Video: https://drive.google.com/file/d/1m858AD7Vp46hSNSznfW_KmfRPVg-R3Nl/view
+
+The previous text, saved for *Ring at once* on 2026-10-22, never mentioned the battery setting:
 
 > Urgent rings through silent, vibrate or DND for user-set triggers: the same number calling again
 > within 5, 10, 15 or 30 minutes, or a number on the user's Ring at once list. On a ringing call it

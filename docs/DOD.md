@@ -104,15 +104,21 @@ template's `docs/DOD.md` the day a feature adds a table.
       verbatim in [`play-app-content.md`](play-app-content.md).
 - [x] **Decide the first production number.** `1.0.0`, decided 2026-11-01; on 2026-11-18 the
       unreleased 0.9.0 was folded into it, so production starts with one build and one review.
-- [ ] **1.0.0 approved and live on production.** Sent for review from the Console on 2026-11-19 as a
-      full rollout to 178 countries/regions, the same set as the closed track, with the 1.0.0 notes
-      in both locales. Managed publishing is off, so approval publishes it. It went from the Console
-      because the workflow's staged rollout is refused on a track's first release
-      ([`RELEASING.md`](RELEASING.md#going-to-production-manual-gated-staged)), so `update_listing`
-      did not run with it: the descriptions and screenshots on Play are whatever the Console held.
-      Once it is live, update the public status together: the README *Status* section, the
-      `maksforge:` `status` in [`_config.yml`](_config.yml), the entry in the home page repo's
-      `apps/web/src/app/catalog/projects.ts`, and the profile README.
+- [x] **1.0.0 sent to production — rejected 2026-11-19.** Sent from the Console that day as a full
+      rollout to 178 countries/regions (the workflow's staged rollout is refused on a track's first
+      release, [`RELEASING.md`](RELEASING.md#going-to-production-manual-gated-staged)). Play rejected
+      it on the `READ_CALL_LOG` declaration, *Device automation*: the store listing did not match the
+      declared core functionality, and the reviewer could not verify it in the app, asking for an
+      updated declaration with steps to verify and a video. The build itself was not faulted.
+      Details and the answer in [`play-app-content.md`](play-app-content.md#sms-and-call-log-permissions).
+- [ ] **Production, second attempt.** The listing in all nine locales now leads with the user-set
+      rule and its automatic action; the declaration carries numbered steps and an emulator video.
+      Ship 1.1.0 with `update_listing: true` and `rollout: 1.0` (still a first release), so build,
+      listing and declaration go up as one review. Once it is live, update the public status together:
+      the README *Status* section, the `maksforge:` `status` in [`_config.yml`](_config.yml), the entry
+      in the home page repo's `apps/web/src/app/catalog/projects.ts`, and the profile README. If it is
+      refused again, read the reason before changing anything; the fallback stays distribution off
+      Play.
 - [ ] **Confirm the Console listing matches [`store-listing.md`](store-listing.md).** Descriptions
       and screenshots in both locales, since `update_listing` has never run against production. The
       next production release run with `update_listing: true` pushes them anyway
