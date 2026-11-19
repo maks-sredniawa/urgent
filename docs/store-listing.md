@@ -52,7 +52,7 @@ The line that appears under the name in search results, and the most-read text i
 Automatically rings through silent mode when the same number calls twice.
 ```
 
-### Full description — 3957/4000
+### Full description — 3998/4000
 
 **No health or safety claims.** Urgent is a second chance at a call, not an emergency service, and
 the *What it cannot do* section says so; Play's enforcement reads a linked page as part of the
@@ -63,7 +63,7 @@ Urgent is a call rule that runs by itself. You set the trigger once: the same nu
 
 HOW THE RULE WORKS
 
-When a call comes in, Urgent checks your call log for the same number within the minutes you chose. If it called before and your phone would let the call go silent, Urgent plays your ringtone at your alarm volume and vibrates. It stops when the call is answered, declined or ends, or after a minute; Silence stops it sooner.
+When a call comes in, Urgent checks your call log for the same number within the minutes you chose. If it called before and your phone would let the call go silent, Urgent plays your ringtone, or your alarm sound if Android won't share it, at your alarm volume and vibrates. It stops when the call is answered, declined or ends, or after a minute; Silence stops it sooner.
 
 The first call stays as quiet as you set it; Ring at once callers ring on the first. A call you declined counts as the first one too, unless you turn that off. You can choose the callers it rings for, or turn on Everyone in your contacts or Starred contacts. Until you choose one of those, it rings for anyone. Need quiet? Pause it for up to 8 hours.
 
@@ -84,7 +84,7 @@ Urgent never changes your ringer mode, ring volume or Do Not Disturb. It plays o
 
 FREE, AND NOTHING LEAVES YOUR PHONE
 
-No ads. No account. No server. No subscription. Urgent has no internet permission, so it cannot send anything anywhere. It reads the last few minutes of your call log when a call rings, compares one number, and keeps nothing. If Everyone in your contacts or Starred contacts is on, it also checks the caller's number against your contacts, and keeps nothing. It stores only its own settings: whether it is on or paused, how many minutes count as "again", whether declined calls count, your contacts choice, whether it runs in the background, the numbers and names you chose, your theme and your language.
+No ads, account, server or subscription. Urgent has no internet permission, so it cannot send anything anywhere. It reads the last few minutes of your call log when a call rings, compares one number, and keeps nothing. If Everyone in your contacts or Starred contacts is on, it also checks the caller's number against your contacts, and keeps nothing. It stores only its own settings: whether it is on or paused, how many minutes count as "again", whether declined calls count, your contacts choice, whether it runs in the background, the numbers and names you chose, your theme and your language.
 
 WHAT IT CANNOT DO
 
@@ -124,16 +124,16 @@ Urgent call
 Automatycznie dzwoni mimo wyciszenia, gdy ten sam numer dzwoni drugi raz.
 ```
 
-### Full description — 3998/4000
+### Full description — 3999/4000
 
 ```
 Urgent to reguła połączeń, która działa sama. Wyzwalacz ustawiasz raz: ten sam numer dzwoni znów w ciągu 5, 10, 15 lub 30 minut albo rozmówca jest na liście „Dzwoń od razu”. Gdy połączenie pasuje, Urgent automatycznie dzwoni, nawet gdy telefon jest wyciszony albo na wibracjach.
 
 JAK DZIAŁA REGUŁA
 
-Gdy ktoś dzwoni, Urgent sprawdza w rejestrze połączeń, czy ten numer dzwonił w ciągu wybranych minut. Jeśli tak i telefon przepuściłby połączenie bez dźwięku, Urgent odtwarza twój dzwonek z głośnością alarmu i wibruje. Przestaje, gdy odbierzesz, odrzucisz albo połączenie się skończy, albo po minucie. Wycisz zatrzymuje go wcześniej.
+Gdy ktoś dzwoni, Urgent sprawdza w rejestrze połączeń, czy ten numer dzwonił w ciągu wybranych minut. Jeśli tak i telefon przepuściłby połączenie bez dźwięku, Urgent odtwarza twój dzwonek (albo dźwięk alarmu, gdy Android go nie udostępni) z głośnością alarmu i wibruje. Przestaje, gdy odbierzesz, odrzucisz albo połączenie się skończy, albo po minucie. Wycisz zatrzymuje go wcześniej.
 
-Pierwsze połączenie zostaje ciche, jak ustawiono; od rozmówców z listy „Dzwoń od razu” dzwoni już pierwsze. Odrzucone połączenie też liczy się jako pierwsze, chyba że to wyłączysz. Możesz wybrać rozmówców, od których Urgent ma dzwonić, albo włączyć „Wszyscy z twoich kontaktów” lub „Oznaczone gwiazdką”. Dopóki nie wybierzesz żadnej z nich, dzwoni od każdego. Chcesz ciszy? Wstrzymaj go do 8 godzin.
+Pierwsze połączenie zostaje ciche, jak ustawiono; od rozmówców z listy „Dzwoń od razu” dzwoni już pierwsze. Odrzucone połączenie też liczy się jako pierwsze, chyba że to wyłączysz. Możesz wybrać rozmówców, od których Urgent ma dzwonić, albo włączyć „Wszyscy z twoich kontaktów” lub „Oznaczone gwiazdką”. Bez tego wyboru dzwoni od każdego. Chcesz ciszy? Wstrzymaj go do 8 godzin.
 
 DZWONI TYLKO WTEDY, GDY TELEFON BY NIE ZADZWONIŁ
 
@@ -148,11 +148,11 @@ DZIAŁA W TLE, JEŚLI TAK WOLISZ
 
 TWOJE USTAWIENIA ZOSTAJĄ BEZ ZMIAN
 
-Urgent nigdy nie zmienia trybu dzwonka, głośności ani trybu Nie przeszkadzać. Odtwarza dzwonek na strumieniu alarmu, którego tryb cichy nie wycisza.
+Urgent nigdy nie zmienia trybu dzwonka, głośności ani trybu Nie przeszkadzać. Gra na strumieniu alarmu, którego tryb cichy nie wycisza.
 
 ZA DARMO I NIC NIE OPUSZCZA TELEFONU
 
-Bez reklam, konta, serwera i subskrypcji. Urgent nie ma uprawnienia do internetu, więc nie może niczego nikomu wysłać. Czyta kilka ostatnich minut rejestru połączeń, gdy ktoś dzwoni, porównuje jeden numer i niczego nie zachowuje. Gdy wybrano „Wszyscy z twoich kontaktów” lub „Oznaczone gwiazdką”, sprawdza też numer dzwoniącego w kontaktach i nic nie zachowuje. Przechowuje tylko własne ustawienia: czy jest włączony lub wstrzymany, ile minut liczy się jako „ponownie”, czy liczą się odrzucone połączenia, wybór z kontaktów, czy działa w tle, wybrane numery i nazwy, motyw i język.
+Bez reklam, konta, serwera i subskrypcji. Bez uprawnienia do internetu Urgent nie może niczego wysłać. Czyta kilka ostatnich minut rejestru połączeń, gdy ktoś dzwoni, porównuje jeden numer i niczego nie zachowuje. Gdy wybrano „Wszyscy z twoich kontaktów” lub „Oznaczone gwiazdką”, sprawdza też numer dzwoniącego w kontaktach i nic nie zachowuje. Przechowuje tylko własne ustawienia: czy jest włączony lub wstrzymany, ile minut liczy się jako „ponownie”, czy liczą się odrzucone połączenia, wybór z kontaktów, czy działa w tle, wybrane numery i nazwy, motyw i język.
 
 CZEGO NIE POTRAFI
 
@@ -191,14 +191,14 @@ Urgent call
 Klingelt automatisch trotz Lautlos-Modus, wenn dieselbe Nummer zweimal anruft.
 ```
 
-### Full description — 3994/4000
+### Full description — 3997/4000
 
 ```
 Urgent ist eine Anrufregel, die von selbst läuft. Du legst den Auslöser einmal fest: dieselbe Nummer ruft binnen 5, 10, 15 oder 30 Minuten erneut an, oder Anrufende stehen auf deiner Liste „Sofort klingeln“. Passt ein Anruf, klingelt Urgent automatisch, auch auf lautlos oder Vibration.
 
 SO FUNKTIONIERT DIE REGEL
 
-Bei einem Anruf sucht Urgent in deiner Anrufliste dieselbe Nummer in den gewählten Minuten. Rief sie schon an und bliebe dein Handy still, spielt Urgent deinen Klingelton in Weckerlautstärke und vibriert. Es endet, wenn der Anruf angenommen, abgelehnt oder beendet wird, sonst nach einer Minute; „Stummschalten“ beendet es früher.
+Bei einem Anruf sucht Urgent in deiner Anrufliste die Nummer in den gewählten Minuten. Rief sie schon an und bliebe dein Handy still, spielt Urgent deinen Klingelton (oder Weckerton, gibt Android ihn nicht frei) in Weckerlautstärke und vibriert. Es endet, wenn der Anruf angenommen, abgelehnt oder beendet wird, sonst nach einer Minute; „Stummschalten“ beendet es früher.
 
 Der erste Anruf bleibt so leise wie eingestellt; bei Anrufenden auf „Sofort klingeln“ klingelt schon der erste. Auch ein abgelehnter Anruf zählt als erster, außer du schaltest das aus. Wähle Anrufende, für die es klingelt, oder eine Kontaktoption: „Alle in deinen Kontakten“ oder „Markierte Kontakte“. Bis dahin klingelt es bei allen. Ruhe nötig? Pausiere es bis zu 8 Stunden.
 
@@ -206,7 +206,7 @@ ES KLINGELT NUR, WENN DEIN HANDY SCHWEIGT
 
 - Klingelton an: Dein Handy klingelt selbst, Urgent bleibt still.
 - Lautlos oder Vibration: Urgent klingelt.
-- Bitte nicht stören: Urgent klingelt nur, wenn Wecker erlaubt sind, und bleibt still, wenn dein Handy den Anruf schon klingeln lässt, per „Wiederholte Anrufer“ oder für alle. Lässt Bitte nicht stören nur Kontakte oder nur markierte durch, bleibt Urgent bei ihnen mit Kontaktoption still, da dein Handy ohnehin klingelt. Ohne Kontaktoption schlägt Urgent sie nicht nach und kann mit deinem Handy zusammen für sie klingeln.
+- Bitte nicht stören: Urgent klingelt nur, wenn Wecker erlaubt sind, und bleibt still, wenn dein Handy den Anruf schon klingeln lässt, per „Wiederholte Anrufer“ oder für alle. Lässt Bitte nicht stören nur Kontakte oder nur markierte durch, bleibt Urgent bei ihnen mit Kontaktoption still, da dein Handy ohnehin klingelt. Ohne Kontaktoption schlägt Urgent sie nicht nach und kann zugleich mit deinem Handy klingeln.
 - Im Gespräch: Urgent bleibt still.
 
 IM HINTERGRUND, WENN DU WILLST
@@ -219,7 +219,7 @@ Urgent ändert nie Klingeltonmodus, Klingeltonlautstärke oder Bitte nicht stör
 
 KOSTENLOS, NICHTS VERLÄSST DEIN HANDY
 
-Keine Werbung. Kein Konto. Kein Server. Kein Abo. Ohne Internetberechtigung kann Urgent nichts irgendwohin senden. Klingelt ein Anruf, liest es die letzten Minuten deiner Anrufliste, vergleicht eine Nummer und speichert nichts. Mit einer Kontaktoption gleicht es zudem die Nummer mit deinen Kontakten ab und speichert nichts. Es speichert nur seine Einstellungen: an oder pausiert, wie viele Minuten als „noch einmal“ zählen, ob abgelehnte Anrufe zählen, deine Kontaktoption, ob es im Hintergrund läuft, gewählte Nummern und Namen, Design und Sprache.
+Ohne Werbung, Konto, Server oder Abo. Ohne Internetberechtigung kann Urgent nichts senden. Klingelt ein Anruf, liest es die letzten Minuten deiner Anrufliste, vergleicht eine Nummer und speichert nichts. Mit Kontaktoption gleicht es zudem die Nummer mit deinen Kontakten ab und speichert nichts. Es speichert nur seine Einstellungen: an oder pausiert, wie viele Minuten als „noch einmal“ zählen, ob abgelehnte Anrufe zählen, deine Kontaktoption, ob es im Hintergrund läuft, gewählte Nummern und Namen, Design und Sprache.
 
 WAS ES NICHT KANN
 
@@ -258,14 +258,14 @@ Urgent call
 Suena automáticamente en modo silencio cuando el mismo número llama dos veces.
 ```
 
-### Full description — 3995/4000
+### Full description — 3997/4000
 
 ```
 Urgent es una regla de llamadas que funciona sola. Fijas el disparador una vez: el mismo número que vuelve a llamar en 5, 10, 15 o 30 minutos, o quien esté en tu lista «Sonar a la primera». Cuando una llamada coincide, Urgent suena automáticamente, incluso en silencio o vibración.
 
 CÓMO FUNCIONA LA REGLA
 
-Al entrar una llamada, Urgent busca ese número en tu registro de llamadas dentro de los minutos que elegiste. Si ya llamó y tu teléfono la dejaría en silencio, Urgent pone tu tono con tu volumen de alarmas y vibra. Para al contestar, rechazar o terminar la llamada, o al minuto; «Silenciar» lo para antes.
+Al entrar una llamada, Urgent busca ese número en tu registro de llamadas dentro de los minutos que elegiste. Si ya llamó y tu teléfono la dejaría en silencio, Urgent pone tu tono (o tu sonido de alarma, si Android no lo comparte) con tu volumen de alarmas y vibra. Para al contestar, rechazar o terminar la llamada, o al minuto; «Silenciar» lo para antes.
 
 La primera llamada sigue como la tengas configurada; si quien llama está en «Sonar a la primera», suena ya la primera. Una llamada rechazada también cuenta como primera, salvo que lo desactives. Puedes elegir para quién suena, o activar «Todos tus contactos» o «Contactos destacados». Hasta que elijas algo, suena para cualquiera. ¿Necesitas silencio? Páusalo hasta 8 horas.
 
@@ -273,7 +273,7 @@ SOLO SUENA SI TU TELÉFONO NO LO HARÍA
 
 - Sonido activado: suena tu teléfono, así que Urgent no.
 - Silencio o vibración: Urgent suena.
-- No molestar: solo suena si se permiten las alarmas, y calla si tu teléfono ya deja sonar la llamada, por su regla de llamadas repetidas o para todos. Si No molestar solo deja pasar a tus contactos, o solo a los destacados, Urgent no suena con ellos si tienes «Todos tus contactos» o «Contactos destacados», porque tu teléfono ya suena. Sin ninguno, Urgent no los busca y puede sonar con ellos aunque tu teléfono también suene.
+- No molestar: solo suena si se permiten las alarmas, y calla si tu teléfono ya deja sonar la llamada, por su regla de llamadas repetidas o para todos. Si No molestar solo deja pasar a tus contactos, o solo a los destacados, Urgent no suena con ellos si tienes «Todos tus contactos» o «Contactos destacados», porque tu teléfono ya suena. Sin ninguno, Urgent no los busca y puede sonar para ellos junto con tu teléfono.
 - En otra llamada: Urgent no suena.
 
 EN SEGUNDO PLANO, SI LO PIDES
@@ -286,7 +286,7 @@ Urgent nunca cambia tu modo de sonido, el volumen de tonos ni No molestar. Suena
 
 GRATIS, Y NADA SALE DE TU TELÉFONO
 
-Sin anuncios, cuenta, servidor ni suscripción. Urgent no tiene permiso de internet, así que no puede enviar nada. Al sonar una llamada, lee los últimos minutos de tu registro de llamadas, compara un número y no guarda nada. Con «Todos tus contactos» o «Contactos destacados» activado, también busca el número de quien llama en tus contactos, y no guarda nada. Solo guarda sus propios ajustes: si está activado o en pausa, cuántos minutos cuentan como «otra vez», si cuentan las rechazadas, tu elección de contactos, si se ejecuta en segundo plano, los números y nombres elegidos, tu tema y tu idioma.
+Sin anuncios, cuenta, servidor ni suscripción. Sin permiso de internet, Urgent no puede enviar nada. Al sonar una llamada, lee los últimos minutos de tu registro de llamadas, compara un número y no guarda nada. Con «Todos tus contactos» o «Contactos destacados» activado, también busca el número en tus contactos, sin guardar nada. Solo guarda sus ajustes: si está activado o en pausa, cuántos minutos cuentan como «otra vez», si cuentan las rechazadas, tu elección de contactos, si se ejecuta en segundo plano, los números y nombres elegidos, tu tema e idioma.
 
 LO QUE NO PUEDE HACER
 
@@ -332,28 +332,28 @@ Urgent est une règle d’appel qui agit seule. Tu fixes le déclencheur une foi
 
 COMMENT FONCTIONNE LA RÈGLE
 
-À chaque appel, Urgent cherche le même numéro dans ton journal d’appels, sur le délai choisi. S’il a déjà appelé et que ton téléphone resterait muet, Urgent joue ta sonnerie au volume des alarmes et vibre. Il s’arrête quand l’appel est pris, refusé ou fini, ou après une minute ; Couper le son l’arrête avant.
+À chaque appel, Urgent cherche le numéro dans ton journal d’appels, sur le délai choisi. S’il a déjà appelé et que ton téléphone resterait muet, Urgent joue ta sonnerie (ou ton son d’alarme si Android la refuse) au volume des alarmes et vibre. Il s’arrête quand l’appel est pris, refusé ou fini, ou après une minute ; Couper le son l’arrête avant.
 
-Le premier appel reste aussi discret que tu l’as réglé ; ta liste Sonnerie immédiate sonne dès le premier. Un appel refusé compte aussi comme premier, sauf si tu désactives l’option. Choisis pour quels appelants il sonne, ou active Tous tes contacts ou Contacts favoris. Sinon, il sonne pour tous. Besoin de calme ? Pause jusqu’à 8 heures.
+Le premier appel reste tel que tu l’as réglé ; ta liste Sonnerie immédiate sonne dès le premier. Un appel refusé compte aussi comme premier, sauf si tu le désactives. Choisis pour quels appelants il sonne, ou active Tous tes contacts ou Contacts favoris. Sinon, il sonne pour tous. Besoin de calme ? Pause jusqu’à 8 heures.
 
 IL NE SONNE QUE SI TON TÉLÉPHONE SE TAIT
 
 - Sonnerie activée : ton téléphone sonne seul, Urgent se tait.
 - Silencieux ou vibreur : Urgent sonne.
-- Ne pas déranger : Urgent ne sonne que si les alarmes sont autorisées, et se tait si ton téléphone laisse déjà sonner l’appel (appels répétés, ou tout le monde). Si Ne pas déranger ne laisse passer que tes contacts, ou les favoris, Urgent se tait pour eux tant que Tous tes contacts ou Contacts favoris est choisi : ton téléphone les fait déjà sonner. Sinon, Urgent ne les cherche pas et peut sonner pour eux, même si ton téléphone sonne aussi.
+- Ne pas déranger : Urgent ne sonne que si les alarmes sont autorisées, et se tait si ton téléphone laisse déjà sonner l’appel (appels répétés, ou tout le monde). Si Ne pas déranger ne laisse passer que tes contacts, ou les favoris, Urgent se tait pour eux tant que Tous tes contacts ou Contacts favoris est choisi : ton téléphone les fait déjà sonner. Sinon, Urgent ne les cherche pas et peut sonner en même temps que ton téléphone.
 - En communication : Urgent se tait.
 
 EN ARRIÈRE-PLAN, SI TU LE DEMANDES
 
 Fonctionner en arrière-plan garde Urgent actif avec une notification silencieuse, pour qu’Android ne l’arrête pas entre deux appels. Seulement si Sonner pour les appels répétés est activé ; il repart après un redémarrage ou une mise à jour.
 
-TES PARAMÈTRES RESTENT INCHANGÉS
+TES RÉGLAGES RESTENT INCHANGÉS
 
 Urgent ne modifie jamais ton mode de sonnerie, le volume de sonnerie ni Ne pas déranger. Il joue sur le flux des alarmes, que le mode silencieux ne coupe pas.
 
-GRATUIT, ET RIEN NE SORT DU TÉLÉPHONE
+GRATUIT, RIEN NE SORT DU TÉLÉPHONE
 
-Ni pub, ni compte, ni serveur, ni abonnement. Sans autorisation Internet, Urgent ne peut rien envoyer. Quand un appel sonne, il lit les dernières minutes de ton journal d’appels, compare un numéro et ne garde rien. Avec Tous tes contacts ou Contacts favoris, il cherche aussi le numéro dans tes contacts, sans rien garder. Il ne stocke que ses réglages : activé ou en pause, minutes qui comptent comme « à nouveau », appels refusés comptés ou non, choix de contacts, arrière-plan ou non, numéros et noms choisis, thème et langue.
+Sans pub, compte, serveur ni abonnement. Sans autorisation Internet, Urgent ne peut rien envoyer. Quand un appel sonne, il lit les dernières minutes de ton journal d’appels, compare un numéro et ne garde rien. Avec Tous tes contacts ou Contacts favoris, il cherche aussi le numéro dans tes contacts, sans rien garder. Il ne stocke que ses réglages : activé ou en pause, minutes qui comptent comme « à nouveau », appels refusés comptés ou non, choix de contacts, arrière-plan ou non, numéros et noms choisis, thème et langue.
 
 CE QU’IL NE PEUT PAS FAIRE
 
@@ -392,14 +392,14 @@ Urgent call
 Suona in automatico anche in silenzioso se lo stesso numero chiama due volte.
 ```
 
-### Full description — 3994/4000
+### Full description — 3996/4000
 
 ```
-Urgent è una regola per le chiamate che funziona da sola. Imposti una volta la condizione: lo stesso numero che richiama entro 5, 10, 15 o 30 minuti, o chi è in Suona subito. Quando una chiamata la soddisfa, Urgent suona automaticamente, anche con il telefono silenzioso o in vibrazione.
+Urgent è una regola per le chiamate che funziona da sola. Imposti una volta la condizione: lo stesso numero che richiama entro 5, 10, 15 o 30 minuti, o chi è in Suona subito. Quando una chiamata la soddisfa, Urgent suona automaticamente, anche in silenzioso o vibrazione.
 
 COME FUNZIONA LA REGOLA
 
-A ogni chiamata, Urgent cerca lo stesso numero nel registro chiamate entro i minuti che hai scelto. Se ha già chiamato e il telefono non suonerebbe, Urgent riproduce la tua suoneria al volume della sveglia e vibra. Smette quando rispondi, rifiuti o la chiamata finisce, o dopo un minuto; Silenzia lo ferma prima.
+A ogni chiamata, Urgent cerca il numero nel registro chiamate entro i minuti che hai scelto. Se ha già chiamato e il telefono non suonerebbe, Urgent riproduce la tua suoneria (o il suono della sveglia, se Android non la condivide) al volume della sveglia e vibra. Smette quando rispondi, rifiuti o la chiamata finisce, o dopo un minuto; Silenzia lo ferma prima.
 
 La prima chiamata resta come l’hai impostata; per chi è in Suona subito suona già la prima. Anche una chiamata rifiutata conta come prima, se non lo disattivi. Puoi scegliere per chi suona, o attivare Tutti i tuoi contatti o Contatti speciali. Finché non scegli, suona per chiunque. Ti serve silenzio? Mettilo in pausa fino a 8 ore.
 
@@ -407,7 +407,7 @@ SUONA SOLO SE IL TELEFONO NON LO FA
 
 - Suoneria attiva: il telefono suona da solo, quindi Urgent tace.
 - Silenzioso o vibrazione: Urgent suona.
-- Non disturbare: Urgent suona solo se le sveglie sono consentite, e tace se il telefono fa già suonare la chiamata, per la regola Chiamate ripetute o per tutti. Se Non disturbare lascia passare solo i contatti, o solo quelli speciali, Urgent tace per loro se hai scelto Tutti i tuoi contatti o Contatti speciali: il telefono suona già. Senza nessuna delle due, Urgent non li cerca e può suonare anche per loro, pure se suona il telefono.
+- Non disturbare: Urgent suona solo se le sveglie sono consentite, e tace se il telefono fa già suonare la chiamata, per la regola Chiamate ripetute o per tutti. Se Non disturbare lascia passare solo i contatti, o solo quelli speciali, Urgent tace per loro se hai scelto Tutti i tuoi contatti o Contatti speciali: il telefono suona già. Senza nessuna delle due, Urgent non li cerca e può suonare per loro insieme al telefono.
 - Durante un’altra chiamata: Urgent tace.
 
 IN BACKGROUND, SE LO CHIEDI
@@ -416,11 +416,11 @@ Esegui in background tiene attivo Urgent con una notifica silenziosa, così Andr
 
 LE TUE IMPOSTAZIONI NON CAMBIANO
 
-Urgent non cambia mai la modalità suoneria, il volume della suoneria o Non disturbare. Suona sul flusso audio delle sveglie, che la modalità silenziosa non silenzia.
+Urgent non cambia mai la modalità suoneria, il volume della suoneria o Non disturbare. Suona sul flusso delle sveglie, che la modalità silenziosa non silenzia.
 
-GRATIS, E NIENTE ESCE DAL TELEFONO
+GRATIS, NIENTE ESCE DAL TELEFONO
 
-Niente pubblicità, account, server o abbonamento. Urgent non ha l’autorizzazione internet, quindi non può inviare niente. A ogni chiamata legge gli ultimi minuti del registro chiamate, confronta un numero e non conserva nulla. Con Tutti i tuoi contatti o Contatti speciali, confronta anche il numero con i contatti, senza conservare nulla. Salva solo le sue impostazioni: se è attivo o in pausa, quanti minuti valgono come «di nuovo», se le chiamate rifiutate contano, la tua scelta sui contatti, se funziona in background, i numeri e i nomi scelti, il tema e la lingua.
+Niente pubblicità, account, server o abbonamento. Senza autorizzazione internet, Urgent non può inviare niente. A ogni chiamata legge gli ultimi minuti del registro chiamate, confronta un numero e non conserva nulla. Con Tutti i tuoi contatti o Contatti speciali, confronta anche il numero con i contatti, senza conservare nulla. Salva solo le sue impostazioni: se è attivo o in pausa, quanti minuti valgono come «di nuovo», se le chiamate rifiutate contano, la tua scelta sui contatti, se funziona in background, i numeri e i nomi scelti, il tema e la lingua.
 
 COSA NON PUÒ FARE
 
@@ -459,20 +459,20 @@ Urgent call
 Toca automaticamente no modo silencioso quando o mesmo número liga duas vezes.
 ```
 
-### Full description — 3992/4000
+### Full description — 3995/4000
 
 ```
 O Urgent é uma regra de chamadas que funciona sozinha. Você define o gatilho uma vez: o mesmo número ligando de novo em até 5, 10, 15 ou 30 minutos, ou quem está em Tocar na hora. Se uma chamada se encaixa, o Urgent toca automaticamente, mesmo no modo silencioso ou vibrar.
 
 COMO A REGRA FUNCIONA
 
-A cada chamada, o Urgent procura no registro de chamadas o mesmo número nos minutos que você escolheu. Se ele já ligou e o celular silenciaria a chamada, reproduz o seu toque no volume do alarme e vibra. Para quando a chamada é atendida, recusada ou termina, ou após um minuto; Silenciar para antes.
+A cada chamada, o Urgent procura no registro de chamadas o número nos minutos que você escolheu. Se ele já ligou e o celular silenciaria a chamada, reproduz o seu toque (ou o som do alarme, se o Android o negar) no volume do alarme e vibra. Para quando a chamada é atendida, recusada ou termina, ou após um minuto; Silenciar para antes.
 
 A primeira chamada fica como você configurou; para quem está em Tocar na hora, já toca a primeira. Uma chamada recusada também conta como a primeira, se não desativar isso. Escolha para quem ele toca ou ative Todos os seus contatos ou Contatos marcados com estrela. Até lá, toca para qualquer pessoa. Precisa de silêncio? Pause por até 8 horas.
 
 SÓ TOCA QUANDO O CELULAR NÃO TOCARIA
 
-- Som ativado: o celular já toca, então o Urgent fica quieto.
+- Som ativado: o celular já toca e o Urgent fica quieto.
 - Silencioso ou vibrar: o Urgent toca.
 - Não perturbe: o Urgent só toca se os alarmes forem permitidos, e fica quieto se o celular já deixa a chamada tocar, pela regra de chamadas repetidas ou para todos. Se o Não perturbe só deixa passar seus contatos, ou só os marcados com estrela, o Urgent fica quieto para eles com Todos os seus contatos ou Contatos marcados com estrela escolhido, pois o celular já toca. Sem nenhum dos dois, o Urgent não os consulta e pode tocar junto com o celular.
 - Em outra chamada: o Urgent fica quieto.
@@ -485,9 +485,9 @@ SUAS CONFIGURAÇÕES NÃO MUDAM
 
 O Urgent nunca muda o modo de som, o volume do toque nem o Não perturbe. Toca pelo canal de alarme, que o modo silencioso não silencia.
 
-GRÁTIS, E NADA SAI DO CELULAR
+GRÁTIS, NADA SAI DO CELULAR
 
-Sem anúncios, conta, servidor nem assinatura. O Urgent não tem permissão de internet, então não pode enviar nada. Quando uma chamada toca, lê os últimos minutos do registro de chamadas, compara um número e não guarda nada. Com Todos os seus contatos ou Contatos marcados com estrela ativado, também confere nos seus contatos o número de quem liga, sem guardar nada. Só guarda as próprias configurações: se está ativado ou pausado, quantos minutos contam como “de novo”, se chamadas recusadas contam, sua escolha de contatos, se executa em segundo plano, os números e nomes escolhidos, seu tema e seu idioma.
+Sem anúncios, conta, servidor nem assinatura. Sem permissão de internet, o Urgent não pode enviar nada. Quando uma chamada toca, lê os últimos minutos do registro de chamadas, compara um número e não guarda nada. Com Todos os seus contatos ou Contatos marcados com estrela ativado, também confere o número nos seus contatos, sem guardar nada. Só guarda as próprias configurações: se está ativado ou pausado, quantos minutos contam como “de novo”, se chamadas recusadas contam, sua escolha de contatos, se executa em segundo plano, os números e nomes escolhidos, seu tema e idioma.
 
 O QUE ELE NÃO CONSEGUE FAZER
 
@@ -526,14 +526,14 @@ Urgent call
 Automaticky zazvoní i v tichém režimu, když stejné číslo volá podruhé.
 ```
 
-### Full description — 3982/4000
+### Full description — 3997/4000
 
 ```
 Urgent je pravidlo pro hovory, které běží samo. Spouštěč nastavíš jednou: stejné číslo volá znovu do 5, 10, 15 nebo 30 minut, nebo volá někdo ze seznamu „Zvonit hned“. Když hovor pravidlu odpovídá, Urgent automaticky zazvoní, i když je telefon v tichém režimu nebo na vibrace.
 
 JAK PRAVIDLO FUNGUJE
 
-Když přijde hovor, Urgent se podívá do seznamu hovorů, jestli stejné číslo nevolalo během zvoleného počtu minut. Pokud ano a telefon by hovor nechal tichý, Urgent přehraje tvoje vyzvánění hlasitostí budíků a zavibruje. Přestane, když se hovor přijme, odmítne nebo skončí, případně po minutě; „Ztišit“ ho zastaví dřív.
+Když přijde hovor, Urgent se podívá do seznamu hovorů, jestli stejné číslo nevolalo během zvoleného počtu minut. Pokud ano a telefon by hovor nechal tichý, Urgent přehraje tvoje vyzvánění (nebo zvuk budíku, když ho Android nezpřístupní) hlasitostí budíků a zavibruje. Přestane, když se hovor přijme, odmítne nebo skončí, případně po minutě; „Ztišit“ ho zastaví dřív.
 
 První hovor zůstane tak tichý, jak ho máš nastavený; u volajících ze seznamu „Zvonit hned“ zvoní už první. Odmítnutý hovor se taky počítá jako první, pokud to nevypneš. Můžeš vybrat volající, pro které zvoní, nebo zapnout „Všichni z tvých kontaktů“ či „Kontakty označené hvězdičkou“. Dokud nic z toho nevybereš, zvoní pro kohokoli. Potřebuješ klid? Pozastav ho až na 8 hodin.
 
@@ -554,7 +554,7 @@ Urgent nikdy nemění režim vyzvánění, hlasitost vyzvánění ani Nerušit. 
 
 ZDARMA A NIC NEOPOUŠTÍ TELEFON
 
-Žádné reklamy. Žádný účet. Žádný server. Žádné předplatné. Urgent nemá oprávnění k internetu, takže nemůže nic nikam poslat. Když hovor zvoní, přečte posledních pár minut seznamu hovorů, porovná jedno číslo a nic si neuchová. Pokud je zapnuté „Všichni z tvých kontaktů“ nebo „Kontakty označené hvězdičkou“, porovná číslo volajícího taky s tvými kontakty a nic si neuchová. Ukládá jen vlastní nastavení: jestli je zapnutý nebo pozastavený, kolik minut se počítá jako „znovu“, jestli se počítají odmítnuté hovory, tvoji volbu kontaktů, jestli běží na pozadí, vybraná čísla a jména, motiv a jazyk.
+Bez reklam, účtu, serveru i předplatného. Urgent nemá oprávnění k internetu, takže nemůže nic poslat. Když hovor zvoní, přečte posledních pár minut seznamu hovorů, porovná jedno číslo a nic si neuchová. Pokud je zapnuté „Všichni z tvých kontaktů“ nebo „Kontakty označené hvězdičkou“, porovná číslo taky s tvými kontakty a nic si neuchová. Ukládá jen vlastní nastavení: jestli je zapnutý nebo pozastavený, kolik minut se počítá jako „znovu“, jestli se počítají odmítnuté hovory, tvoji volbu kontaktů, jestli běží na pozadí, vybraná čísla a jména, motiv a jazyk.
 
 CO NEDOKÁŽE
 
@@ -593,22 +593,22 @@ Urgent call
 Автоматично дзвонить у режимі без звуку, коли той самий номер телефонує вдруге.
 ```
 
-### Full description — 3997/4000
+### Full description — 3996/4000
 
 ```
 Urgent — це правило дзвінків, що спрацьовує саме. Ти задаєш умову один раз: той самий номер телефонує знову за 5, 10, 15 чи 30 хвилин або абонент є у списку «Дзвонити одразу». Коли дзвінок відповідає умові, Urgent автоматично дзвонить, навіть коли телефон у режимі без звуку чи вібросигналу.
 
 ЯК ПРАЦЮЄ ПРАВИЛО
 
-Під час дзвінка Urgent шукає цей номер у журналі викликів за вибраний тобою час. Якщо він уже дзвонив, а телефон лишив би дзвінок тихим, Urgent грає твій сигнал дзвінка з гучністю будильника й вібрує. Звук стихає, коли дзвінок прийнято, відхилено чи завершено, або через хвилину; «Вимкнути звук» зупиняє раніше.
+Під час дзвінка Urgent шукає цей номер у журналі викликів за вибраний тобою час. Якщо він уже дзвонив, а телефон лишив би дзвінок тихим, Urgent грає твій сигнал дзвінка (або сигнал будильника, якщо Android ним не ділиться) з гучністю будильника й вібрує. Звук стихає, коли дзвінок прийнято, відхилено чи завершено, або через хвилину; «Вимкнути звук» зупиняє раніше.
 
-Перший дзвінок тихий, як налаштовано; для абонентів зі списку «Дзвонити одразу» лунає вже перший. Відхилений тобою дзвінок теж вважається першим, якщо це не вимкнути. Можна вибрати, для кого Urgent дзвонить, або ввімкнути «Усі з твоїх контактів» чи «Контакти із зірочкою». Без жодного з цих виборів він дзвонить для всіх. Потрібна тиша? Призупини його до 8 годин.
+Перший дзвінок тихий, як налаштовано; для абонентів зі списку «Дзвонити одразу» лунає вже перший. Відхилений тобою дзвінок теж вважається першим, якщо це не вимкнути. Можна вибрати, для кого Urgent дзвонить, або ввімкнути «Усі з твоїх контактів» чи «Контакти із зірочкою». Інакше він дзвонить для всіх. Потрібна тиша? Призупини його до 8 годин.
 
 ДЗВОНИТЬ, ЛИШЕ КОЛИ ТЕЛЕФОН МОВЧАВ БИ
 
 - Дзвінок увімкнено: телефон дзвонить сам, тож Urgent мовчить.
 - Без звуку чи вібросигнал: Urgent дзвонить.
-- Не турбувати: Urgent дзвонить, лише якщо дозволено будильники, і мовчить, коли телефон сам пропускає дзвінок (правило повторних дзвінків чи для всіх). Якщо «Не турбувати» пропускає лише контакти чи контакти із зірочкою, Urgent мовчить для них, поки вибрано «Усі з твоїх контактів» чи «Контакти із зірочкою»: телефон і так їм дзвонить. Без цього вибору Urgent їх не перевіряє, тож може дзвонити й для них, навіть коли дзвонить і телефон.
+- Не турбувати: Urgent дзвонить, лише якщо дозволено будильники, і мовчить, коли телефон сам пропускає дзвінок (правило повторних дзвінків чи для всіх). Якщо «Не турбувати» пропускає лише контакти чи контакти із зірочкою, Urgent мовчить для них, поки вибрано «Усі з твоїх контактів» чи «Контакти із зірочкою»: телефон і так їм дзвонить. Без цього вибору Urgent їх не перевіряє, тож може дзвонити для них разом із телефоном.
 - Під час іншої розмови: Urgent мовчить.
 
 ПРАЦЮЄ У ФОНІ, ЯКЩО ПОПРОСИШ
@@ -621,7 +621,7 @@ Urgent ніколи не змінює режим дзвінка, гучніст�
 
 БЕЗКОШТОВНО, І НІЩО НЕ ЗАЛИШАЄ ТЕЛЕФОН
 
-Без реклами, облікового запису, сервера й підписки. Urgent не має дозволу на інтернет, тож не може нікуди нічого надіслати. Під час дзвінка він читає останні кілька хвилин журналу викликів, порівнює один номер і нічого не зберігає. Якщо ввімкнено «Усі з твоїх контактів» чи «Контакти із зірочкою», він також звіряє номер абонента з контактами й нічого не зберігає. Зберігає лише свої налаштування: чи він увімкнений або призупинений, скільки хвилин означає «знову», чи враховуються відхилені дзвінки, вибір щодо контактів, чи працює у фоні, вибрані тобою номери та імена, тему й мову.
+Без реклами, облікового запису, сервера й підписки. Без дозволу на інтернет Urgent нічого не може надіслати. Під час дзвінка він читає останні хвилини журналу викликів, порівнює один номер і нічого не зберігає. Якщо ввімкнено «Усі з твоїх контактів» чи «Контакти із зірочкою», він також звіряє номер абонента з контактами й нічого не зберігає. Зберігає лише свої налаштування: чи він увімкнений або призупинений, скільки хвилин означає «знову», чи враховуються відхилені дзвінки, вибір щодо контактів, чи працює у фоні, вибрані тобою номери та імена, тему й мову.
 
 ЧОГО ВІН НЕ ВМІЄ
 
