@@ -103,12 +103,20 @@ template's `docs/DOD.md` the day a feature adds a table.
       friends added as testers, 0.8.0 shipped mid-test and no crashes or ANRs in vitals. Answers
       verbatim in [`play-app-content.md`](play-app-content.md).
 - [x] **Decide the first production number.** `1.0.0`, decided 2026-11-01; on 2026-11-18 the
-      unreleased 0.9.0 was folded into it, so production starts with one build and one review. Its
-      release notes and the `Release-As: 1.0.0` footer reach `main` after production access; next the
-      release PR, *then* the AAB and the listing go up together.
-- [ ] **Promote 1.0.0 to production** from internal with `publish-play-production.yml`: a dry run
-      first, then with `update_listing` on and a staged rollout of 0.1, approved in the `production`
-      environment (the owner is its required reviewer). Widen the rollout once vitals look clean.
+      unreleased 0.9.0 was folded into it, so production starts with one build and one review.
+- [ ] **1.0.0 approved and live on production.** Sent for review from the Console on 2026-11-19 as a
+      full rollout to 178 countries/regions, the same set as the closed track, with the 1.0.0 notes
+      in both locales. Managed publishing is off, so approval publishes it. It went from the Console
+      because the workflow's staged rollout is refused on a track's first release
+      ([`RELEASING.md`](RELEASING.md#going-to-production-manual-gated-staged)), so `update_listing`
+      did not run with it: the descriptions and screenshots on Play are whatever the Console held.
+      Once it is live, update the public status together: the README *Status* section, the
+      `maksforge:` `status` in [`_config.yml`](_config.yml), the entry in the home page repo's
+      `apps/web/src/app/catalog/projects.ts`, and the profile README.
+- [ ] **Confirm the Console listing matches [`store-listing.md`](store-listing.md).** Descriptions
+      and screenshots in both locales, since `update_listing` has never run against production. The
+      next production release run with `update_listing: true` pushes them anyway
+      ([`RELEASING.md`](RELEASING.md)).
 
 ## Standing checks that never close
 
