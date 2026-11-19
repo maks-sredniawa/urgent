@@ -12,6 +12,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.intl.LocaleList
+import androidx.compose.ui.text.withStyle
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import app.urgent.R
@@ -89,11 +94,19 @@ private fun LanguageRow() {
         for (language in AppLanguage.entries) {
             ChoiceChip(
                 selected = current == language,
-                label = stringResource(language.labelRes),
+                label = language.endonym(),
                 onClick = { setAppLanguage(language) },
             )
         }
     }
+}
+
+// The locale rides on the text as a span, the way HTML's `lang` attribute does, so TalkBack reads
+// "Čeština" in a Czech voice even while the app speaks English. A plain String has nowhere to put it.
+@Composable
+private fun AppLanguage.endonym(): AnnotatedString {
+    val label = stringResource(labelRes)
+    return buildAnnotatedString { withStyle(SpanStyle(localeList = LocaleList(tag))) { append(label) } }
 }
 
 private fun ThemeMode.labelRes(): Int =
