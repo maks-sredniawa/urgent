@@ -188,7 +188,27 @@ The previous text, saved for *Ring at once* on 2026-10-22, never mentioned the b
 > READ_CALL_LOG; CallScreeningService skips contacts unless default dialer. Test: turn it on, set
 > silent, call twice.
 
-Would change: a second refusal (Plan B is distribution off Play), the window choices, a new trigger, or any
+**Rejected again on 2026-11-21**, on one finding only: *Unable to verify core functionality* — "the
+video you submitted does not demonstrate the functionality necessary to verify and approve your use
+case declaration". The listing finding was gone. The emulator video above had no sound (the feature
+*is* a sound, and Android keeps the alarm stream out of any playback capture), a debug build's name
+and made-up numbers.
+
+The answer, sent 2026-11-22: a real-phone video. Xiaomi's screen recorder with the **microphone** as
+its sound source records the ring from the speaker, so no second camera is needed; the other phone
+only makes the call. Recorded on a Xiaomi 24115RA8EG (HyperOS, Android 16) running a release build of
+1.1.0: switch on, permissions, battery set to *No restrictions*, the 5-minute rule, a caller added to
+*Ring at once*, silent mode, and that caller's first call ringing aloud (2:09). Third-party names and
+numbers are blurred (1:03–1:20 and the caller's name in the call banner and status bar). It shows the
+*Ring at once* trigger, not the repeated-call one, and HyperOS's banner reads "You have a new message"
+instead of Urgent's notification text. Link:
+https://drive.google.com/file/d/1x_yoNpfRsXb4YTEXJMPyfqJDyYIrhQhS/view
+
+*Instructions for review*, as saved on 2026-11-22 (474 of 500 characters):
+
+> Device automation. User-set triggers (Home): the same number calls again within 5, 10, 15 or 30 min, or a caller on the Ring at once list. Automatic action: rings at alarm volume through silent/vibrate. Video (real phone, sound on): 1:03-1:20 a caller is added to Ring at once (contacts blurred) and the phone set to silent; 1:47 that caller rings aloud. To verify: turn on Ring for repeated calls, allow all, battery Unrestricted, set silent, call twice from another phone.
+
+Would change: another refusal (Plan B is distribution off Play), the window choices, a new trigger, or any
 use of the call log beyond comparing one number.
 
 ## Foreground service permissions
