@@ -128,8 +128,10 @@ template's `docs/DOD.md` the day a feature adds a table.
 - [ ] **Ship 1.1.0 to production once the declaration is approved.** Its internal upload has not
       reached Play: the release run failed on *Changes cannot be sent for review automatically*, and
       a retry from `main` with `changes_not_sent_for_review` on failed on the opposite message once
-      the Console's own submission was in review. Re-run `publish-play.yml` from `main` when nothing
-      is in review, then promote with `update_listing: true` and `rollout: 1.0` (still a first
+      the Console's own submission was in review. Once nothing is in review, run `publish-play.yml`
+      from the `v1.1.0` tag (its versionCode 146 never reached Play; `changes_not_sent_for_review`
+      is not needed, and the tag's workflow lacks it anyway). Use `main` only if
+      `git log v1.1.0..main` shows no app change. Then promote with `update_listing: true` and `rollout: 1.0` (still a first
       release), so all nine locales and their screenshot sets go up. Before this run English
       screenshots never reached Play (`play-metadata.py` did not know their `en-US` filename tag), so
       check the Console listing matches [`store-listing.md`](store-listing.md) once it is up. Once it

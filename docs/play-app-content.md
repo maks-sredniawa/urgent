@@ -198,7 +198,7 @@ The answer, sent 2026-11-22: a real-phone video. Xiaomi's screen recorder with t
 its sound source records the ring from the speaker, so no second camera is needed; the other phone
 only makes the call. Recorded on a Xiaomi 24115RA8EG (HyperOS, Android 16) running a release build of
 1.1.0: switch on, permissions, battery set to *No restrictions*, the 5-minute rule, a caller added to
-*Ring at once*, silent mode, and that caller's first call ringing aloud (2:09). Third-party names and
+*Ring at once*, silent mode, and that caller's first call ringing aloud (2:09 long). Third-party names and
 numbers are blurred (1:03–1:20 and the caller's name in the call banner and status bar). It shows the
 *Ring at once* trigger, not the repeated-call one, and HyperOS's banner reads "You have a new message"
 instead of Urgent's notification text. Link:
@@ -208,8 +208,9 @@ https://drive.google.com/file/d/1x_yoNpfRsXb4YTEXJMPyfqJDyYIrhQhS/view
 
 > Device automation. User-set triggers (Home): the same number calls again within 5, 10, 15 or 30 min, or a caller on the Ring at once list. Automatic action: rings at alarm volume through silent/vibrate. Video (real phone, sound on): 1:03-1:20 a caller is added to Ring at once (contacts blurred) and the phone set to silent; 1:47 that caller rings aloud. To verify: turn on Ring for repeated calls, allow all, battery Unrestricted, set silent, call twice from another phone.
 
-Would change: another refusal (Plan B is distribution off Play), the window choices, a new trigger, or any
-use of the call log beyond comparing one number.
+Would change: another refusal (over the video: record the repeated-call path; over the use case
+itself: Plan B, distribution off Play), the window choices, a new trigger, or any use of the call
+log beyond comparing one number.
 
 ## Foreground service permissions
 
