@@ -111,18 +111,31 @@ template's `docs/DOD.md` the day a feature adds a table.
       declared core functionality, and the reviewer could not verify it in the app, asking for an
       updated declaration with steps to verify and a video. The build itself was not faulted.
       Details and the answer in [`play-app-content.md`](play-app-content.md#sms-and-call-log-permissions).
-- [ ] **Production, second attempt: ship 1.1.0 with `update_listing: true` and `rollout: 1.0`.**
-      Still a first release, so build, listing and the already-saved declaration (numbered steps and
-      an emulator video) go up as one review. The build carries seven more languages (cs, de, es, fr,
-      it, pt-BR, uk); the listing, now leading with the user-set rule and its automatic action, goes
-      up in all nine locales with all nine screenshot sets, retaken on the `pixel-api36` emulator on
-      2026-11-19. Before this run English screenshots never reached Play (`play-metadata.py` did not
-      know their `en-US` filename tag), and `update_listing` has never run against production, so
+- [x] **Second attempt — rejected 2026-11-21.** Sent from the Console on 2026-11-19 without a new
+      build: the reworded en-US and pl-PL listing, the countries, and the declaration with numbered
+      steps and an emulator video. Play dropped the listing finding and kept one: *Unable to verify
+      core functionality* — "the video you submitted does not demonstrate the functionality". The
+      emulator video had no sound, a debug build's name and made-up numbers.
+- [ ] **Third attempt — sent 2026-11-22, in review.** The declaration now links a real-phone video:
+      a screen recording of 1.1.0 on a Xiaomi 24115RA8EG with the microphone on, so the ring through
+      silent mode is audible, showing a *Ring at once* caller ringing on the first call. Third-party
+      names and numbers are blurred. It does not show the repeated-call trigger; if this is refused
+      on the video again, record that path (silent first call, ringing second, the shade pulled down
+      so *Repeated call* and *Silence* show). Details in
+      [`play-app-content.md`](play-app-content.md#sms-and-call-log-permissions). If it is refused for
+      anything else, read the reason before changing anything; the fallback stays distribution off
+      Play.
+- [ ] **Ship 1.1.0 to production once the declaration is approved.** Its internal upload has not
+      reached Play: the release run failed on *Changes cannot be sent for review automatically*, and
+      a retry from `main` with `changes_not_sent_for_review` on failed on the opposite message once
+      the Console's own submission was in review. Re-run `publish-play.yml` from `main` when nothing
+      is in review, then promote with `update_listing: true` and `rollout: 1.0` (still a first
+      release), so all nine locales and their screenshot sets go up. Before this run English
+      screenshots never reached Play (`play-metadata.py` did not know their `en-US` filename tag), so
       check the Console listing matches [`store-listing.md`](store-listing.md) once it is up. Once it
       is live, update the public status together: the README *Status* section, the `maksforge:`
       `status` in [`_config.yml`](_config.yml), the entry in the home page repo's
-      `apps/web/src/app/catalog/projects.ts`, and the profile README. If it is refused again, read the
-      reason before changing anything; the fallback stays distribution off Play.
+      `apps/web/src/app/catalog/projects.ts`, and the profile README.
 - [ ] **Read Xiaomi's own words in each new language on a HyperOS phone.** The translators took the
       AOSP terms from source, but Xiaomi's *autostart*, *Recents* and its battery option name could
       not be checked from a document in cs, de, es, fr, it, pt-BR and uk. Set the phone to each
