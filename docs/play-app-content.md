@@ -208,6 +208,27 @@ https://drive.google.com/file/d/1x_yoNpfRsXb4YTEXJMPyfqJDyYIrhQhS/view
 
 > Device automation. User-set triggers (Home): the same number calls again within 5, 10, 15 or 30 min, or a caller on the Ring at once list. Automatic action: rings at alarm volume through silent/vibrate. Video (real phone, sound on): 1:03-1:20 a caller is added to Ring at once (contacts blurred) and the phone set to silent; 1:47 that caller rings aloud. To verify: turn on Ring for repeated calls, allow all, battery Unrestricted, set silent, call twice from another phone.
 
+**Rejected a third time on 2026-11-24**, with both findings of the first refusal back: the store
+listing does not match the declared core functionality, and "the video you submitted does not
+demonstrate the functionality". The listing had not changed since the second attempt dropped that
+finding, so the likely cause is the video and instructions: *Ring at once* reads the user's own list,
+not the call log, so a video of it shows nothing that needs `READ_CALL_LOG`.
+
+The answer, sent 2026-11-24 with production 1.1.0 (versionCode 146) in the same submission: a
+real-phone video of the repeated-call path only. Recorded on the same Xiaomi with the microphone as
+the sound source, starting from cleared app data and battery set back to *Optimized*, so the whole
+setup is on screen: switch on, the call-log permission dialog (0:02), battery set to *No
+restrictions* (0:04), autostart, silent mode (1:04), a first call that stays silent (1:05), the
+missed call in the shade (1:22), and the same number's second call ringing aloud (1:23–1:33). The
+caller's name and avatar are blurred in the status bar and the call banner. It does not open the
+call log app, and HyperOS again hides Urgent's notification text while recording. 1:37 long. Link:
+https://drive.google.com/file/d/1Cl-XjLDdlPbyGVhmr4cIaad1uZ8tyM6V/view
+
+*Instructions for review*, as saved on 2026-11-24 (482 of 500 characters), with no mention of *Ring
+at once*:
+
+> Device automation. User-set trigger (Home): the same number calls again within 5, 10, 15 or 30 min. Automatic action: Urgent checks the call log for that number's last call and rings at alarm volume through silent/vibrate. Video (real phone, sound on): 0:02 call log permission; 0:04 battery Unrestricted; 1:04 phone silent; 1:05 first call stays silent; 1:22 it shows as missed; 1:23 same number again rings aloud. To verify: same steps, call twice from another phone within 5 min.
+
 Would change: another refusal (over the video: record the repeated-call path; over the use case
 itself: Plan B, distribution off Play), the window choices, a new trigger, or any use of the call
 log beyond comparing one number.
