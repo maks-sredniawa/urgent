@@ -229,9 +229,9 @@ at once*:
 
 > Device automation. User-set trigger (Home): the same number calls again within 5, 10, 15 or 30 min. Automatic action: Urgent checks the call log for that number's last call and rings at alarm volume through silent/vibrate. Video (real phone, sound on): 0:02 call log permission; 0:04 battery Unrestricted; 1:04 phone silent; 1:05 first call stays silent; 1:22 it shows as missed; 1:23 same number again rings aloud. To verify: same steps, call twice from another phone within 5 min.
 
-Would change: another refusal (over the video: record the repeated-call path; over the use case
-itself: Plan B, distribution off Play), the window choices, a new trigger, or any use of the call
-log beyond comparing one number.
+Would change: another refusal (read the reason first; the fallback is distribution off Play, or an
+ADR on replacing `READ_CALL_LOG`), the window choices, a new trigger, or any use of the call log
+beyond comparing one number.
 
 ## Foreground service permissions
 
