@@ -116,26 +116,24 @@ template's `docs/DOD.md` the day a feature adds a table.
       steps and an emulator video. Play dropped the listing finding and kept one: *Unable to verify
       core functionality* — "the video you submitted does not demonstrate the functionality". The
       emulator video had no sound, a debug build's name and made-up numbers.
-- [ ] **Third attempt — sent 2026-11-22, in review.** The declaration now links a real-phone video:
-      a screen recording of 1.1.0 on a Xiaomi 24115RA8EG with the microphone on, so the ring through
-      silent mode is audible, showing a *Ring at once* caller ringing on the first call. Third-party
-      names and numbers are blurred. It does not show the repeated-call trigger; if this is refused
-      on the video again, record that path (silent first call, ringing second, the shade pulled down
-      so *Repeated call* and *Silence* show). Details in
-      [`play-app-content.md`](play-app-content.md#sms-and-call-log-permissions). If it is refused for
-      anything else, read the reason before changing anything; the fallback stays distribution off
-      Play.
-- [ ] **Ship 1.1.0 to production once the declaration is approved.** Its internal upload has not
-      reached Play: the release run failed on *Changes cannot be sent for review automatically*, and
-      a retry from `main` with `changes_not_sent_for_review` on failed on the opposite message once
-      the Console's own submission was in review. Once nothing is in review, run `publish-play.yml`
-      from the `v1.1.0` tag (its versionCode 146 never reached Play; `changes_not_sent_for_review`
-      is not needed, and the tag's workflow lacks it anyway). Use `main` only if
-      `git log v1.1.0..main` shows no app change. Then promote with `update_listing: true` and `rollout: 1.0` (still a first
-      release), so all nine locales and their screenshot sets go up. Before this run English
-      screenshots never reached Play (`play-metadata.py` did not know their `en-US` filename tag), so
-      check the Console listing matches [`store-listing.md`](store-listing.md) once it is up. Once it
-      is live, update the public status together: the README *Status* section, the `maksforge:`
+- [x] **Third attempt — rejected 2026-11-24.** Sent 2026-11-22 with a real-phone video of 1.1.0 on
+      a Xiaomi 24115RA8EG, sound recorded from the microphone, showing a *Ring at once* caller.
+      Both of the first refusal's findings came back: listing mismatch and a video that does not
+      demonstrate the functionality. *Ring at once* never touches the call log.
+- [ ] **Fourth attempt — sent 2026-11-24, in review.** The declaration now links a real-phone video
+      of the repeated-call path only, from cleared app data (permission dialog, battery, silent mode,
+      a silent first call, the second call ringing aloud), and instructions that drop *Ring at once*.
+      The same submission carries production 1.1.0 (versionCode 146), seven new listing languages
+      and new English and Polish screenshots. Details in
+      [`play-app-content.md`](play-app-content.md#sms-and-call-log-permissions). If it is refused,
+      read the reason before changing anything; the fallback stays distribution off Play, or an ADR
+      on replacing `READ_CALL_LOG`.
+- [ ] **Ship 1.1.0 to production once the declaration is approved.** Its versionCode 146, built
+      from the `v1.1.0` tag, reached Play outside the workflows and is the production release (full
+      rollout, 178 countries/regions) in the fourth attempt's review, with all nine locales and their
+      screenshot sets. Once approved, check that the live listing matches
+      [`store-listing.md`](store-listing.md), and that the closed track (`alpha`) carries 1.1.0 too.
+      Then update the public status together: the README *Status* section, the `maksforge:`
       `status` in [`_config.yml`](_config.yml), the entry in the home page repo's
       `apps/web/src/app/catalog/projects.ts`, and the profile README.
 - [ ] **Read Xiaomi's own words in each new language on a HyperOS phone.** The translators took the
