@@ -137,6 +137,9 @@ template's `docs/DOD.md` the day a feature adds a table.
       - [x] *Count declined calls* removed, 2026-11-25: without the call log a declined call cannot be
             told from a missed one (ADR 0007)
       - [x] the listing in nine locales without the call log
+      - [x] an update leaves someone who switched on before the role existed without it: the update
+            receiver posts a *Repeated calls will not ring through* notification, cleared once Home
+            sees the setup complete. Read on `pixel-api36`, 2026-11-25
       - [ ] the Console: remove the SMS and call log declaration once a build without the permission
             is live
 - [ ] **Appeal — filed 2026-11-25** (ticket 6-7138000041278, against *Unable to verify core

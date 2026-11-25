@@ -98,6 +98,9 @@
     <string name="channel_ringing_description">Zobrazuje se, když Urgent zvoní kvůli opakovanému hovoru nebo volajícímu ze seznamu „Zvonit hned“, s tlačítkem, které zvonění zastaví.</string>
     <string name="channel_keep_alive_name">Běh na pozadí</string>
     <string name="channel_keep_alive_description">Zobrazuje se, když Urgent běží na pozadí a čeká na opakované hovory.</string>
+    <string name="channel_setup_name">Je potřeba nastavení</string>
+    <string name="channel_setup_description">Zobrazí se, když je Urgent zapnutý, ale ještě nevidí, kdo volá.</string>
+    <string name="setup_reminder_body">Otevři Urgent a klepni na Nastavit, aby znovu viděl, kdo volá.</string>
     <string name="keep_alive_title">Urgent běží</string>
     <string name="keep_alive_body">Čeká na opakované hovory. Klepnutím otevřeš.</string>
     <string name="ringing_title">Opakovaný hovor</string>

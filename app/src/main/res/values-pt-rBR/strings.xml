@@ -93,6 +93,9 @@
     <string name="channel_ringing_description">Aparece enquanto o Urgent toca por uma chamada repetida ou por uma chamada de quem está em “Tocar na hora”, com um botão para parar.</string>
     <string name="channel_keep_alive_name">Em execução em segundo plano</string>
     <string name="channel_keep_alive_description">Aparece enquanto o Urgent está em execução em segundo plano, esperando chamadas repetidas.</string>
+    <string name="channel_setup_name">Configuração necessária</string>
+    <string name="channel_setup_description">Mostrada quando o Urgent está ativado, mas ainda não vê quem está ligando.</string>
+    <string name="setup_reminder_body">Abra o Urgent e toque em Configurar para ele voltar a ver quem está ligando.</string>
     <string name="keep_alive_title">O Urgent está em execução</string>
     <string name="keep_alive_body">Esperando chamadas repetidas. Toque para abrir.</string>
     <string name="ringing_title">Chamada repetida</string>

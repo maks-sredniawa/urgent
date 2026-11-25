@@ -93,6 +93,9 @@
     <string name="channel_ringing_description">Se muestra mientras Urgent suena por una llamada repetida o por alguien de «Sonar a la primera», con un botón para detenerlo.</string>
     <string name="channel_keep_alive_name">Ejecución en segundo plano</string>
     <string name="channel_keep_alive_description">Se muestra mientras Urgent se ejecuta en segundo plano, a la espera de llamadas repetidas.</string>
+    <string name="channel_setup_name">Falta configurar</string>
+    <string name="channel_setup_description">Se muestra cuando Urgent está activado pero aún no puede ver quién llama.</string>
+    <string name="setup_reminder_body">Abre Urgent y toca Configurar para que vuelva a ver quién llama.</string>
     <string name="keep_alive_title">Urgent se está ejecutando</string>
     <string name="keep_alive_body">Esperando llamadas repetidas. Toca para abrir.</string>
     <string name="ringing_title">Llamada repetida</string>

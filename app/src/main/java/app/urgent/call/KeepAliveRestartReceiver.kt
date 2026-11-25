@@ -21,6 +21,7 @@ class KeepAliveRestartReceiver : BroadcastReceiver() {
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 if (app.preferences.keepAliveActive.first()) KeepAliveService.start(app)
+                if (app.preferences.ringThrough.first() && app.setupMissing()) app.showSetupReminder()
             } finally {
                 pending.finish()
             }
