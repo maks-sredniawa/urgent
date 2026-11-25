@@ -5,6 +5,7 @@ import android.telecom.Call
 import android.telecom.CallScreeningService
 import androidx.annotation.RequiresApi
 import app.urgent.MainApplication
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 /**
@@ -29,13 +30,37 @@ class RepeatCallScreeningService : CallScreeningService() {
         }
         val app = application as MainApplication
         app.callScope.launch {
+            var ringing = false
             try {
-                app.decideRingThrough(number)?.let { RingThroughService.start(app, it.firstCall) }
+                app.decideRingThrough(number)?.let {
+                    RingThroughService.start(app, it.firstCall)
+                    ringing = true
+                }
             } finally {
                 allow(details)
             }
+            if (ringing) stopIfCallerGaveUp(app)
         }
     }
 
     private fun allow(details: Call.Details) = respondToCall(details, CallResponse.Builder().build())
+
+    /**
+     * A caller who hangs up while the call is still being screened never makes the phone ring, so no
+     * phone-state broadcast arrives to stop Urgent's ring, which would otherwise run its full minute.
+     * Without the phone permission the check cannot be made, and the ring is left alone.
+     */
+    private suspend fun stopIfCallerGaveUp(app: MainApplication) {
+        if (!app.hasCallPermissions()) return
+        repeat(CALL_SHOWS_CHECKS) {
+            if (app.isCallStillThere()) return
+            delay(CALL_SHOWS_STEP_MILLIS)
+        }
+        RingThroughService.stop(app)
+    }
+
+    private companion object {
+        const val CALL_SHOWS_CHECKS = 10
+        const val CALL_SHOWS_STEP_MILLIS = 500L
+    }
 }
