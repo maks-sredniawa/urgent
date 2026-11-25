@@ -65,8 +65,15 @@
     <string name="home_count_declined">Count declined calls</string>
     <string name="home_count_declined_hint">A call you declined counts as the first call. Turn this off and declining someone keeps their next call quiet.</string>
     <string name="home_permissions_missing_title">Repeated calls will not ring through</string>
-    <string name="home_permissions_missing_body">Without the phone and call log permissions, Urgent cannot see who is calling or whether they called before.</string>
     <string name="home_permissions_missing_action">Open app permissions</string>
+    <string name="home_setup_missing_body">To see who is calling, Urgent needs the phone permission and, from Android 10, to be your caller ID and spam app. It lets every call through untouched, and takes that role from any other app that holds it.</string>
+    <string name="home_setup_missing_action">Set up</string>
+    <string name="home_contacts_unheard_title">Calls from your contacts will not count</string>
+    <string name="home_contacts_unheard_body">Android passes calls from saved contacts to Urgent only while it has the contacts permission. Urgent reads your contacts itself only if you choose them under Callers.</string>
+    <string name="home_contacts_unheard_action">Allow contacts</string>
+    <string name="home_contacts_android10_body">Android 10 does not pass calls from saved contacts to apps like Urgent. Calls from other numbers still count.</string>
+    <string name="home_android9_title">Repeated calls cannot ring through on Android 9</string>
+    <string name="home_android9_body">Android 9 does not let apps like Urgent see who is calling. Urgent works on Android 8 and on Android 10 or later.</string>
     <string name="home_battery_title">Repeated calls may stay silent</string>
     <string name="home_battery_body">Android can stop Urgent from ringing while it is in the background. Set Urgent\'s battery use to unrestricted.</string>
     <string name="home_battery_action">Open battery settings</string>

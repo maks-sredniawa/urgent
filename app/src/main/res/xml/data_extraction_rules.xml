@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 12+ backup and device transfer. The recent-call record is live state (ADR 0007). -->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="file" path="datastore/recent_calls.preferences_pb" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="file" path="datastore/recent_calls.preferences_pb" />
+    </device-transfer>
+</data-extraction-rules>

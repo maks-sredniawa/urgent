@@ -39,9 +39,9 @@ codebase.
 | --- | --- |
 | Kotlin, Jetpack Compose, Material 3 | Android only, `minSdk` 26 |
 | **Navigation 3** (`androidx.navigation3`) | Replaces Navigation Compose 2.x — don't reintroduce the old one |
-| **DataStore only — there is no database** | Settings, the chosen callers and a theme. The call log is the platform's, read on demand |
+| **DataStore only — there is no database** | Settings, the chosen callers and a theme; the recent-call record in a file of its own |
 | Manual DI via `AppContainer`, **not Hilt** | Constructor injection is clearer at this size and easy to migrate later |
-| A manifest `PHONE_STATE` receiver and one foreground service | `call/` — the app's whole mechanism |
+| A `CallScreeningService`, a manifest `PHONE_STATE` receiver and one foreground service | `call/` — the app's whole mechanism |
 | On-device storage only | No backend. Platform Auto Backup, no custom agent |
 
 ## House rules
@@ -56,8 +56,10 @@ codebase.
   ring the phone and Urgent together. Contacts stay unread unless the user opts in, and the store listing
   says so. Below Android 9 the DND policy is unreadable without access Urgent never asks for, so in
   *Priority only* it may ring alongside any caller the phone lets through.
-- **The call log is the source of truth for "called before".** Android writes a call to the log
-  when it ends, so the ringing call is never in it, and nothing of ours needs storing.
+- **Urgent's own recent-call record is the source of truth for "called before"**, never the call log
+  ([ADR 0007](docs/adr/0007-urgent-remembers-recent-calls-instead-of-reading-the-call-log.md)): Play
+  will not grant `READ_CALL_LOG` to an app like this. The number comes from the call-screening role,
+  which always answers "allow" and decides before it answers.
 - **A new preference is a key, a `Flow` that reads it with its default, and a `suspend` setter.**
   Keep the default in the read. Every key is backed up by Auto Backup, so ask what it means on the
   user's next phone: a setting is welcome, live state is not.
@@ -100,10 +102,10 @@ adb devices                                     # confirm the phone is attached
 app/src/main/java/<namespace>/
   MainActivity.kt, MainApplication.kt, AppContainer.kt, Navigation.kt, NavigationKeys.kt
                the app shell and Nav3 wiring stay at the package root, not under ui/
-  call/        PhoneStateReceiver (the way in), PhoneState (permissions, the call log, the sound
-               settings), RepeatCall and Silence (the pure rules: "called before", "would the phone
-               stay silent"), RingThroughService (the ringing)
-  data/        AppPreferences.kt — the DataStore keys and their defaults. No database
+  call/        RepeatCallScreeningService (the way in, Android 10+), PhoneStateReceiver (call end, and
+               the way in on Android 8.x), IncomingCall (one call's decision), PhoneState (permissions,
+               the role, the sound settings), RepeatCall and Silence (the pure rules), RingThroughService
+  data/        AppPreferences.kt — the DataStore keys and their defaults; RecentCalls.kt. No database
   theme/       generated palette, type scale, spacing, the night-mode window half
   ui/          Compose screens + ViewModels — home/ is the app; settings/, support/, common/
   work/        Xiaomi autostart and battery-optimisation hand-offs
@@ -127,13 +129,13 @@ with a build to prove it.
 **No Android Studio — everything is CLI**, `./gradlew` against a physical Xiaomi phone over USB.
 `adb devices` before assuming it is attached.
 
-- **Testing the real path needs a second phone.** `PHONE_STATE` is a protected broadcast and cannot
-  be faked over adb; the debug section's *Ring as for a repeated call* exercises the service alone.
-  Call twice from another phone, with this one on silent.
+- **Testing the real path needs a second phone, or an emulator.** `PHONE_STATE` is a protected
+  broadcast and cannot be faked over adb on the phone; on an emulator `adb emu gsm call <n>` is a real
+  incoming call, screening included. Grant the role with `adb shell cmd role add-role-holder
+  android.app.role.CALL_SCREENING <package>`.
 - **A brand-new `applicationId` is refused on HyperOS** with `INSTALL_FAILED_USER_RESTRICTED` and no
   dialog. `adb push` the APK to `/sdcard/Download/` and tap it in the file manager; updates then
   install over adb normally.
-- **Xiaomi kills background work aggressively.** Without **autostart** the ROM does not start the
-  process for the ringing broadcast at all, and without the battery exemption Android 12+ refuses
-  the foreground service. Autostart has no appop and lapses on its own — `scripts/device-gate.py`
-  reads and sets it.
+- **Xiaomi kills background work aggressively.** Without **autostart** the ROM may not start the
+  process for the ringing broadcast or the screening binding. Autostart has no appop and lapses on
+  its own — `scripts/device-gate.py` reads and sets it.

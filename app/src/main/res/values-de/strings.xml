@@ -44,8 +44,15 @@
     <string name="home_count_declined">Abgelehnte Anrufe mitzählen</string>
     <string name="home_count_declined_hint">Ein abgelehnter Anruf zählt als erster Anruf. Ist das aus, bleibt nach einer Ablehnung der nächste Anruf derselben Nummer still.</string>
     <string name="home_permissions_missing_title">Wiederholte Anrufe klingeln nicht</string>
-    <string name="home_permissions_missing_body">Ohne die Berechtigungen für Telefon und Anrufliste kann Urgent nicht sehen, wer anruft oder ob die Nummer schon vorher angerufen hat.</string>
     <string name="home_permissions_missing_action">App-Berechtigungen öffnen</string>
+    <string name="home_setup_missing_body">Um zu sehen, wer anruft, braucht Urgent die Telefonberechtigung und ab Android 10 die Rolle der Anrufer-ID- und Spam-App. Es lässt jeden Anruf unverändert durch und übernimmt diese Rolle von jeder anderen App, die sie hat.</string>
+    <string name="home_setup_missing_action">Einrichten</string>
+    <string name="home_contacts_unheard_title">Anrufe von deinen Kontakten zählen nicht</string>
+    <string name="home_contacts_unheard_body">Android gibt Anrufe von gespeicherten Kontakten nur an Urgent weiter, solange es die Kontaktberechtigung hat. Urgent selbst liest deine Kontakte nur, wenn du sie unter Anrufende auswählst.</string>
+    <string name="home_contacts_unheard_action">Kontakte erlauben</string>
+    <string name="home_contacts_android10_body">Android 10 gibt Anrufe von gespeicherten Kontakten nicht an Apps wie Urgent weiter. Anrufe von anderen Nummern zählen weiterhin.</string>
+    <string name="home_android9_title">Auf Android 9 klingeln wiederholte Anrufe nicht</string>
+    <string name="home_android9_body">Android 9 lässt Apps wie Urgent nicht sehen, wer anruft. Urgent funktioniert unter Android 8 und ab Android 10.</string>
     <string name="home_battery_title">Wiederholte Anrufe bleiben möglicherweise still</string>
     <string name="home_battery_body">Android kann Urgent am Klingeln hindern, während es im Hintergrund läuft. Stell die Akkunutzung von Urgent auf „Uneingeschränkt“.</string>
     <string name="home_battery_action">Akku-Einstellungen öffnen</string>

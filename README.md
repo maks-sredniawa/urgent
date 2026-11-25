@@ -5,22 +5,23 @@ phone is on silent, on vibrate or in Do Not Disturb. Someone who calls straight 
 you.
 
 Android only lets repeated calls through inside Do Not Disturb; silent and vibrate mode mute them
-like any other call. Urgent hears the call, checks the call log for an earlier one from the same
-number, and plays your ringtone at alarm volume. It never changes your phone's sound settings.
+like any other call. Urgent hears the call as your caller ID app, checks its own short record of
+recent calls for an earlier one from the same number, and plays your ringtone at alarm volume. It never changes your phone's sound settings.
 
 Free, no ads, no server, no account. Nothing leaves the phone.
 
 ## Status
 
-In closed testing on Google Play, ahead of a production release. Reading the call log is a
-restricted permission there; Urgent's declaration passed review.
+In closed testing on Google Play. Play refused production access to the call log four times, so
+Urgent no longer reads it ([ADR 0007](docs/adr/0007-urgent-remembers-recent-calls-instead-of-reading-the-call-log.md)).
 
 ## Setup on the phone
 
-1. Turn on **Ring for repeated calls** and allow the phone and call log permissions.
-2. Set Urgent's battery use to **unrestricted** — Android 12+ will not let it ring from the
-   background otherwise.
-3. On Xiaomi, turn on **autostart** for Urgent.
+1. Turn on **Ring for repeated calls**, allow the phone, notification and contacts permissions, and
+   set Urgent as your **caller ID & spam app** (Android 10+).
+2. On Xiaomi, turn on **autostart** for Urgent.
+
+Android 9 cannot run it, and on Android 10 calls from saved contacts never reach it.
 
 ## Contributing
 

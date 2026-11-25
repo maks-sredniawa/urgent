@@ -52,8 +52,15 @@
     <string name="home_count_declined">Počítat odmítnuté hovory</string>
     <string name="home_count_declined_hint">Odmítnutý hovor se počítá jako první. Když tohle vypneš, po odmítnutí zůstane další hovor ze stejného čísla tichý.</string>
     <string name="home_permissions_missing_title">Opakované hovory nebudou zvonit</string>
-    <string name="home_permissions_missing_body">Bez oprávnění Telefon a Seznamy hovorů Urgent nevidí, kdo volá, ani jestli to číslo už volalo dřív.</string>
     <string name="home_permissions_missing_action">Otevřít oprávnění aplikace</string>
+    <string name="home_setup_missing_body">Aby Urgent viděl, kdo volá, potřebuje oprávnění k telefonu a od Androidu 10 také roli aplikace pro ID volajícího a spam. Každý hovor nechá projít beze změny a tuto roli převezme od jiné aplikace, která ji má.</string>
+    <string name="home_setup_missing_action">Nastavit</string>
+    <string name="home_contacts_unheard_title">Hovory od vašich kontaktů se nebudou počítat</string>
+    <string name="home_contacts_unheard_body">Android předává Urgentu hovory od uložených kontaktů jen tehdy, když má oprávnění ke kontaktům. Urgent sám čte vaše kontakty jen tehdy, když je vyberete v části Volající.</string>
+    <string name="home_contacts_unheard_action">Povolit kontakty</string>
+    <string name="home_contacts_android10_body">Android 10 nepředává aplikacím jako Urgent hovory od uložených kontaktů. Hovory z jiných čísel se počítají dál.</string>
+    <string name="home_android9_title">Na Androidu 9 opakované hovory nezazvoní</string>
+    <string name="home_android9_body">Android 9 nedovolí aplikacím jako Urgent vidět, kdo volá. Urgent funguje na Androidu 8 a na Androidu 10 a novějším.</string>
     <string name="home_battery_title">Opakované hovory mohou zůstat tiché</string>
     <string name="home_battery_body">Android může aplikaci Urgent bránit ve zvonění, když běží na pozadí. Nastav u aplikace Urgent využití baterie na „Neomezeno“.</string>
     <string name="home_battery_action">Otevřít nastavení baterie</string>
