@@ -44,8 +44,6 @@
         <item quantity="many">%d minutos</item>
         <item quantity="other">%d minutos</item>
     </plurals>
-    <string name="home_count_declined">Contar llamadas rechazadas</string>
-    <string name="home_count_declined_hint">Una llamada que rechazas cuenta como primera llamada. Si lo desactivas, al rechazar una llamada, la siguiente de ese número sigue en silencio.</string>
     <string name="home_permissions_missing_title">Las llamadas repetidas no sonarán</string>
     <string name="home_permissions_missing_action">Abrir permisos de la aplicación</string>
     <string name="home_setup_missing_body">Para ver quién llama, Urgent necesita el permiso de teléfono y, desde Android 10, ser tu aplicación de identificador de llamada y spam. Deja pasar cada llamada sin cambios y toma ese papel de cualquier otra aplicación que lo tenga.</string>

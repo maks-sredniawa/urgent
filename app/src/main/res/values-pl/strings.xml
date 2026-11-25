@@ -37,8 +37,6 @@
     <string name="home_paused_until">Wstrzymane do %s</string>
     <string name="home_pause_resume">Wznów</string>
     <string name="home_window">Drugie połączenie w ciągu</string>
-    <string name="home_count_declined">Licz odrzucone połączenia</string>
-    <string name="home_count_declined_hint">Odrzucone połączenie liczy się jako pierwsze. Po wyłączeniu odrzucenie połączenia sprawia, że następne z tego numeru pozostaje ciche.</string>
     <plurals name="home_window_minutes">
         <item quantity="one">%d minuty</item>
         <item quantity="few">%d minut</item>

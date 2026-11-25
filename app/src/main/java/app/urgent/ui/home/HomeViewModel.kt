@@ -32,7 +32,6 @@ data class HomeUiState(
     val ringThrough: Boolean = false,
     val keepAlive: Boolean = false,
     val windowMinutes: Int = DEFAULT_REPEAT_WINDOW_MINUTES,
-    val countDeclined: Boolean = true,
     val callers: CallerRules = CallerRules(),
     val pausedUntilMillis: Long? = null,
 )
@@ -60,7 +59,6 @@ class HomeViewModel(
             preferences.ringThrough,
             preferences.keepAlive,
             preferences.repeatWindowMinutes,
-            preferences.countDeclinedCalls,
             preferences.callerRules,
             ::HomeUiState,
         ).combine(runningPause) { state, until -> state.copy(pausedUntilMillis = until) }
@@ -90,10 +88,6 @@ class HomeViewModel(
 
     fun setWindowMinutes(minutes: Int) {
         viewModelScope.launch { preferences.setRepeatWindowMinutes(minutes) }
-    }
-
-    fun setCountDeclined(enabled: Boolean) {
-        viewModelScope.launch { preferences.setCountDeclinedCalls(enabled) }
     }
 
     fun setUseChosenCallers(enabled: Boolean) {

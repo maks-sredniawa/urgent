@@ -85,10 +85,10 @@ Disturb's 15 when that is longer). "Called before" is a lookup in that record, n
 
 - **Contacts on Android 10 are never heard**, and **Android 9 loses the feature** entirely. Both are
   platform limits, said plainly in the app and the listing.
-- **"Count declined calls" can no longer be honoured as it is.** The call log said whether a call
-  was declined; the call state only says a call rang and ended without being answered, which a
-  missed call does too. The setting is removed or redefined in the phase that builds this, with
-  the reason in this ADR's amendment.
+- **"Count declined calls" is removed.** The call log said whether a call was declined; the call
+  state only says a call rang and ended without being answered, which a missed call does too. Every
+  call that rang counts, which was the setting's default. Decided by the owner on 2026-11-25; the
+  key is no longer read, and a value stored by an older version is ignored.
 - **The call-screening role is exclusive.** Taking it displaces another screening app the user may
   have, such as a spam blocker, and on some phones it may stop the built-in dialer's own spam
   screening (unconfirmed). Setup must say so before Android's role dialog appears.

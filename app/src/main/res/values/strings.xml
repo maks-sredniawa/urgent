@@ -62,8 +62,6 @@
         <item quantity="one">%d minute</item>
         <item quantity="other">%d minutes</item>
     </plurals>
-    <string name="home_count_declined">Count declined calls</string>
-    <string name="home_count_declined_hint">A call you declined counts as the first call. Turn this off and declining someone keeps their next call quiet.</string>
     <string name="home_permissions_missing_title">Repeated calls will not ring through</string>
     <string name="home_permissions_missing_action">Open app permissions</string>
     <string name="home_setup_missing_body">To see who is calling, Urgent needs the phone permission and, from Android 10, to be your caller ID and spam app. It lets every call through untouched, and takes that role from any other app that holds it.</string>

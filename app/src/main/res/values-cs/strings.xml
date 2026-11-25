@@ -49,8 +49,6 @@
         <item quantity="many">%d minuty</item>
         <item quantity="other">%d minut</item>
     </plurals>
-    <string name="home_count_declined">Počítat odmítnuté hovory</string>
-    <string name="home_count_declined_hint">Odmítnutý hovor se počítá jako první. Když tohle vypneš, po odmítnutí zůstane další hovor ze stejného čísla tichý.</string>
     <string name="home_permissions_missing_title">Opakované hovory nebudou zvonit</string>
     <string name="home_permissions_missing_action">Otevřít oprávnění aplikace</string>
     <string name="home_setup_missing_body">Aby Urgent viděl, kdo volá, potřebuje oprávnění k telefonu a od Androidu 10 také roli aplikace pro ID volajícího a spam. Každý hovor nechá projít beze změny a tuto roli převezme od jiné aplikace, která ji má.</string>

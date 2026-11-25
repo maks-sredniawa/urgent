@@ -41,8 +41,6 @@
         <item quantity="one">%d Minute</item>
         <item quantity="other">%d Minuten</item>
     </plurals>
-    <string name="home_count_declined">Abgelehnte Anrufe mitzählen</string>
-    <string name="home_count_declined_hint">Ein abgelehnter Anruf zählt als erster Anruf. Ist das aus, bleibt nach einer Ablehnung der nächste Anruf derselben Nummer still.</string>
     <string name="home_permissions_missing_title">Wiederholte Anrufe klingeln nicht</string>
     <string name="home_permissions_missing_action">App-Berechtigungen öffnen</string>
     <string name="home_setup_missing_body">Um zu sehen, wer anruft, braucht Urgent die Telefonberechtigung und ab Android 10 die Rolle der Anrufer-ID- und Spam-App. Es lässt jeden Anruf unverändert durch und übernimmt diese Rolle von jeder anderen App, die sie hat.</string>

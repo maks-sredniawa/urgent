@@ -52,7 +52,7 @@ The line that appears under the name in search results, and the most-read text i
 Automatically rings through silent mode when the same number calls twice.
 ```
 
-### Full description — 3995/4000
+### Full description — 3969/4000
 
 **No health or safety claims.** Urgent is a second chance at a call, not an emergency service, and
 the *What it cannot do* section says so; Play's enforcement reads a linked page as part of the
@@ -65,7 +65,7 @@ HOW THE RULE WORKS
 
 When a call comes in, Urgent checks its own record of recent calls for the same number in the minutes you chose. If it called before and your phone would let the call go silent, Urgent plays your ringtone, or your alarm sound if Android won't share it, at your alarm volume and vibrates. It stops when the call is answered, declined or ends, or after a minute; Silence stops it sooner.
 
-The first call stays as quiet as you set it; Ring at once callers ring on the first. A call you declined counts as the first one too, unless you turn that off. Choose the callers it rings for, or turn on Everyone in your contacts or Starred contacts; until you do, it rings for anyone. Need quiet? Pause it for up to 8 hours.
+The first call stays as quiet as you set it; Ring at once callers ring on the first. A call you declined counts as the first one too. Choose the callers it rings for, or turn on Everyone in your contacts or Starred contacts; until you do, it rings for anyone. Need quiet? Pause it for up to 8 hours.
 
 IT ONLY RINGS WHEN YOUR PHONE WOULD NOT
 
@@ -126,7 +126,7 @@ Urgent call
 Automatycznie dzwoni mimo wyciszenia, gdy ten sam numer dzwoni drugi raz.
 ```
 
-### Full description — 3991/4000
+### Full description — 3968/4000
 
 ```
 Urgent to reguła połączeń, która działa sama. Wyzwalacz ustawiasz raz: ten sam numer dzwoni znów w ciągu 5, 10, 15 lub 30 minut albo rozmówca jest na liście „Dzwoń od razu”. Gdy połączenie pasuje, Urgent automatycznie dzwoni, nawet na wyciszeniu albo wibracjach.
@@ -135,7 +135,7 @@ JAK DZIAŁA REGUŁA
 
 Gdy ktoś dzwoni, Urgent sprawdza we własnym zapisie ostatnich połączeń, czy ten numer dzwonił w ciągu wybranych minut. Jeśli tak i telefon przepuściłby połączenie bez dźwięku, Urgent odtwarza twój dzwonek (albo dźwięk alarmu, gdy Android go nie udostępni) z głośnością alarmu i wibruje. Przestaje, gdy odbierzesz, odrzucisz albo połączenie się skończy, albo po minucie. Wycisz zatrzymuje go wcześniej.
 
-Pierwsze połączenie zostaje ciche, jak ustawiono; od rozmówców z listy „Dzwoń od razu” dzwoni już pierwsze. Odrzucone połączenie też liczy się jako pierwsze, chyba że to wyłączysz. Wybierz rozmówców, od których ma dzwonić, albo włącz „Wszyscy z twoich kontaktów” lub „Oznaczone gwiazdką”; do tego czasu dzwoni od każdego. Chcesz ciszy? Wstrzymaj go do 8 godzin.
+Pierwsze połączenie zostaje ciche, jak ustawiono; od rozmówców z listy „Dzwoń od razu” dzwoni już pierwsze. Odrzucone połączenie też liczy się jako pierwsze. Wybierz rozmówców, od których ma dzwonić, albo włącz „Wszyscy z twoich kontaktów” lub „Oznaczone gwiazdką”; do tego czasu dzwoni od każdego. Chcesz ciszy? Wstrzymaj go do 8 godzin.
 
 DZWONI TYLKO WTEDY, GDY TELEFON BY NIE ZADZWONIŁ
 
@@ -195,7 +195,7 @@ Urgent call
 Klingelt automatisch trotz Lautlos-Modus, wenn dieselbe Nummer zweimal anruft.
 ```
 
-### Full description — 3986/4000
+### Full description — 3958/4000
 
 ```
 Urgent ist eine Anrufregel, die von selbst läuft. Du legst den Auslöser einmal fest: dieselbe Nummer ruft binnen 5, 10, 15 oder 30 Minuten erneut an, oder Anrufende stehen auf deiner Liste „Sofort klingeln“. Passt ein Anruf, klingelt Urgent automatisch, auch auf lautlos oder Vibration.
@@ -204,7 +204,7 @@ SO FUNKTIONIERT DIE REGEL
 
 Bei einem Anruf sucht Urgent die Nummer in seiner eigenen Liste der Anrufe der gewählten Minuten. Rief sie schon an und bliebe dein Handy still, spielt Urgent deinen Klingelton (oder Weckerton, gibt Android ihn nicht frei) in Weckerlautstärke und vibriert. Es endet mit dem Anruf (angenommen, abgelehnt, beendet) oder nach einer Minute; „Stummschalten“ beendet es früher.
 
-Der erste Anruf bleibt so leise wie eingestellt; bei Anrufenden auf „Sofort klingeln“ klingelt schon der erste. Auch ein abgelehnter Anruf zählt als erster, außer du schaltest das aus. Wähle Anrufende, für die es klingelt, oder eine Kontaktoption: „Alle in deinen Kontakten“ oder „Markierte Kontakte“. Bis dahin klingelt es bei allen. Ruhe nötig? Pausiere es bis zu 8 Stunden.
+Der erste Anruf bleibt so leise wie eingestellt; bei Anrufenden auf „Sofort klingeln“ klingelt schon der erste. Auch ein abgelehnter Anruf zählt als erster. Wähle Anrufende, für die es klingelt, oder eine Kontaktoption: „Alle in deinen Kontakten“ oder „Markierte Kontakte“. Bis dahin klingelt es bei allen. Ruhe nötig? Pausiere es bis zu 8 Stunden.
 
 ES KLINGELT NUR, WENN DEIN HANDY SCHWEIGT
 
@@ -264,7 +264,7 @@ Urgent call
 Suena automáticamente en modo silencio cuando el mismo número llama dos veces.
 ```
 
-### Full description — 3987/4000
+### Full description — 3962/4000
 
 ```
 Urgent es una regla de llamadas que funciona sola. Fijas el disparador una vez: el mismo número que vuelve a llamar en 5, 10, 15 o 30 minutos, o quien esté en tu lista «Sonar a la primera». Cuando una llamada coincide, Urgent suena automáticamente, incluso en silencio o vibración.
@@ -273,7 +273,7 @@ CÓMO FUNCIONA LA REGLA
 
 Al entrar una llamada, Urgent busca ese número en su propia lista de llamadas recientes, en los minutos elegidos. Si ya llamó y tu teléfono la dejaría en silencio, Urgent pone tu tono (o tu sonido de alarma, si Android no lo comparte) con tu volumen de alarmas y vibra. Para al contestar, rechazar o terminar la llamada, o al minuto; «Silenciar» lo para antes.
 
-La primera llamada sigue como la tengas configurada; si quien llama está en «Sonar a la primera», suena ya la primera. Una llamada rechazada también cuenta como primera, salvo que lo desactives. Elige para quién suena, o activa «Todos tus contactos» o «Contactos destacados»; hasta entonces, suena para cualquiera. ¿Necesitas silencio? Páusalo hasta 8 horas.
+La primera llamada sigue como la tengas configurada; si quien llama está en «Sonar a la primera», suena ya la primera. Una llamada rechazada también cuenta como primera. Elige para quién suena, o activa «Todos tus contactos» o «Contactos destacados»; hasta entonces, suena para cualquiera. ¿Necesitas silencio? Páusalo hasta 8 horas.
 
 SOLO SUENA SI TU TELÉFONO NO LO HARÍA
 
@@ -333,7 +333,7 @@ Urgent call
 Sonne automatiquement en silencieux quand le même numéro appelle deux fois.
 ```
 
-### Full description — 3994/4000
+### Full description — 3968/4000
 
 ```
 Urgent est une règle d’appel qui agit seule. Tu fixes le déclencheur une fois : le même numéro qui rappelle sous 5, 10, 15 ou 30 minutes, ou un numéro de ta liste Sonnerie immédiate. Si un appel correspond, Urgent sonne automatiquement, même en silencieux ou vibreur.
@@ -342,7 +342,7 @@ COMMENT FONCTIONNE LA RÈGLE
 
 À chaque appel, Urgent cherche le numéro dans sa liste d’appels récents, sur le délai choisi. S’il a déjà appelé et que ton téléphone resterait muet, il joue ta sonnerie (ou ton son d’alarme si Android la refuse) au volume des alarmes et vibre. Il s’arrête quand l’appel est pris, refusé ou fini, ou après une minute ; Couper le son l’arrête avant.
 
-Le premier appel reste tel que tu l’as réglé ; ta liste Sonnerie immédiate sonne dès le premier. Un appel refusé compte aussi comme premier, sauf si tu le désactives. Choisis pour quels appelants il sonne, ou active Tous tes contacts ou Contacts favoris. Sinon, il sonne pour tous. Besoin de calme ? Pause jusqu’à 8 heures.
+Le premier appel reste tel que tu l’as réglé ; ta liste Sonnerie immédiate sonne dès le premier. Un appel refusé compte aussi comme premier. Choisis pour quels appelants il sonne, ou active Tous tes contacts ou Contacts favoris. Sinon, il sonne pour tous. Besoin de calme ? Pause jusqu’à 8 heures.
 
 IL NE SONNE QUE SI TON TÉLÉPHONE SE TAIT
 
@@ -402,7 +402,7 @@ Urgent call
 Suona in automatico anche in silenzioso se lo stesso numero chiama due volte.
 ```
 
-### Full description — 3988/4000
+### Full description — 3967/4000
 
 ```
 Urgent è una regola per le chiamate che funziona da sola. Imposti una volta la condizione: lo stesso numero che richiama entro 5, 10, 15 o 30 minuti, o chi è in Suona subito. Quando una chiamata la soddisfa, Urgent suona automaticamente, anche in silenzioso o vibrazione.
@@ -411,7 +411,7 @@ COME FUNZIONA LA REGOLA
 
 A ogni chiamata, Urgent cerca il numero nel proprio elenco di chiamate recenti, entro i minuti che hai scelto. Se ha già chiamato e il telefono non suonerebbe, Urgent riproduce la tua suoneria (o il suono della sveglia, se Android non la condivide) al volume della sveglia e vibra. Smette quando rispondi, rifiuti o la chiamata finisce, o dopo un minuto; Silenzia lo ferma prima.
 
-La prima chiamata resta come l’hai impostata; per chi è in Suona subito suona già la prima. Anche una chiamata rifiutata conta come prima, se non lo disattivi. Puoi scegliere per chi suona, o attivare Tutti i tuoi contatti o Contatti speciali. Finché non scegli, suona per chiunque. Ti serve silenzio? Mettilo in pausa fino a 8 ore.
+La prima chiamata resta come l’hai impostata; per chi è in Suona subito suona già la prima. Anche una chiamata rifiutata conta come prima. Puoi scegliere per chi suona, o attivare Tutti i tuoi contatti o Contatti speciali. Finché non scegli, suona per chiunque. Ti serve silenzio? Mettilo in pausa fino a 8 ore.
 
 SUONA SOLO SE IL TELEFONO NON LO FA
 
@@ -471,7 +471,7 @@ Urgent call
 Toca automaticamente no modo silencioso quando o mesmo número liga duas vezes.
 ```
 
-### Full description — 3993/4000
+### Full description — 3970/4000
 
 ```
 O Urgent é uma regra de chamadas que funciona sozinha. Você define o gatilho uma vez: o mesmo número ligando de novo em até 5, 10, 15 ou 30 minutos, ou quem está em Tocar na hora. Se uma chamada se encaixa, o Urgent toca automaticamente, mesmo no modo silencioso ou vibrar.
@@ -480,7 +480,7 @@ COMO A REGRA FUNCIONA
 
 A cada chamada, o Urgent procura o número na própria lista de chamadas recentes, nos minutos que você escolheu. Se ele já ligou e o celular silenciaria a chamada, reproduz o seu toque (ou o som do alarme, se o Android o negar) no volume do alarme e vibra. Para quando a chamada é atendida, recusada ou termina, ou após um minuto; Silenciar para antes.
 
-A primeira chamada fica como você configurou; para quem está em Tocar na hora, já toca a primeira. Uma chamada recusada também conta como a primeira, se não desativar isso. Escolha para quem ele toca ou ative Todos os seus contatos ou Contatos marcados com estrela. Até lá, toca para qualquer pessoa. Precisa de silêncio? Pause por até 8 horas.
+A primeira chamada fica como você configurou; para quem está em Tocar na hora, já toca a primeira. Uma chamada recusada também conta como a primeira. Escolha para quem ele toca ou ative Todos os seus contatos ou Contatos marcados com estrela. Até lá, toca para qualquer pessoa. Precisa de silêncio? Pause por até 8 horas.
 
 SÓ TOCA QUANDO O CELULAR NÃO TOCARIA
 
@@ -540,7 +540,7 @@ Urgent call
 Automaticky zazvoní i v tichém režimu, když stejné číslo volá podruhé.
 ```
 
-### Full description — 3958/4000
+### Full description — 3939/4000
 
 ```
 Urgent je pravidlo pro hovory, které běží samo. Spouštěč nastavíš jednou: stejné číslo volá znovu do 5, 10, 15 nebo 30 minut, nebo volá někdo ze seznamu „Zvonit hned“. Když hovor pravidlu odpovídá, Urgent automaticky zazvoní, i když je telefon v tichém režimu nebo na vibrace.
@@ -549,7 +549,7 @@ JAK PRAVIDLO FUNGUJE
 
 Když přijde hovor, Urgent se podívá do vlastního záznamu nedávných hovorů, jestli stejné číslo nevolalo během zvoleného počtu minut. Pokud ano a telefon by hovor nechal tichý, Urgent přehraje tvoje vyzvánění (nebo zvuk budíku, když ho Android nezpřístupní) hlasitostí budíků a zavibruje. Přestane, když se hovor přijme, odmítne nebo skončí, případně po minutě; „Ztišit“ ho zastaví dřív.
 
-První hovor zůstane tak tichý, jak ho máš nastavený; u volajících ze seznamu „Zvonit hned“ zvoní už první. Odmítnutý hovor se taky počítá jako první, pokud to nevypneš. Vyber volající, pro které zvoní, nebo zapni „Všichni z tvých kontaktů“ či „Kontakty označené hvězdičkou“; do té doby zvoní pro kohokoli. Potřebuješ klid? Pozastav ho až na 8 hodin.
+První hovor zůstane tak tichý, jak ho máš nastavený; u volajících ze seznamu „Zvonit hned“ zvoní už první. Odmítnutý hovor se taky počítá jako první. Vyber volající, pro které zvoní, nebo zapni „Všichni z tvých kontaktů“ či „Kontakty označené hvězdičkou“; do té doby zvoní pro kohokoli. Potřebuješ klid? Pozastav ho až na 8 hodin.
 
 ZVONÍ, JEN KDYŽ BY TELEFON NEZAZVONIL
 
@@ -609,7 +609,7 @@ Urgent call
 Автоматично дзвонить у режимі без звуку, коли той самий номер телефонує вдруге.
 ```
 
-### Full description — 3999/4000
+### Full description — 3978/4000
 
 ```
 Urgent — це правило дзвінків, що спрацьовує саме. Ти задаєш умову один раз: той самий номер телефонує знову за 5, 10, 15 чи 30 хвилин або абонент є у списку «Дзвонити одразу». Коли дзвінок відповідає умові, Urgent автоматично дзвонить, навіть у режимі без звуку чи вібросигналу.
@@ -618,7 +618,7 @@ Urgent — це правило дзвінків, що спрацьовує са�
 
 Під час дзвінка Urgent шукає цей номер у власному записі недавніх дзвінків за вибраний тобою час. Якщо він уже дзвонив, а телефон лишив би дзвінок тихим, Urgent грає твій сигнал дзвінка (або сигнал будильника, якщо Android ним не ділиться) з гучністю будильника й вібрує. Звук стихає, коли дзвінок прийнято, відхилено чи завершено, або через хвилину; «Вимкнути звук» зупиняє раніше.
 
-Перший дзвінок тихий, як налаштовано; для абонентів зі списку «Дзвонити одразу» лунає вже перший. Відхилений тобою дзвінок теж вважається першим, якщо це не вимкнути. Можна вибрати, для кого Urgent дзвонить, або ввімкнути «Усі з твоїх контактів» чи «Контакти із зірочкою». Інакше він дзвонить для всіх. Потрібна тиша? Призупини його до 8 годин.
+Перший дзвінок тихий, як налаштовано; для абонентів зі списку «Дзвонити одразу» лунає вже перший. Відхилений тобою дзвінок теж вважається першим. Можна вибрати, для кого Urgent дзвонить, або ввімкнути «Усі з твоїх контактів» чи «Контакти із зірочкою». Інакше він дзвонить для всіх. Потрібна тиша? Призупини його до 8 годин.
 
 ДЗВОНИТЬ, ЛИШЕ КОЛИ ТЕЛЕФОН МОВЧАВ БИ
 

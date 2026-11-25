@@ -283,12 +283,6 @@ fun HomeScreen(
 
             Spacer(Modifier.height(Spacing.section))
             SwitchRow(
-                title = stringResource(R.string.home_count_declined),
-                subtitle = stringResource(R.string.home_count_declined_hint),
-                checked = state.countDeclined,
-                onChange = viewModel::setCountDeclined,
-            )
-            SwitchRow(
                 title = stringResource(R.string.home_keep_alive),
                 subtitle = stringResource(R.string.home_keep_alive_hint),
                 checked = state.keepAlive,
