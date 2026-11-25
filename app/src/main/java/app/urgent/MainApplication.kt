@@ -24,8 +24,9 @@ class MainApplication : Application() {
         private set
 
     /**
-     * Outlives any one broadcast or binding, so a call's checks can finish after the screening
-     * service has answered Telecom. `SupervisorJob` keeps one failed call from cancelling the next.
+     * Outlives any one broadcast or binding: `onReceive` and `onScreenCall` must return at once, so a
+     * call's checks run here, and the screening service answers Telecom only after they decide.
+     * `SupervisorJob` keeps one failed call from cancelling the next.
      */
     val callScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
