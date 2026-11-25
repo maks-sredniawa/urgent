@@ -16,7 +16,8 @@ import app.urgent.R
  * Whether Urgent, switched on, still lacks what it needs to hear a call. An update to 1.2.0 leaves a
  * user in exactly that state: they switched on before the call-screening role existed (ADR 0007).
  */
-fun Context.setupMissing(): Boolean = repeatedCallsSupported() && !(hasCallPermissions() && holdsScreeningRole())
+fun Context.setupMissing(): Boolean =
+    setupIncomplete(repeatedCallsSupported(), hasCallPermissions(), holdsScreeningRole())
 
 /** Says so in a notification, because someone updated from Play will not open the app to find out. */
 fun Context.showSetupReminder() {
