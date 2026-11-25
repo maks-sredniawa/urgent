@@ -900,56 +900,56 @@ Urgent call тепер розмовляє чеською, німецькою, і
 
 ### 1.2.0 — without the call log
 
-**English** — 438/500:
+**English** — 455/500:
 
 ```
-Urgent call no longer reads your call log. When you switch it on, set it as your caller ID & spam app so it can see who is calling; it lets every call through unchanged. It keeps the numbers that rang in the last 30 minutes on your phone instead. Calls from your contacts count once you allow contacts. Android 9 cannot run it, and on Android 10 calls from contacts do not count. Count declined calls is gone: every call that rang counts.
+Urgent call no longer reads your call log: it keeps the numbers that rang in the last 30 minutes on your phone. To see who is calling, it must be your caller ID & spam app; it lets every call through unchanged. Open Urgent and tap “Set up” on the “Repeated calls will not ring through” card. Calls from your contacts count once you allow contacts, except on Android 10. Android 9 cannot run it. “Count declined calls” is gone: every call that rang counts.
 ```
 
-**Polish** — 496/500:
+**Polish** — 494/500:
 
 ```
-Urgent call nie czyta już rejestru połączeń. Po włączeniu ustaw go jako aplikację do identyfikacji rozmówcy i ochrony przed spamem, żeby widział, kto dzwoni; przepuszcza każde połączenie bez zmian. Zamiast tego trzyma na telefonie numery, które dzwoniły w ostatnich 30 minutach. Połączenia od kontaktów liczą się, gdy zezwolisz na kontakty. Android 9 go nie obsłuży, a na Androidzie 10 połączenia od kontaktów się nie liczą. Opcji Licz odrzucone połączenia już nie ma: liczy się każde połączenie.
+Urgent call nie czyta już rejestru połączeń: trzyma na telefonie numery z ostatnich 30 minut. Żeby widzieć, kto dzwoni, musi być aplikacją do identyfikacji rozmówcy i ochrony przed spamem; przepuszcza każde połączenie bez zmian. Otwórz Urgent i dotknij „Skonfiguruj” na karcie „Powtórne połączenia nie zadzwonią”. Połączenia od kontaktów liczą się, gdy zezwolisz na kontakty, poza Androidem 10. Android 9 go nie obsłuży. Opcji „Licz odrzucone połączenia” już nie ma: liczy się każde połączenie.
 ```
 
-**German** — 462/500:
+**German** — 495/500:
 
 ```
-Urgent call liest deine Anrufliste nicht mehr. Lege es beim Einschalten als Anrufer-ID- und Spam-App fest, damit es sieht, wer anruft; jeder Anruf geht unverändert durch. Stattdessen merkt es sich auf dem Handy die Nummern der letzten 30 Minuten. Anrufe von Kontakten zählen, sobald du Kontakte erlaubst. Unter Android 9 läuft es nicht, unter Android 10 zählen Anrufe von Kontakten nicht. „Abgelehnte Anrufe mitzählen“ ist weg: Jeder Anruf, der klingelte, zählt.
+Urgent call liest deine Anrufliste nicht mehr: Es merkt sich auf dem Handy die Nummern der letzten 30 Minuten. Um zu sehen, wer anruft, muss es deine Anrufer-ID- und Spam-App sein; jeder Anruf geht unverändert durch. Öffne Urgent und tippe auf der Karte „Wiederholte Anrufe klingeln nicht“ auf „Einrichten“. Anrufe von Kontakten zählen, sobald du Kontakte erlaubst, außer unter Android 10. Unter Android 9 läuft es nicht. „Abgelehnte Anrufe mitzählen“ ist weg: Jeder Anruf, der klingelte, zählt.
 ```
 
-**Spanish** — 478/500:
+**Spanish** — 492/500:
 
 ```
-Urgent call ya no lee tu registro de llamadas. Al activarlo, configúralo como tu aplicación de identificador de llamada y spam para que vea quién llama; deja pasar cada llamada sin cambios. En su lugar guarda en el teléfono los números de los últimos 30 minutos. Las llamadas de tus contactos cuentan si permites los contactos. No funciona en Android 9, y en Android 10 no cuentan las llamadas de contactos. Ya no existe Contar llamadas rechazadas: cuenta toda llamada que sonó.
+Urgent call ya no lee tu registro de llamadas: guarda en el teléfono los números de los últimos 30 minutos. Para ver quién llama debe ser tu aplicación de identificador de llamada y spam; deja pasar cada llamada sin cambios. Abre Urgent y toca «Configurar» en la tarjeta «Las llamadas repetidas no sonarán». Las llamadas de tus contactos cuentan si permites los contactos, salvo en Android 10. No funciona en Android 9. Ya no existe «Contar llamadas rechazadas»: cuenta toda llamada que sonó.
 ```
 
-**French** — 498/500:
+**French** — 499/500:
 
 ```
-Urgent call ne lit plus ton journal d’appels. En l’activant, choisis-le comme application d’identification de l’appelant et anti-spam pour qu’il voie qui appelle ; chaque appel passe sans changement. Il garde plutôt sur le téléphone les numéros des 30 dernières minutes. Les appels de tes contacts comptent si tu autorises les contacts. Il ne marche pas sous Android 9, et sous Android 10 les appels de contacts ne comptent pas. Compter les appels refusés disparaît : tout appel qui a sonné compte.
+Urgent call ne lit plus ton journal d’appels : il garde sur le téléphone les numéros des 30 dernières minutes. Pour voir qui appelle, il doit être ton application d’identification de l’appelant et anti-spam ; chaque appel passe tel quel. Dans Urgent, touche « Configurer » sur la carte « Les appels répétés ne sonneront pas ». Les appels de contacts comptent si tu les autorises, sauf sous Android 10. Incompatible avec Android 9. Fini « Compter les appels refusés » : tout appel qui a sonné compte.
 ```
 
-**Italian** — 460/500:
+**Italian** — 487/500:
 
 ```
-Urgent call non legge più il registro chiamate. Quando lo attivi, impostalo come app ID chiamante e spam per vedere chi chiama; lascia passare ogni chiamata senza modifiche. Al suo posto tiene sul telefono i numeri degli ultimi 30 minuti. Le chiamate dai tuoi contatti contano se consenti i contatti. Non funziona su Android 9, e su Android 10 le chiamate dai contatti non contano. Conta le chiamate rifiutate non c’è più: conta ogni chiamata che ha squillato.
+Urgent call non legge più il registro chiamate: tiene sul telefono i numeri degli ultimi 30 minuti. Per vedere chi chiama deve essere la tua app ID chiamante e spam; lascia passare ogni chiamata senza modifiche. Apri Urgent e tocca «Configura» sulla scheda «Le chiamate ripetute non suoneranno». Le chiamate dai tuoi contatti contano se consenti i contatti, tranne su Android 10. Non funziona su Android 9. «Conta le chiamate rifiutate» non c’è più: conta ogni chiamata che ha squillato.
 ```
 
-**Brazilian Portuguese** — 459/500:
+**Brazilian Portuguese** — 494/500:
 
 ```
-O Urgent call não lê mais seu registro de chamadas. Ao ativá-lo, defina-o como seu app de identificador de chamadas e spam para ver quem está ligando; ele deixa toda chamada passar sem mudanças. No lugar, guarda no celular os números dos últimos 30 minutos. Chamadas dos seus contatos contam se você permitir os contatos. Não funciona no Android 9, e no Android 10 chamadas de contatos não contam. Contar chamadas recusadas saiu: toda chamada que tocou conta.
+O Urgent call não lê mais seu registro de chamadas: guarda no celular os números dos últimos 30 minutos. Para ver quem está ligando, ele precisa ser seu app de identificador de chamadas e spam; deixa toda chamada passar sem mudanças. Abra o Urgent e toque em “Configurar” no cartão “Chamadas repetidas não vão tocar”. Chamadas dos seus contatos contam se você permitir os contatos, exceto no Android 10. Não funciona no Android 9. “Contar chamadas recusadas” saiu: toda chamada que tocou conta.
 ```
 
-**Czech** — 423/500:
+**Czech** — 451/500:
 
 ```
-Urgent call už nečte záznam hovorů. Při zapnutí ho nastav jako aplikaci pro ID volajícího a spam, aby viděl, kdo volá; každý hovor nechá projít beze změny. Místo toho si v telefonu drží čísla z posledních 30 minut. Hovory od kontaktů se počítají, když povolíš kontakty. Na Androidu 9 nefunguje a na Androidu 10 se hovory od kontaktů nepočítají. Možnost Počítat odmítnuté hovory zmizela: počítá se každý hovor, který zvonil.
+Urgent call už nečte záznam hovorů: v telefonu si drží čísla z posledních 30 minut. Aby viděl, kdo volá, musí být tvou aplikací pro ID volajícího a spam; každý hovor nechá projít beze změny. Otevři Urgent a na kartě „Opakované hovory nebudou zvonit“ klepni na „Nastavit“. Hovory od kontaktů se počítají, když povolíš kontakty, kromě Androidu 10. Na Androidu 9 nefunguje. Možnost „Počítat odmítnuté hovory“ zmizela: počítá se každý hovor, který zvonil.
 ```
 
-**Ukrainian** — 476/500:
+**Ukrainian** — 492/500:
 
 ```
-Urgent call більше не читає журнал викликів. Під час увімкнення встанови його як додаток для визначення номера та захисту від спаму, щоб він бачив, хто дзвонить; кожен дзвінок проходить без змін. Натомість він зберігає на телефоні номери за останні 30 хвилин. Дзвінки від контактів враховуються, якщо дозволиш контакти. На Android 9 він не працює, а на Android 10 дзвінки від контактів не враховуються. «Враховувати відхилені дзвінки» більше немає: враховується кожен дзвінок.
+Urgent call більше не читає журнал викликів: він зберігає на телефоні номери за останні 30 хвилин. Щоб бачити, хто дзвонить, він має бути твоїм додатком для визначення номера та захисту від спаму; кожен дзвінок проходить без змін. Відкрий Urgent і натисни «Налаштувати» на картці «Повторні дзвінки не лунатимуть». Дзвінки від контактів враховуються, якщо дозволиш контакти, крім Android 10. На Android 9 він не працює. «Враховувати відхилені дзвінки» більше немає: враховується кожен дзвінок.
 ```
