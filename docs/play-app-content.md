@@ -370,6 +370,10 @@ Some answers are shorter than the 2026-10-31 draft (`b42270d`) because of the 30
   settings. No ads, no account, nothing leaves the phone.
 - *How many installs do you expect your app to have in your first year?* — 0 – 10K.
 
+These answers were sent before [ADR 0007](adr/0007-urgent-remembers-recent-calls-instead-of-reading-the-call-log.md)
+and stay as sent. If Play asks again, the value answer reads "Urgent checks its own short record of
+recent calls" instead of "checks the call log".
+
 **Your production readiness**
 
 - *What changes did you make to your app based on what you learned during your closed test?* —
