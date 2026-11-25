@@ -48,6 +48,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -96,6 +97,7 @@ import app.urgent.work.hasAutostartSettings
 import app.urgent.work.isIgnoringBatteryOptimisations
 import app.urgent.work.openAutostartSettings
 import app.urgent.work.openBatteryOptimisationSettings
+import kotlinx.coroutines.launch
 import java.text.Collator
 import java.util.Date
 
@@ -120,6 +122,7 @@ fun HomeScreen(
     var contactsGranted by remember { mutableStateOf(context.hasContactsPermission()) }
     var screeningRole by remember { mutableStateOf(context.holdsScreeningRole()) }
     val lifecycleOwner = LocalLifecycleOwner.current
+    val scope = rememberCoroutineScope()
     DisposableEffect(lifecycleOwner) {
         val observer =
             LifecycleEventObserver { _, event ->
@@ -128,7 +131,11 @@ fun HomeScreen(
                     batteryExempt = context.isIgnoringBatteryOptimisations()
                     contactsGranted = context.hasContactsPermission()
                     screeningRole = context.holdsScreeningRole()
-                    if (!context.setupMissing()) context.clearSetupReminder()
+                    // Read from the store, not `state`: on the first resume `state` still holds its
+                    // switched-off placeholder, which would clear a reminder that is still owed.
+                    scope.launch {
+                        if (!viewModel.ringThroughStored() || !context.setupMissing()) context.clearSetupReminder()
+                    }
                 }
             }
         lifecycleOwner.lifecycle.addObserver(observer)
@@ -183,6 +190,7 @@ fun HomeScreen(
                 paused = state.pausedUntilMillis != null,
                 onChange = { enabled ->
                     viewModel.setRingThrough(enabled)
+                    if (!enabled) context.clearSetupReminder()
                     // The ask rides on the moment the feature is switched on, never at launch:
                     // Android allows two denials before the dialog stops appearing for good.
                     // Android 9 is never asked: nothing granted there would make the feature work.
