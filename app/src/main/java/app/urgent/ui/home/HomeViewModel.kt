@@ -13,6 +13,7 @@ import app.urgent.data.AppPreferences
 import app.urgent.data.CallerRules
 import app.urgent.data.ContactScope
 import app.urgent.data.DEFAULT_REPEAT_WINDOW_MINUTES
+import app.urgent.data.RecentCalls
 import app.urgent.data.isPaused
 import app.urgent.data.pauseEndMillis
 import kotlinx.coroutines.Dispatchers
@@ -38,6 +39,7 @@ data class HomeUiState(
 
 class HomeViewModel(
     private val preferences: AppPreferences,
+    private val recentCalls: RecentCalls,
     private val contentResolver: ContentResolver,
 ) : ViewModel() {
     // Kotlin note: `transformLatest` is RxJS's `switchMap`: a new stored time cancels the wait below.
@@ -65,7 +67,11 @@ class HomeViewModel(
             .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), HomeUiState())
 
     fun setRingThrough(enabled: Boolean) {
-        viewModelScope.launch { preferences.setRingThrough(enabled) }
+        viewModelScope.launch {
+            preferences.setRingThrough(enabled)
+            // Switched off, nothing records the next call, which is what would drop these numbers.
+            if (!enabled) recentCalls.clear()
+        }
     }
 
     fun pauseFor(hours: Int) {
@@ -140,7 +146,7 @@ class HomeViewModel(
             viewModelFactory {
                 initializer {
                     val app = this[APPLICATION_KEY] as MainApplication
-                    HomeViewModel(app.container.preferences, app.contentResolver)
+                    HomeViewModel(app.container.preferences, app.recentCalls, app.contentResolver)
                 }
             }
     }
