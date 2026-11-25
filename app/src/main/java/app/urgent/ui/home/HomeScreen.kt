@@ -68,10 +68,12 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import app.urgent.R
 import app.urgent.call.CALL_PERMISSIONS
 import app.urgent.call.ChosenCaller
+import app.urgent.call.clearSetupReminder
 import app.urgent.call.hasCallPermissions
 import app.urgent.call.hasContactsPermission
 import app.urgent.call.holdsScreeningRole
 import app.urgent.call.repeatedCallsSupported
+import app.urgent.call.setupMissing
 import app.urgent.data.CallerRules
 import app.urgent.data.ContactScope
 import app.urgent.data.PAUSE_HOUR_CHOICES
@@ -125,6 +127,7 @@ fun HomeScreen(
                     batteryExempt = context.isIgnoringBatteryOptimisations()
                     contactsGranted = context.hasContactsPermission()
                     screeningRole = context.holdsScreeningRole()
+                    if (!context.setupMissing()) context.clearSetupReminder()
                 }
             }
         lifecycleOwner.lifecycle.addObserver(observer)

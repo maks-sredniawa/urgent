@@ -90,6 +90,9 @@
     <string name="channel_ringing_description">Wird angezeigt, während Urgent für einen wiederholten Anruf oder einen Anruf aus „Sofort klingeln“ klingelt, mit einer Schaltfläche, die es beendet.</string>
     <string name="channel_keep_alive_name">Im Hintergrund aktiv</string>
     <string name="channel_keep_alive_description">Wird angezeigt, während Urgent im Hintergrund läuft und für wiederholte Anrufe bereit ist.</string>
+    <string name="channel_setup_name">Einrichtung nötig</string>
+    <string name="channel_setup_description">Erscheint, wenn Urgent eingeschaltet ist, aber noch nicht sieht, wer anruft.</string>
+    <string name="setup_reminder_body">Öffne Urgent und tippe auf Einrichten, damit es wieder sieht, wer anruft.</string>
     <string name="keep_alive_title">Urgent läuft</string>
     <string name="keep_alive_body">Wartet auf wiederholte Anrufe. Zum Öffnen tippen.</string>
     <string name="ringing_title">Wiederholter Anruf</string>

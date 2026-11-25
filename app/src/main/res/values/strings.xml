@@ -111,6 +111,9 @@
     <string name="channel_ringing_description">Shown while Urgent rings for a repeated call or a Ring at once caller, with a button to stop it.</string>
     <string name="channel_keep_alive_name">Running in the background</string>
     <string name="channel_keep_alive_description">Shown while Urgent runs in the background, ready for repeated calls.</string>
+    <string name="channel_setup_name">Setup needed</string>
+    <string name="channel_setup_description">Shown when Urgent is switched on but cannot see who is calling yet.</string>
+    <string name="setup_reminder_body">Open Urgent and tap Set up, so it can see who is calling again.</string>
     <string name="keep_alive_title">Urgent is running</string>
     <string name="keep_alive_body">Waiting for repeated calls. Tap to open.</string>
     <string name="ringing_title">Repeated call</string>

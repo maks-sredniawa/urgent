@@ -94,6 +94,9 @@
     <string name="channel_ringing_description">Affichée pendant qu’Urgent sonne pour un appel répété ou pour un appel de la liste « Sonnerie immédiate », avec un bouton pour l’arrêter.</string>
     <string name="channel_keep_alive_name">Fonctionnement en arrière-plan</string>
     <string name="channel_keep_alive_description">Affichée pendant qu’Urgent fonctionne en arrière-plan, prêt pour les appels répétés.</string>
+    <string name="channel_setup_name">Configuration requise</string>
+    <string name="channel_setup_description">Affichée quand Urgent est activé mais ne voit pas encore qui appelle.</string>
+    <string name="setup_reminder_body">Ouvre Urgent et touche Configurer pour qu’il voie à nouveau qui appelle.</string>
     <string name="keep_alive_title">Urgent fonctionne</string>
     <string name="keep_alive_body">En attente d’appels répétés. Touche pour ouvrir.</string>
     <string name="ringing_title">Appel répété</string>

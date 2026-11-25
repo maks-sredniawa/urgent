@@ -90,6 +90,9 @@
     <string name="channel_ringing_description">Mostrata mentre Urgent suona per una chiamata ripetuta o per chi è in «Suona subito», con un pulsante per interrompere il suono.</string>
     <string name="channel_keep_alive_name">In esecuzione in background</string>
     <string name="channel_keep_alive_description">Mostrata mentre Urgent è in esecuzione in background, in attesa delle chiamate ripetute.</string>
+    <string name="channel_setup_name">Configurazione necessaria</string>
+    <string name="channel_setup_description">Mostrata quando Urgent è attivo ma non vede ancora chi chiama.</string>
+    <string name="setup_reminder_body">Apri Urgent e tocca Configura, così torna a vedere chi chiama.</string>
     <string name="keep_alive_title">Urgent è in esecuzione</string>
     <string name="keep_alive_body">In attesa delle chiamate ripetute. Tocca per aprire.</string>
     <string name="ringing_title">Chiamata ripetuta</string>
