@@ -1,6 +1,5 @@
 package app.urgent.call
 
-import android.provider.CallLog
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
@@ -13,19 +12,17 @@ class RepeatCallTest {
     private val exact: (String, String) -> Boolean = { a, b -> a == b }
 
     private fun repeat(
-        vararg earlier: LoggedCall,
+        vararg earlier: RecentCall,
         window: Int = 15,
         incoming: String = "600100200",
-        countDeclined: Boolean = true,
-    ) = repeatCallAgeMillis(incoming, earlier.toList(), now, window, countDeclined, exact) != null
+    ) = repeatCallAgeMillis(incoming, earlier.toList(), now, window, exact) != null
 
     private fun call(
         minutesAgo: Long,
-        type: Int = CallLog.Calls.MISSED_TYPE,
         number: String = "600100200",
-    ) = LoggedCall(number, now - minutesAgo * minute, type)
+    ) = RecentCall(number, now - minutesAgo * minute)
 
-    @Test fun `a missed call from the same number inside the window is a repeat`() = assertTrue(repeat(call(3)))
+    @Test fun `a call from the same number inside the window is a repeat`() = assertTrue(repeat(call(3)))
 
     @Test fun `the window edge still counts`() = assertTrue(repeat(call(15)))
 
@@ -35,61 +32,41 @@ class RepeatCallTest {
 
     @Test fun `a different number is not a repeat`() = assertFalse(repeat(call(3, number = "700100200")))
 
-    @Test fun `an answered call counts`() = assertTrue(repeat(call(3, CallLog.Calls.INCOMING_TYPE)))
-
-    @Test fun `a declined call counts`() = assertTrue(repeat(call(3, CallLog.Calls.REJECTED_TYPE)))
-
-    @Test fun `a declined call does not count when declined calls are switched off`() =
-        assertFalse(repeat(call(3, CallLog.Calls.REJECTED_TYPE), countDeclined = false))
-
-    @Test fun `a missed call still counts when declined calls are switched off`() =
-        assertTrue(repeat(call(3), countDeclined = false))
-
-    @Test fun `a newer declined call outweighs an earlier missed one when declined calls are off`() =
-        assertFalse(repeat(call(2, CallLog.Calls.REJECTED_TYPE), call(9), countDeclined = false))
-
-    @Test fun `a newer missed call counts behind an earlier declined one`() =
-        assertTrue(repeat(call(2), call(9, CallLog.Calls.REJECTED_TYPE), countDeclined = false))
-
-    @Test fun `my own outgoing call does not count`() = assertFalse(repeat(call(3, CallLog.Calls.OUTGOING_TYPE)))
-
-    @Test fun `a blocked number does not count`() = assertFalse(repeat(call(3, CallLog.Calls.BLOCKED_TYPE)))
-
-    @Test fun `a row dated in the future does not count`() = assertFalse(repeat(call(-1)))
+    @Test fun `a call dated in the future does not count`() = assertFalse(repeat(call(-1)))
 
     @Test fun `no earlier calls is not a repeat`() = assertFalse(repeat())
 
     @Test fun `number matching is delegated`() =
         assertTrue(
-            repeatCallAgeMillis("+48600100200", listOf(call(3)), now, 15, true) { a, b ->
+            repeatCallAgeMillis("+48600100200", listOf(call(3)), now, 15) { a, b ->
                 a.takeLast(9) == b.takeLast(9)
             } !=
                 null,
         )
 
     @Test fun `the age is the newest matching call's`() =
-        assertEquals(
-            4 * minute,
-            repeatCallAgeMillis("600100200", listOf(call(12), call(4), call(20)), now, 30, true, exact),
-        )
+        assertEquals(4 * minute, repeatCallAgeMillis("600100200", listOf(call(12), call(4), call(20)), now, 30, exact))
 
-    @Test fun `no repeat has no age`() =
-        assertNull(
-            repeatCallAgeMillis("600100200", listOf(call(31)), now, 30, true, exact),
-        )
+    @Test fun `no repeat has no age`() = assertNull(repeatCallAgeMillis("600100200", listOf(call(31)), now, 30, exact))
 
     @Test fun `Do Not Disturb sees an earlier call beyond a shorter window`() {
         val earlier = listOf(call(12))
-        assertNull(repeatCallAgeMillis("600100200", earlier, now, 5, true, exact))
+        assertNull(repeatCallAgeMillis("600100200", earlier, now, 5, exact))
         assertEquals(12 * minute, dndRepeatCallAgeMillis("600100200", earlier, now, exact))
-    }
-
-    @Test fun `Do Not Disturb counts a declined call even when declined calls are switched off`() {
-        val earlier = listOf(call(3, CallLog.Calls.REJECTED_TYPE))
-        assertNull(repeatCallAgeMillis("600100200", earlier, now, 15, false, exact))
-        assertEquals(3 * minute, dndRepeatCallAgeMillis("600100200", earlier, now, exact))
     }
 
     @Test fun `Do Not Disturb ignores a call older than its threshold`() =
         assertNull(dndRepeatCallAgeMillis("600100200", listOf(call(16)), now, exact))
+
+    @Test fun `the record keeps the widest window and drops older or future calls`() =
+        assertEquals(listOf(call(30), call(0)), keepRecent(listOf(call(31), call(30), call(0), call(-1)), now))
+
+    @Test fun `an entry survives encoding`() =
+        assertEquals(call(3, "+48 600 100 200"), decodeRecentCall(encodeRecentCall(call(3, "+48 600 100 200"))))
+
+    @Test fun `a malformed entry is dropped`() {
+        assertNull(decodeRecentCall("not a call"))
+        assertNull(decodeRecentCall("123|"))
+        assertNull(decodeRecentCall("|600100200"))
+    }
 }

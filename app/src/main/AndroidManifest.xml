@@ -3,11 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <!--
-        READ_PHONE_STATE and READ_CALL_LOG are runtime permissions, asked together the moment the
-        user turns the feature on: the first delivers the ringing broadcast, the second the caller's
-        number in it and the earlier call in the log. READ_CALL_LOG is why this app cannot be on
-        Google Play without a policy exception: Play reserves it for default dialers and a short list
-        of call-related app types.
+        READ_PHONE_STATE is a runtime permission, asked the moment the user turns the feature on: it
+        delivers the phone-state broadcast, which ends the ring when the call ends and carries the
+        ringing number on Android 8.x. From Android 10 the number comes from the call-screening role
+        instead (RepeatCallScreeningService), so the app needs no READ_CALL_LOG (ADR 0007).
 
         POST_NOTIFICATIONS is asked alongside on Android 13+, for the ringing notification's
         Silence button. The ringing itself does not depend on it.
@@ -15,7 +14,6 @@
         FOREGROUND_SERVICE_MEDIA_PLAYBACK is the type the ringing service declares from Android 14.
     -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_CALL_LOG" />
 
     <!--
         READ_CONTACTS is asked when the user presses Add from contacts or turns on Everyone in your
@@ -101,6 +99,19 @@
                 <action android:name="android.intent.action.PHONE_STATE" />
             </intent-filter>
         </receiver>
+
+        <!--
+            Bound by Telecom, never started by the app; BIND_SCREENING_SERVICE means only Telecom can
+            bind it, and only while Urgent holds the call-screening role.
+        -->
+        <service
+            android:name=".call.RepeatCallScreeningService"
+            android:exported="true"
+            android:permission="android.permission.BIND_SCREENING_SERVICE">
+            <intent-filter>
+                <action android:name="android.telecom.CallScreeningService" />
+            </intent-filter>
+        </service>
 
         <!--
             Restarts Run in the background after a reboot or an update, when nothing else would start it
