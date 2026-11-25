@@ -131,9 +131,13 @@ fun HomeScreen(
         onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
     }
 
+    // After "Don't ask again" the role request returns at once with no dialog, so once it has come
+    // back without the role, the next press goes to Default apps, where the role can still be given.
+    var roleRefused by rememberSaveable { mutableStateOf(false) }
     val askRole =
         rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             screeningRole = context.holdsScreeningRole()
+            roleRefused = !screeningRole
         }
     val askPermissions =
         rememberLauncherForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) {
@@ -177,10 +181,13 @@ fun HomeScreen(
                     viewModel.setRingThrough(enabled)
                     // The ask rides on the moment the feature is switched on, never at launch:
                     // Android allows two denials before the dialog stops appearing for good.
-                    if (enabled && !callPermissions) {
-                        askPermissions.launch(permissionsToAsk())
-                    } else if (enabled && !screeningRole) {
-                        context.screeningRoleRequest()?.let(askRole::launch)
+                    // Android 9 is never asked: nothing granted there would make the feature work.
+                    if (enabled && repeatedCallsSupported()) {
+                        if (!callPermissions) {
+                            askPermissions.launch(permissionsToAsk())
+                        } else if (!screeningRole) {
+                            context.screeningRoleRequest()?.let(askRole::launch)
+                        }
                     }
                 },
                 modifier = Modifier.padding(start = Spacing.base, end = Spacing.base, top = Spacing.section),
@@ -227,12 +234,10 @@ fun HomeScreen(
                                 // A permission denied twice no longer shows its dialog; only the
                                 // app's settings page can grant it then.
                                 val roleRequest = context.screeningRoleRequest()
-                                if (callPermissions &&
-                                    roleRequest != null
-                                ) {
-                                    askRole.launch(roleRequest)
-                                } else {
-                                    context.openAppDetails()
+                                when {
+                                    !callPermissions || roleRequest == null -> context.openAppDetails()
+                                    roleRefused -> context.openDefaultApps() || context.openAppDetails()
+                                    else -> askRole.launch(roleRequest)
                                 }
                             },
                         )
@@ -751,6 +756,9 @@ private fun Context.screeningRoleRequest(): Intent? =
     } else {
         null
     }
+
+private fun Context.openDefaultApps(): Boolean =
+    startActivitySafely(Intent(Settings.ACTION_MANAGE_DEFAULT_APPS_SETTINGS).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
 
 private fun Context.openAppDetails(): Boolean =
     startActivitySafely(
