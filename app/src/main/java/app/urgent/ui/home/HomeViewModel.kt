@@ -23,6 +23,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.transformLatest
 import kotlinx.coroutines.launch
@@ -71,6 +72,8 @@ class HomeViewModel(
             if (!enabled) recentCalls.clear()
         }
     }
+
+    suspend fun ringThroughStored(): Boolean = preferences.ringThrough.first()
 
     fun pauseFor(hours: Int) {
         viewModelScope.launch {
