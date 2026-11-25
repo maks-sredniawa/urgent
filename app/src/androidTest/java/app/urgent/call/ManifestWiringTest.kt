@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.pm.ServiceInfo
 import android.os.Build
+import android.telecom.CallScreeningService
 import android.telephony.TelephonyManager
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
@@ -34,6 +35,29 @@ class ManifestWiringTest {
         val names = receivers.map { it.activityInfo.name }
         assertTrue("PHONE_STATE reaches $names", PhoneStateReceiver::class.java.name in names)
         assertTrue("the telephony process is another app", receivers.single().activityInfo.exported)
+    }
+
+    @Test
+    fun telecom_finds_the_screening_service_and_only_telecom_may_bind_it() {
+        val services =
+            context.packageManager.queryIntentServices(
+                Intent(CallScreeningService.SERVICE_INTERFACE).setPackage(context.packageName),
+                0,
+            )
+        val service = services.single().serviceInfo
+        assertEquals(RepeatCallScreeningService::class.java.name, service.name)
+        assertTrue("Telecom is another process", service.exported)
+        assertEquals(Manifest.permission.BIND_SCREENING_SERVICE, service.permission)
+    }
+
+    @Test
+    fun the_call_log_permission_is_not_requested() {
+        val requested =
+            context.packageManager
+                .getPackageInfo(context.packageName, PackageManager.GET_PERMISSIONS)
+                .requestedPermissions
+                .orEmpty()
+        assertFalse(Manifest.permission.READ_CALL_LOG in requested)
     }
 
     @Test

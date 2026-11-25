@@ -23,12 +23,12 @@ Read at **versionCode 88, versionName 0.6.1** by `publish-play.yml`'s verify ste
 
 | Permission | Whose | What it is for | Console consequence |
 | --- | --- | --- | --- |
-| `READ_PHONE_STATE` | ours | the ringing broadcast that tells the app a call has arrived | none: runtime, asked when the feature is switched on |
-| `READ_CALL_LOG` | ours | the caller's number, and whether they called in the last few minutes | **Restricted**: Play's SMS and Call Log policy allows it only for default dialers and listed exceptions. The Permissions Declaration Form decides whether this app can be on Play at all |
+| `READ_PHONE_STATE` | ours | the call-state broadcast: the end of a call stops the ring, and on Android 8.x it carries the ringing number | none: runtime, asked when the feature is switched on |
+| *(no `READ_CALL_LOG`)* | — | removed by [ADR 0007](adr/0007-urgent-remembers-recent-calls-instead-of-reading-the-call-log.md): the number comes from the call-screening role, which is a role, not a permission, and "called before" from Urgent's own record of the last 30 minutes | `aab-permissions.py` forbids it. Once a build without it is live, remove the SMS and call log declaration |
 | `POST_NOTIFICATIONS` | ours | the ringing notification's Silence button | none |
 | `VIBRATE` | ours | vibrating with the ring | none: normal, install-time |
 | `RECEIVE_BOOT_COMPLETED` | ours | restarts *Run in the background* after a reboot or an update, without waiting for the user to open Urgent | none: normal, install-time |
-| `READ_CONTACTS` | ours | the contacts list behind *Add from contacts*, read on the phone; only the callers the user taps are kept. With *Everyone in your contacts* or *Starred contacts* on, the number of each repeated call, and of each call from the *Ring at once* list, is checked against it when it rings | Runtime, asked when either control is switched on, never at launch. Play has no `READ_CONTACTS` declaration form; Data safety is the only Console answer it touches, re-read on 2026-10-22 |
+| `READ_CONTACTS` | ours | from Android 11, Telecom passes a call from a saved contact to the screening service only while the app holds it, so it is asked when the feature is switched on. The app itself reads contacts only for the contacts list behind *Add from contacts*, where only the callers the user taps are kept, and, with *Everyone in your contacts* or *Starred contacts* on, to check the number of each repeated call, and of each call from the *Ring at once* list, when it rings | Runtime, asked when the feature is switched on, never at launch. Play has no `READ_CONTACTS` declaration form; Data safety is the only Console answer it touches, re-read on 2026-10-22 |
 | `FOREGROUND_SERVICE`, `FOREGROUND_SERVICE_MEDIA_PLAYBACK`, `FOREGROUND_SERVICE_SPECIAL_USE` | ours | `RingThroughService` plays the ringtone for up to a minute; `KeepAliveService` keeps the app running while *Run in the background* is on | **Foreground service declarations**: one for each type, `mediaPlayback` and `specialUse`, each with a short video, asked for in App content |
 | `…DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION` | AndroidX | its own non-exported receivers, signature-level | none: not user-visible |
 
@@ -114,9 +114,10 @@ The answer rests on one fact per route data could take:
 
 1. **The app cannot transmit anything.** `INTERNET` is absent from the artifact, and
    `aab-permissions.py` fails the upload if it ever appears. This one fact is most of the answer.
-2. **The call log is read only on the device.** A few minutes of it, at the moment a call rings, to
-   compare one number. Nothing from it is stored or sent. Still disclose it if the form asks about
-   *access* rather than collection: the Permissions Declaration Form does.
+2. **The recent-call record stays on the device** (ADR 0007). The number and time of each call that
+   rang in the last 30 minutes, to compare one number; anything older is dropped at the next call. It
+   is never sent, and the backup rules leave it out, so it never reaches the user's Drive or next
+   phone. The call log is not read at all.
 3. **Auto Backup is still "no data collected".** The platform moves the user's backup to the user's
    own Google Drive; the developer never sees it. That is Android transmitting the user's backup, not
    the app transmitting to the developer. ⚠ Every file the backup carries lands on the user's *next*
@@ -128,13 +129,14 @@ The answer rests on one fact per route data could take:
    what "collect" means, and that is the reason to give.
 5. **The contacts list is read only on the device: when the user presses *Add from contacts*, and, with *Everyone in your contacts* or *Starred contacts* on, to check the number of each repeated or *Ring at once* call when it rings.**
    Only the callers the user taps are kept, nothing from the list is sent, and the ring-time check keeps nothing. Still disclose it if the form
-   asks about *access* rather than collection, as for the call log.
+   asks about *access* rather than collection.
 
 Would change any of it:
 
 - **`INTERNET` on the artifact**, from our code or a dependency. Every answer here becomes a question.
 - **Anything the app sends by itself**, such as crash reporting or analytics. There is none today.
-- **Storing call-log rows, or contacts beyond the callers the user taps,** in the app's own storage, where a backup would carry them.
+- **Keeping the recent-call record longer than 30 minutes, or letting the backup carry it, or
+  storing contacts beyond the callers the user taps,** in the app's own storage, where a backup would carry them.
 - **Reading the contacts list anywhere other than the *Add from contacts* button and the ring-time check.** The Data safety answer and the Console's permission questions need re-reading.
 
 ## Advertising ID
