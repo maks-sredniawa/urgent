@@ -73,6 +73,7 @@ import app.urgent.call.hasCallPermissions
 import app.urgent.call.hasContactsPermission
 import app.urgent.call.holdsScreeningRole
 import app.urgent.call.repeatedCallsSupported
+import app.urgent.call.setupIncomplete
 import app.urgent.call.setupMissing
 import app.urgent.data.CallerRules
 import app.urgent.data.ContactScope
@@ -208,7 +209,8 @@ fun HomeScreen(
             // Only while the switch is on: a warning about a grant a disabled feature would need is
             // the app asking for something it is not using.
             val unsupported = state.ringThrough && !repeatedCallsSupported()
-            val callsBlocked = state.ringThrough && !unsupported && !(callPermissions && screeningRole)
+            val callsBlocked =
+                state.ringThrough && setupIncomplete(repeatedCallsSupported(), callPermissions, screeningRole)
             val contactsUnheard =
                 state.ringThrough && !unsupported && !callsBlocked && contactsNeedPermission() && !contactsGranted
             val contactsNeverHeard = state.ringThrough && !callsBlocked && contactsNeverScreened()
