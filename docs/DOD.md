@@ -120,19 +120,23 @@ template's `docs/DOD.md` the day a feature adds a table.
       a Xiaomi 24115RA8EG, sound recorded from the microphone, showing a *Ring at once* caller.
       Both of the first refusal's findings came back: listing mismatch and a video that does not
       demonstrate the functionality. *Ring at once* never touches the call log.
-- [ ] **Fourth attempt — sent 2026-11-24, in review.** The declaration now links a real-phone video
-      of the repeated-call path only, from cleared app data (permission dialog, battery, silent mode,
-      a silent first call, the second call ringing aloud), and instructions that drop *Ring at once*.
-      The same submission carries production 1.1.0 (versionCode 146), seven new listing languages
-      and new English and Polish screenshots. Details in
-      [`play-app-content.md`](play-app-content.md#sms-and-call-log-permissions). If it is refused,
-      read the reason before changing anything; the fallback stays distribution off Play, or an ADR
-      on replacing `READ_CALL_LOG`.
-- [ ] **Ship 1.1.0 to production once the declaration is approved.** Its versionCode 146, built
-      from the `v1.1.0` tag, reached Play outside the workflows and is the production release (full
-      rollout, 178 countries/regions) in the fourth attempt's review, with all nine locales and their
-      screenshot sets. Once approved, check that the live listing matches
-      [`store-listing.md`](store-listing.md), and that the closed track (`alpha`) carries 1.1.0 too.
+- [ ] **Build without `READ_CALL_LOG`**, per
+      [ADR 0007](adr/0007-urgent-remembers-recent-calls-instead-of-reading-the-call-log.md): the
+      call-screening role for the number, Urgent's own record of recent calls for "called before".
+      Its phase file is written when the ADR is merged.
+- [ ] **Appeal — filed 2026-11-25** (ticket 6-7138000041278, against *Unable to verify core
+      functionality*), answer due within 7 days. A second appeal on the listing finding did not
+      submit from the Console form.
+- [x] **Fourth attempt — rejected 2026-11-24**, about three and a half hours after it was sent,
+      on the same two findings, now also saying "your in-app experience does not match". It linked a
+      real-phone video of the repeated-call path only, from cleared app data, and instructions that
+      dropped *Ring at once*. The same submission carried production 1.1.0 (versionCode 146), seven
+      new listing languages and new English and Polish screenshots; none of it was published.
+      Details in [`play-app-content.md`](play-app-content.md#sms-and-call-log-permissions).
+- [ ] **Ship to production once Play approves.** Either the appeal reinstates the declaration, and
+      1.1.0 (versionCode 146, already in the Console) is sent again, or the build without
+      `READ_CALL_LOG` is the first production release. Check that the live listing matches
+      [`store-listing.md`](store-listing.md) and that the closed track (`alpha`) carries the same build.
       Then update the public status together: the README *Status* section, the `maksforge:`
       `status` in [`_config.yml`](_config.yml), the entry in the home page repo's
       `apps/web/src/app/catalog/projects.ts`, and the profile README.
