@@ -127,8 +127,13 @@ template's `docs/DOD.md` the day a feature adds a table.
       number on vibrate, first silent and second ringing on the alarm stream: `pixel-api36` (role
       path; contacts only with `READ_CONTACTS`; from a killed process; with battery *Optimized*; the
       ring stops on answer), `small-api30` (role path), `urgent-api26` (broadcast path). Still to read:
-      - [ ] the Xiaomi: the role dialog on HyperOS, two real calls on silent, autostart off and on,
-            battery *Optimized*
+      - [x] the Xiaomi 24115RA8EG (HyperOS, Android 16), 2026-11-25, release build versionCode 160
+            over the old 1.1.0, data cleared, battery *Optimized*, autostart on, phone on Mute: the
+            role dialog appeared after the permission prompts; a saved contact's first call stayed
+            silent, its second rang on the alarm stream. Telecom logged `SCREENING_COMPLETED, [Allow,
+            logged, notified, contact exists]`, and Android allowed the ringing service from the
+            background (`PROC_STATE_BFGS`). Screen recording kept by the owner
+      - [ ] the same with autostart off
       - [ ] decide *Count declined calls*, which cannot be honoured without the call log
       - [ ] the listing in nine locales without the call log, then the Console: remove the SMS and
             call log declaration once a build without the permission is live
