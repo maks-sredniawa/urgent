@@ -48,9 +48,10 @@ through android16-release):
 number and time, nothing else, pruned to the longest window it needs (30 minutes, or Do Not
 Disturb's 15 when that is longer). "Called before" is a lookup in that record, not in the call log.
 
-- The screening service always answers `allow` with nothing skipped, at once: it never blocks,
-  silences or hides a call, and Telecom's own ringing and call log are untouched. The ringing
-  decision runs after that answer, exactly as `PhoneStateReceiver` runs it today.
+- The screening service always answers `allow` with nothing skipped: it never blocks, silences or
+  hides a call, and Telecom's own ringing and call log are untouched. It answers **after** deciding,
+  and starts the ringing service before it answers: Android lets an app start a foreground service
+  while Telecom is bound to it, and refuses once Telecom has let go and battery use is *Optimized*.
 - **`READ_CONTACTS` becomes part of setup**, asked with the role, so that repeated calls from
   contacts count on Android 11+. It stays declinable: without it only numbers outside the contacts
   are heard.
@@ -91,8 +92,14 @@ Disturb's 15 when that is longer). "Called before" is a lookup in that record, n
 - **The call-screening role is exclusive.** Taking it displaces another screening app the user may
   have, such as a spam blocker, and on some phones it may stop the built-in dialer's own spam
   screening (unconfirmed). Setup must say so before Android's role dialog appears.
-- **The process is started by Telecom's binding** rather than by the broadcast, which may make
-  Xiaomi's autostart unnecessary for the number path. Unconfirmed until read on the phone.
+- **The process is started by Telecom's binding** rather than by the broadcast. Read on the
+  `pixel-api36` emulator on 2026-11-25: with the process killed, the first call started it and the
+  second rang. Whether HyperOS's autostart still blocks the binding is unconfirmed until read on the
+  phone.
+- **The battery exemption stops deciding whether Urgent rings** on Android 10+. Read on the same
+  emulator with battery use *Optimized*: answering Telecom first gave
+  `ForegroundServiceStartNotAllowedException` and silence; starting the ring before answering rang.
+  Home hides its battery card while the role is held. Unconfirmed on HyperOS.
 - **`READ_CONTACTS` will need its own Play declaration** once the app targets Android 17 (from
   2027-01-27, [Play Console Help 16935362](https://support.google.com/googleplay/android-developer/answer/16935362)).
   *Call Screening* is one of its listed use cases.

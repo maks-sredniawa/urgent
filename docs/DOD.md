@@ -123,7 +123,15 @@ template's `docs/DOD.md` the day a feature adds a table.
 - [ ] **Build without `READ_CALL_LOG`**, per
       [ADR 0007](adr/0007-urgent-remembers-recent-calls-instead-of-reading-the-call-log.md): the
       call-screening role for the number, Urgent's own record of recent calls for "called before".
-      Its phase file is written when the ADR is merged.
+      Built on `feat/call-screening`. Read on emulators with `adb emu gsm call`, two calls from one
+      number on vibrate, first silent and second ringing on the alarm stream: `pixel-api36` (role
+      path; contacts only with `READ_CONTACTS`; from a killed process; with battery *Optimized*; the
+      ring stops on answer), `small-api30` (role path), `urgent-api26` (broadcast path). Still to read:
+      - [ ] the Xiaomi: the role dialog on HyperOS, two real calls on silent, autostart off and on,
+            battery *Optimized*
+      - [ ] decide *Count declined calls*, which cannot be honoured without the call log
+      - [ ] the listing in nine locales without the call log, then the Console: remove the SMS and
+            call log declaration once a build without the permission is live
 - [ ] **Appeal — filed 2026-11-25** (ticket 6-7138000041278, against *Unable to verify core
       functionality*), answer due within 7 days. A second appeal on the listing finding did not
       submit from the Console form.
