@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.2.0](https://github.com/maks-sredniawa/urgent/compare/v1.1.0...v1.2.0) (2026-11-25)
+
+
+### Features
+
+* ask for the call-screening role and contacts when switching on, and say plainly where Android does not allow it ([c29ae67](https://github.com/maks-sredniawa/urgent/commit/c29ae67b6e81e7f825729f2928286360d0e3d2f3))
+* forbid READ_CALL_LOG in the artifact gate and check the screening service's manifest wiring ([a6960b1](https://github.com/maks-sredniawa/urgent/commit/a6960b13177b0221d4dd1259d4a7e92118653042))
+* hear the ringing number through the call-screening role and keep Urgent's own recent-call record instead of reading the call log ([eb17779](https://github.com/maks-sredniawa/urgent/commit/eb177798791c66f6b5003477efa78de7dde641b3))
+* remind people who updated with Urgent on that it needs the caller ID role before it can ring again ([2eec3da](https://github.com/maks-sredniawa/urgent/commit/2eec3daeeb34c6c9d4b3011e0dbff113c4bb3dad))
+* remove Count declined calls, which cannot tell a declined call from a missed one without the call log ([63ae7b4](https://github.com/maks-sredniawa/urgent/commit/63ae7b4395d94ce7c19c564eddef6754417e674b))
+
+
+### Bug Fixes
+
+* clear the recent-call record when Ring for repeated calls is switched off ([c147261](https://github.com/maks-sredniawa/urgent/commit/c147261dac94eccbe992427f75331557de5e75a7))
+* clear the setup reminder when Ring for repeated calls is switched off ([a22b3a5](https://github.com/maks-sredniawa/urgent/commit/a22b3a585406986f8a5bf65f3184080610cfdebd))
+* send Set up to Default apps once the role request comes back without the role, and ask nothing on Android 9 ([2f53182](https://github.com/maks-sredniawa/urgent/commit/2f53182be24eb9d6ed41c4c9cc0b46f52ee88ac5))
+* stop the ring when the caller hangs up before the screened call rings ([97efe4c](https://github.com/maks-sredniawa/urgent/commit/97efe4c8394a0b8542a2fe90e900f57140ba703c))
+
 ## [1.1.0](https://github.com/maks-sredniawa/urgent/compare/v1.0.0...v1.1.0) (2026-11-19)
 
 
