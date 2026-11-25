@@ -47,8 +47,15 @@
     <string name="home_count_declined">Contar chamadas recusadas</string>
     <string name="home_count_declined_hint">Uma chamada que você recusou conta como a primeira. Com isto desativado, recusar uma chamada deixa a próxima do mesmo número em silêncio.</string>
     <string name="home_permissions_missing_title">Chamadas repetidas não vão tocar</string>
-    <string name="home_permissions_missing_body">Sem as permissões de telefone e registro de chamadas, o Urgent não consegue ver quem está ligando nem se já ligou antes.</string>
     <string name="home_permissions_missing_action">Abrir permissões do app</string>
+    <string name="home_setup_missing_body">Para ver quem está ligando, o Urgent precisa da permissão de telefone e, a partir do Android 10, ser seu app de identificador de chamadas e spam. Ele deixa toda chamada passar sem mudanças e assume essa função de qualquer outro app que a tenha.</string>
+    <string name="home_setup_missing_action">Configurar</string>
+    <string name="home_contacts_unheard_title">Chamadas dos seus contatos não vão contar</string>
+    <string name="home_contacts_unheard_body">O Android só passa ao Urgent as chamadas de contatos salvos enquanto ele tem a permissão de contatos. O próprio Urgent só lê seus contatos se você escolhê-los em Quem liga.</string>
+    <string name="home_contacts_unheard_action">Permitir contatos</string>
+    <string name="home_contacts_android10_body">O Android 10 não passa chamadas de contatos salvos para apps como o Urgent. Chamadas de outros números continuam contando.</string>
+    <string name="home_android9_title">No Android 9 as chamadas repetidas não podem tocar</string>
+    <string name="home_android9_body">O Android 9 não deixa apps como o Urgent verem quem está ligando. O Urgent funciona no Android 8 e no Android 10 ou mais recente.</string>
     <string name="home_battery_title">Chamadas repetidas podem ficar em silêncio</string>
     <string name="home_battery_body">O Android pode impedir o Urgent de tocar enquanto ele está em segundo plano. Defina o uso da bateria do Urgent como “Sem restrições”.</string>
     <string name="home_battery_action">Abrir configurações de bateria</string>

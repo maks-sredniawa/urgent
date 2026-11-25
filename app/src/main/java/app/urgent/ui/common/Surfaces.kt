@@ -129,9 +129,9 @@ fun WarningCard(
     icon: Painter,
     title: String,
     body: String,
-    actionLabel: String,
-    onAct: () -> Unit,
     modifier: Modifier = Modifier,
+    actionLabel: String? = null,
+    onAct: (() -> Unit)? = null,
 ) {
     Surface(
         color = MaterialTheme.colorScheme.tertiaryContainer,
@@ -150,12 +150,14 @@ fun WarningCard(
                     Text(text = body, style = MaterialTheme.typography.bodyMedium)
                 }
             }
-            TextButton(
-                onClick = onAct,
-                colors = ButtonDefaults.textButtonColors(contentColor = LocalContentColor.current),
-                modifier = Modifier.align(Alignment.End).padding(top = Spacing.tight),
-            ) {
-                Text(actionLabel)
+            if (actionLabel != null && onAct != null) {
+                TextButton(
+                    onClick = onAct,
+                    colors = ButtonDefaults.textButtonColors(contentColor = LocalContentColor.current),
+                    modifier = Modifier.align(Alignment.End).padding(top = Spacing.tight),
+                ) {
+                    Text(actionLabel)
+                }
             }
         }
     }

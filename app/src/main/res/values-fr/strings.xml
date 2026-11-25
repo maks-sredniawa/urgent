@@ -48,8 +48,15 @@
     <string name="home_count_declined">Compter les appels refusés</string>
     <string name="home_count_declined_hint">Un appel que tu as refusé compte comme premier appel. Si tu désactives cette option, refuser un appel laisse silencieux le prochain appel de la même personne.</string>
     <string name="home_permissions_missing_title">Les appels répétés ne sonneront pas</string>
-    <string name="home_permissions_missing_body">Sans les autorisations Téléphone et Journaux d’appels, Urgent ne peut pas voir qui appelle, ni si cette personne a déjà appelé.</string>
     <string name="home_permissions_missing_action">Ouvrir les autorisations de l’application</string>
+    <string name="home_setup_missing_body">Pour voir qui appelle, Urgent a besoin de l’autorisation Téléphone et, depuis Android 10, d’être votre application d’identification de l’appelant et anti-spam. Il laisse passer chaque appel sans le modifier et reprend ce rôle à toute autre application qui l’a.</string>
+    <string name="home_setup_missing_action">Configurer</string>
+    <string name="home_contacts_unheard_title">Les appels de vos contacts ne compteront pas</string>
+    <string name="home_contacts_unheard_body">Android ne transmet à Urgent les appels des contacts enregistrés que s’il a l’autorisation Contacts. Urgent ne lit lui-même vos contacts que si vous les choisissez dans Appelants.</string>
+    <string name="home_contacts_unheard_action">Autoriser les contacts</string>
+    <string name="home_contacts_android10_body">Android 10 ne transmet pas les appels des contacts enregistrés aux applications comme Urgent. Les appels des autres numéros comptent toujours.</string>
+    <string name="home_android9_title">Sous Android 9, les appels répétés ne peuvent pas sonner</string>
+    <string name="home_android9_body">Android 9 ne laisse pas les applications comme Urgent voir qui appelle. Urgent fonctionne sous Android 8 et à partir d’Android 10.</string>
     <string name="home_battery_title">Les appels répétés peuvent rester silencieux</string>
     <string name="home_battery_body">Android peut empêcher Urgent de sonner quand il est en arrière-plan. Règle l’utilisation de la batterie d’Urgent sur « Sans restriction ».</string>
     <string name="home_battery_action">Ouvrir les paramètres de la batterie</string>

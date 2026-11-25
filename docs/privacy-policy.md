@@ -20,11 +20,18 @@ not request internet access at all.
 
 ## What the app can access, and why
 
-- **Phone state.** When a call comes in, Android tells the app that the phone is ringing and which
-  number is calling. The app uses this only to decide whether to ring.
-- **Your call log.** At that moment, the app reads the calls from the last few minutes to see whether
-  the same number called before. It does not copy, store or send the call log, and it reads nothing
-  older than the window you chose.
+- **Incoming calls.** When a call comes in, Android tells the app that the phone is ringing and which
+  number is calling: on Android 10 and later because you set Urgent as your *caller ID & spam app*,
+  and on Android 8 through the phone-state permission. The app always lets the call through
+  unchanged. It never blocks, silences or hides a call.
+- **A short record of recent calls.** To know whether a number called before, the app keeps the
+  number and time of each call that rang in the last 30 minutes, on your phone only. Anything older is
+  deleted as the next call comes in. The record is left out of your phone's backup and is never sent
+  anywhere. The app does not read your call log.
+- **Your contacts, so that calls from them count.** On Android 11 and later, Android passes a call
+  from one of your saved contacts to the app only while the app has the contacts permission, so
+  switching Urgent on asks for it. Having the permission does not make the app read your contacts:
+  it reads them only for the two uses below.
 - **Your contacts, when you ask for them.** Pressing *Add from contacts* asks for permission to read
   your contacts. If you allow it, the app lists the phone numbers in your contacts on your phone, and
   keeps only the numbers and names of the contacts you tap. It keeps a name only when it is the

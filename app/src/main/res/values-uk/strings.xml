@@ -47,8 +47,15 @@
     <string name="home_count_declined">Враховувати відхилені дзвінки</string>
     <string name="home_count_declined_hint">Відхилений тобою дзвінок вважається першим. Якщо це вимкнути, після відхилення наступний дзвінок від того самого абонента залишиться тихим.</string>
     <string name="home_permissions_missing_title">Повторні дзвінки не лунатимуть</string>
-    <string name="home_permissions_missing_body">Без дозволів «Телефон» і «Журнали викликів» Urgent не бачить, хто телефонує і чи телефонували з цього номера раніше.</string>
     <string name="home_permissions_missing_action">Відкрити дозволи застосунку</string>
+    <string name="home_setup_missing_body">Щоб бачити, хто дзвонить, Urgent потрібен дозвіл на телефон, а від Android 10 — роль додатка для визначення номера та захисту від спаму. Він пропускає кожен дзвінок без змін і перебирає цю роль від будь-якого іншого додатка, що її має.</string>
+    <string name="home_setup_missing_action">Налаштувати</string>
+    <string name="home_contacts_unheard_title">Дзвінки від ваших контактів не враховуватимуться</string>
+    <string name="home_contacts_unheard_body">Android передає Urgent дзвінки від збережених контактів, лише поки він має дозвіл на контакти. Сам Urgent читає ваші контакти, лише якщо ви виберете їх у розділі Абоненти.</string>
+    <string name="home_contacts_unheard_action">Дозволити контакти</string>
+    <string name="home_contacts_android10_body">Android 10 не передає дзвінки від збережених контактів таким додаткам, як Urgent. Дзвінки з інших номерів і далі враховуються.</string>
+    <string name="home_android9_title">На Android 9 повторні дзвінки не можуть лунати</string>
+    <string name="home_android9_body">Android 9 не дозволяє таким додаткам, як Urgent, бачити, хто дзвонить. Urgent працює на Android 8 і на Android 10 або новіших.</string>
     <string name="home_battery_title">Повторні дзвінки можуть залишитися тихими</string>
     <string name="home_battery_body">Android може не дати Urgent дзвонити, поки він працює у фоні. Установи для Urgent використання заряду «Без обмежень».</string>
     <string name="home_battery_action">Відкрити налаштування акумулятора</string>

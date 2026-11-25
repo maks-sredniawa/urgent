@@ -46,8 +46,15 @@
         <item quantity="other">%d minuty</item>
     </plurals>
     <string name="home_permissions_missing_title">Powtórne połączenia nie zadzwonią</string>
-    <string name="home_permissions_missing_body">Bez uprawnień do telefonu i rejestru połączeń Urgent nie widzi, kto dzwoni ani czy dzwonił już wcześniej.</string>
     <string name="home_permissions_missing_action">Otwórz uprawnienia aplikacji</string>
+    <string name="home_setup_missing_body">Żeby widzieć, kto dzwoni, Urgent potrzebuje uprawnienia do telefonu, a od Androida 10 także roli aplikacji do identyfikacji rozmówcy i ochrony przed spamem. Przepuszcza każde połączenie bez zmian i przejmuje tę rolę od innej aplikacji, która ją ma.</string>
+    <string name="home_setup_missing_action">Skonfiguruj</string>
+    <string name="home_contacts_unheard_title">Połączenia od kontaktów nie będą liczone</string>
+    <string name="home_contacts_unheard_body">Android przekazuje Urgent połączenia od zapisanych kontaktów tylko wtedy, gdy ma uprawnienie do kontaktów. Sam Urgent czyta kontakty tylko wtedy, gdy wybierzesz je w sekcji Rozmówcy.</string>
+    <string name="home_contacts_unheard_action">Zezwól na kontakty</string>
+    <string name="home_contacts_android10_body">Android 10 nie przekazuje aplikacjom takim jak Urgent połączeń od zapisanych kontaktów. Połączenia z innych numerów nadal się liczą.</string>
+    <string name="home_android9_title">Na Androidzie 9 powtórne połączenia nie zadzwonią</string>
+    <string name="home_android9_body">Android 9 nie pozwala aplikacjom takim jak Urgent widzieć, kto dzwoni. Urgent działa na Androidzie 8 oraz na Androidzie 10 i nowszych.</string>
     <string name="home_battery_title">Powtórne połączenia mogą pozostać ciche</string>
     <string name="home_battery_body">Android może nie pozwolić aplikacji Urgent dzwonić, gdy działa w tle. Ustaw zużycie baterii dla Urgent na „bez ograniczeń”.</string>
     <string name="home_battery_action">Otwórz ustawienia baterii</string>

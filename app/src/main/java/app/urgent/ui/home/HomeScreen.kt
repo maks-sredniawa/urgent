@@ -1,6 +1,7 @@
 package app.urgent.ui.home
 
 import android.Manifest
+import android.app.role.RoleManager
 import android.content.Context
 import android.content.Intent
 import android.os.Build
@@ -69,6 +70,8 @@ import app.urgent.call.CALL_PERMISSIONS
 import app.urgent.call.ChosenCaller
 import app.urgent.call.hasCallPermissions
 import app.urgent.call.hasContactsPermission
+import app.urgent.call.holdsScreeningRole
+import app.urgent.call.repeatedCallsSupported
 import app.urgent.data.CallerRules
 import app.urgent.data.ContactScope
 import app.urgent.data.PAUSE_HOUR_CHOICES
@@ -112,6 +115,7 @@ fun HomeScreen(
     var callPermissions by remember { mutableStateOf(context.hasCallPermissions()) }
     var batteryExempt by remember { mutableStateOf(context.isIgnoringBatteryOptimisations()) }
     var contactsGranted by remember { mutableStateOf(context.hasContactsPermission()) }
+    var screeningRole by remember { mutableStateOf(context.holdsScreeningRole()) }
     val lifecycleOwner = LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner) {
         val observer =
@@ -120,15 +124,23 @@ fun HomeScreen(
                     callPermissions = context.hasCallPermissions()
                     batteryExempt = context.isIgnoringBatteryOptimisations()
                     contactsGranted = context.hasContactsPermission()
+                    screeningRole = context.holdsScreeningRole()
                 }
             }
         lifecycleOwner.lifecycle.addObserver(observer)
         onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
     }
 
+    val askRole =
+        rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            screeningRole = context.holdsScreeningRole()
+        }
     val askPermissions =
         rememberLauncherForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) {
             callPermissions = context.hasCallPermissions()
+            contactsGranted = context.hasContactsPermission()
+            // The role's own dialog follows the permission dialog, so switching on is one flow.
+            if (callPermissions && !context.holdsScreeningRole()) context.screeningRoleRequest()?.let(askRole::launch)
         }
 
     Scaffold(
@@ -165,7 +177,11 @@ fun HomeScreen(
                     viewModel.setRingThrough(enabled)
                     // The ask rides on the moment the feature is switched on, never at launch:
                     // Android allows two denials before the dialog stops appearing for good.
-                    if (enabled && !callPermissions) askPermissions.launch(permissionsToAsk())
+                    if (enabled && !callPermissions) {
+                        askPermissions.launch(permissionsToAsk())
+                    } else if (enabled && !screeningRole) {
+                        context.screeningRoleRequest()?.let(askRole::launch)
+                    }
                 },
                 modifier = Modifier.padding(start = Spacing.base, end = Spacing.base, top = Spacing.section),
             )
@@ -181,20 +197,60 @@ fun HomeScreen(
 
             // Only while the switch is on: a warning about a grant a disabled feature would need is
             // the app asking for something it is not using.
-            val callsBlocked = state.ringThrough && !callPermissions
-            val batteryBlocked = state.ringThrough && !batteryExempt
-            if (callsBlocked || batteryBlocked) {
+            val unsupported = state.ringThrough && !repeatedCallsSupported()
+            val callsBlocked = state.ringThrough && !unsupported && !(callPermissions && screeningRole)
+            val contactsUnheard =
+                state.ringThrough && !unsupported && !callsBlocked && contactsNeedPermission() && !contactsGranted
+            val contactsNeverHeard = state.ringThrough && !callsBlocked && contactsNeverScreened()
+            // Android lets an app start its ringing service while Telecom is bound to it for screening,
+            // so with the role held the battery setting no longer decides whether Urgent rings.
+            val batteryBlocked = state.ringThrough && !batteryExempt && !screeningRole
+            if (unsupported || callsBlocked || contactsUnheard || contactsNeverHeard || batteryBlocked) {
                 Column(
                     modifier = Modifier.padding(start = Spacing.base, end = Spacing.base, top = Spacing.section),
                     verticalArrangement = Arrangement.spacedBy(Spacing.snug),
                 ) {
+                    if (unsupported) {
+                        WarningCard(
+                            icon = painterResource(R.drawable.ic_warning_lock),
+                            title = stringResource(R.string.home_android9_title),
+                            body = stringResource(R.string.home_android9_body),
+                        )
+                    }
                     if (callsBlocked) {
                         WarningCard(
                             icon = painterResource(R.drawable.ic_warning_lock),
                             title = stringResource(R.string.home_permissions_missing_title),
-                            body = stringResource(R.string.home_permissions_missing_body),
-                            actionLabel = stringResource(R.string.home_permissions_missing_action),
-                            onAct = { context.openAppDetails() },
+                            body = stringResource(R.string.home_setup_missing_body),
+                            actionLabel = stringResource(R.string.home_setup_missing_action),
+                            onAct = {
+                                // A permission denied twice no longer shows its dialog; only the
+                                // app's settings page can grant it then.
+                                val roleRequest = context.screeningRoleRequest()
+                                if (callPermissions &&
+                                    roleRequest != null
+                                ) {
+                                    askRole.launch(roleRequest)
+                                } else {
+                                    context.openAppDetails()
+                                }
+                            },
+                        )
+                    }
+                    if (contactsUnheard) {
+                        WarningCard(
+                            icon = painterResource(R.drawable.ic_warning_lock),
+                            title = stringResource(R.string.home_contacts_unheard_title),
+                            body = stringResource(R.string.home_contacts_unheard_body),
+                            actionLabel = stringResource(R.string.home_contacts_unheard_action),
+                            onAct = { askPermissions.launch(arrayOf(Manifest.permission.READ_CONTACTS)) },
+                        )
+                    }
+                    if (contactsNeverHeard) {
+                        WarningCard(
+                            icon = painterResource(R.drawable.ic_warning_lock),
+                            title = stringResource(R.string.home_contacts_unheard_title),
+                            body = stringResource(R.string.home_contacts_android10_body),
                         )
                     }
                     if (batteryBlocked) {
@@ -675,10 +731,25 @@ private fun ContactScope.labelRes(): Int =
  * the notification with its Silence button is hidden.
  */
 private fun permissionsToAsk(): Array<String> =
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-        CALL_PERMISSIONS + Manifest.permission.POST_NOTIFICATIONS
+    buildList {
+        addAll(CALL_PERMISSIONS)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) add(Manifest.permission.POST_NOTIFICATIONS)
+        if (contactsNeedPermission()) add(Manifest.permission.READ_CONTACTS)
+    }.toTypedArray()
+
+/**
+ * From Android 11 Telecom passes a call from a saved contact to the screening app only while it holds
+ * `READ_CONTACTS`; Android 10 never does (ADR 0007). Android 8.x hears every number in the broadcast.
+ */
+private fun contactsNeedPermission(): Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
+
+private fun contactsNeverScreened(): Boolean = Build.VERSION.SDK_INT == Build.VERSION_CODES.Q
+
+private fun Context.screeningRoleRequest(): Intent? =
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+        getSystemService(RoleManager::class.java)?.createRequestRoleIntent(RoleManager.ROLE_CALL_SCREENING)
     } else {
-        CALL_PERMISSIONS
+        null
     }
 
 private fun Context.openAppDetails(): Boolean =

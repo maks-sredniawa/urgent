@@ -40,8 +40,8 @@ Urgent is a second chance, not a guarantee. If you must not miss a call, keep yo
 
 ## Your data stays on your phone
 
-Urgent does not request internet access. It reads the last few minutes of your call log at the moment
-a call rings, compares one number, and keeps nothing. With Everyone in your contacts or Starred contacts
+Urgent does not request internet access and does not read your call log. It keeps the numbers that
+rang in the last 30 minutes on your phone, to compare one number, and deletes them after that. With Everyone in your contacts or Starred contacts
 chosen, it also checks
 a repeated call's number against your contacts, and keeps nothing. The details are in the
 **[Privacy Policy](privacy-policy.md)**.
