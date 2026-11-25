@@ -75,11 +75,11 @@ PRIM_INT_HEX = 7
 # accounted for in docs/play-app-content.md — keep the two in step.
 EXPECTED = {
     # Declared, runtime, asked together when the feature is switched on (ui/home/).
-    "android.permission.READ_PHONE_STATE": "ours — the ringing broadcast, call/PhoneStateReceiver.kt",
-    "android.permission.READ_CALL_LOG": "ours — the caller's number and the earlier call, call/PhoneState.kt",
+    "android.permission.READ_PHONE_STATE": "ours — the call-state broadcast, call/PhoneStateReceiver.kt",
     "android.permission.POST_NOTIFICATIONS": "ours — the ringing notification's Silence button",
-    # Declared, runtime, asked when the user presses Add from contacts (ui/home/), never at launch.
-    "android.permission.READ_CONTACTS": "ours — the contacts list behind Add from contacts, ui/home/CallerPicker.kt",
+    # Asked with the two above from Android 11, so Telecom screens calls from contacts too (ADR 0007);
+    # read by the app only for Add from contacts and the contacts choices, ui/home/CallerPicker.kt.
+    "android.permission.READ_CONTACTS": "ours — calls from contacts reach the screening service; the Callers choices",
     # Declared, install-time.
     "android.permission.VIBRATE": "ours — call/RingThroughService.kt",
     "android.permission.FOREGROUND_SERVICE": "ours — call/RingThroughService.kt",
@@ -95,6 +95,9 @@ EXPECTED = {
 # Permissions that must never appear. Absence is what the Data safety answers
 # rest on, so it is asserted rather than assumed.
 FORBIDDEN = {
+    # Play refused its declaration four times; Urgent keeps its own recent-call record (ADR 0007).
+    # A dependency or a revert that brings it back would put the app back in that review.
+    "android.permission.READ_CALL_LOG": "Play refuses it for this app; the record replaces it (ADR 0007)",
     "com.google.android.gms.permission.AD_ID": "Data safety says no advertising ID",
     "android.permission.QUERY_ALL_PACKAGES": "the <queries> element names one package instead",
     "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS": "Play restricts it; work/BatteryExemption.kt deep-links instead",
