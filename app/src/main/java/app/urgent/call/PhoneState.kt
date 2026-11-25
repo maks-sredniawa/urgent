@@ -3,25 +3,38 @@ package app.urgent.call
 import android.Manifest
 import android.annotation.SuppressLint
 import android.app.NotificationManager
+import android.app.role.RoleManager
 import android.content.Context
 import android.content.pm.PackageManager
 import android.media.AudioManager
 import android.net.Uri
 import android.os.Build
-import android.provider.CallLog
 import android.provider.ContactsContract
 import android.telecom.TelecomManager
-import android.telephony.PhoneNumberUtils
 
 /**
- * Both are runtime permissions, and both are needed: `READ_PHONE_STATE` delivers the ringing
- * broadcast at all, and since Android 9 the caller's number arrives only to an app that also holds
- * `READ_CALL_LOG`. That one also lets us read the log to find the earlier call.
+ * `READ_PHONE_STATE` delivers the phone-state broadcast at all: the end of a call, which stops the
+ * ring, and on Android 8.x the ringing number too.
  */
-val CALL_PERMISSIONS = arrayOf(Manifest.permission.READ_PHONE_STATE, Manifest.permission.READ_CALL_LOG)
+val CALL_PERMISSIONS = arrayOf(Manifest.permission.READ_PHONE_STATE)
 
 fun Context.hasCallPermissions(): Boolean =
     CALL_PERMISSIONS.all { checkSelfPermission(it) == PackageManager.PERMISSION_GRANTED }
+
+/**
+ * Android 10 added the call-screening role, through which Urgent hears the ringing number from then
+ * on. Android 9 has neither the role nor the number in the broadcast, so there the rule cannot work.
+ */
+fun repeatedCallsSupported(): Boolean = Build.VERSION.SDK_INT != Build.VERSION_CODES.P
+
+fun needsScreeningRole(): Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
+
+fun Context.holdsScreeningRole(): Boolean =
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+        getSystemService(RoleManager::class.java)?.isRoleHeld(RoleManager.ROLE_CALL_SCREENING) == true
+    } else {
+        true
+    }
 
 fun Context.hasContactsPermission(): Boolean =
     checkSelfPermission(Manifest.permission.READ_CONTACTS) == PackageManager.PERMISSION_GRANTED
@@ -54,53 +67,6 @@ internal fun Context.queryCallerContact(number: String): CallerContact {
         starredFlags.isNotEmpty() -> CallerContact.SAVED
         else -> CallerContact.NONE
     }
-}
-
-/** Calls logged since [sinceMillis], or nothing if the log cannot be read. */
-fun Context.callsSince(sinceMillis: Long): List<LoggedCall> {
-    val columns = arrayOf(CallLog.Calls.NUMBER, CallLog.Calls.DATE, CallLog.Calls.TYPE)
-    val cursor =
-        try {
-            contentResolver.query(
-                CallLog.Calls.CONTENT_URI,
-                columns,
-                "${CallLog.Calls.DATE} >= ?",
-                arrayOf(sinceMillis.toString()),
-                null,
-            )
-        } catch (e: SecurityException) {
-            null
-        } ?: return emptyList()
-
-    return cursor.use {
-        buildList {
-            while (it.moveToNext()) {
-                val number = it.getString(0) ?: continue
-                add(LoggedCall(number = number, atMillis = it.getLong(1), type = it.getInt(2)))
-            }
-        }
-    }
-}
-
-fun Context.earlierCallAgesNow(
-    incoming: String,
-    windowMinutes: Int,
-    countDeclined: Boolean,
-): EarlierCallAges {
-    val now = System.currentTimeMillis()
-    val earlier = callsSince(now - maxOf(windowMinutes * 60_000L, DND_REPEAT_CALLERS_MILLIS))
-    return EarlierCallAges(
-        repeatMillis =
-            repeatCallAgeMillis(
-                incoming = incoming,
-                earlier = earlier,
-                nowMillis = now,
-                windowMinutes = windowMinutes,
-                countDeclined = countDeclined,
-                sameNumber = PhoneNumberUtils::compare,
-            ),
-        dndMillis = dndRepeatCallAgeMillis(incoming, earlier, now, PhoneNumberUtils::compare),
-    )
 }
 
 /** The live sound settings [shouldRingThrough] decides from. */

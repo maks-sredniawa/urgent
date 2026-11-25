@@ -13,6 +13,8 @@ import app.urgent.data.AppPreferences
  */
 internal val Context.preferencesStore: DataStore<Preferences> by preferencesDataStore(name = "app_preferences")
 
+internal val Context.recentCallsStore: DataStore<Preferences> by preferencesDataStore(name = "recent_calls")
+
 /**
  * Manual dependency injection — deliberately not Hilt. The whole object graph is this file, and only
  * this file calls a constructor; a class that reaches for a singleton instead stops being testable

@@ -1,83 +1,76 @@
 package app.urgent.call
 
-import android.provider.CallLog
 import app.urgent.data.CallerRules
 import app.urgent.data.ContactScope
 
-/** How long ago the caller last called: under the user's window and setting, and as Do Not Disturb counts it. */
-data class EarlierCallAges(
-    val repeatMillis: Long?,
-    val dndMillis: Long?,
-)
-
-/** One row of the phone's call log, reduced to what deciding a repeat needs. */
-data class LoggedCall(
+/** An incoming call Urgent saw ring: the number as the network gave it, and when. */
+data class RecentCall(
     val number: String,
     val atMillis: Long,
-    val type: Int,
 )
-
-/**
- * The call-log types that count as "they already tried to reach you". Outgoing calls are you
- * reaching them, and a blocked number is one you have already said no to.
- */
-private val COUNTED_TYPES =
-    setOf(
-        CallLog.Calls.INCOMING_TYPE,
-        CallLog.Calls.MISSED_TYPE,
-        CallLog.Calls.REJECTED_TYPE,
-        CallLog.Calls.VOICEMAIL_TYPE,
-    )
 
 /**
  * How long ago [incoming] last called inside the window, or `null` when the call ringing now is not
- * a repeat. A declined call counts unless [countDeclined] is off, for the user who declines a caller
- * to mean "not now, even if they try again": then declining a caller's latest call means their next
- * call is not a repeat, and a later missed or answered call starts counting again.
+ * a repeat. Every call Urgent saw ring counts, answered or not: without the call log there is no
+ * telling a declined call from a missed one.
  *
- * The call that is ringing is not in [earlier] yet — Android writes a call to the log when it ends —
- * so any matching row is a genuinely earlier call. [sameNumber] is passed in because number matching
- * is the platform's job (`+48 600…` and `600…` are the same phone), and the platform's matcher is not
- * callable from a JVM test.
+ * [earlier] never holds the call ringing now, because the record is read before this call is added
+ * to it. [sameNumber] is passed in because number matching is the platform's job (`+48 600…` and
+ * `600…` are the same phone), and the platform's matcher is not callable from a JVM test.
  */
 fun repeatCallAgeMillis(
     incoming: String,
-    earlier: List<LoggedCall>,
+    earlier: List<RecentCall>,
     nowMillis: Long,
     windowMinutes: Int,
-    countDeclined: Boolean,
     sameNumber: (String, String) -> Boolean,
-): Long? {
-    val newest = newestCountedCall(incoming, earlier, nowMillis, windowMinutes * 60_000L, sameNumber) ?: return null
-    if (!countDeclined && newest.type == CallLog.Calls.REJECTED_TYPE) return null
-    return nowMillis - newest.atMillis
-}
+): Long? =
+    newestCall(incoming, earlier, nowMillis, windowMinutes * 60_000L, sameNumber)
+        ?.let { call -> nowMillis - call.atMillis }
 
 /**
  * How long ago [incoming] last called as Do Not Disturb's repeat-callers rule sees it, or `null` when
- * that rule will not let the call through. The rule has its own threshold and counts a declined call
- * like any other, so this can differ from [repeatCallAgeMillis] under the user's window and setting.
+ * that rule will not let the call through. The rule has its own threshold, so this can differ from
+ * [repeatCallAgeMillis] under the user's window.
  */
 fun dndRepeatCallAgeMillis(
     incoming: String,
-    earlier: List<LoggedCall>,
+    earlier: List<RecentCall>,
     nowMillis: Long,
     sameNumber: (String, String) -> Boolean,
 ): Long? =
-    newestCountedCall(incoming, earlier, nowMillis, DND_REPEAT_CALLERS_MILLIS, sameNumber)
+    newestCall(incoming, earlier, nowMillis, DND_REPEAT_CALLERS_MILLIS, sameNumber)
         ?.let { call -> nowMillis - call.atMillis }
 
-private fun newestCountedCall(
+private fun newestCall(
     incoming: String,
-    earlier: List<LoggedCall>,
+    earlier: List<RecentCall>,
     nowMillis: Long,
     windowMillis: Long,
     sameNumber: (String, String) -> Boolean,
-): LoggedCall? =
+): RecentCall? =
     earlier
-        .filter { call -> call.type in COUNTED_TYPES && sameNumber(call.number, incoming) }
+        .filter { call -> sameNumber(call.number, incoming) }
         .filter { call -> nowMillis - call.atMillis in 0..windowMillis }
         .maxByOrNull { call -> call.atMillis }
+
+/** The longest any rule looks back: the widest window the user can pick, or Do Not Disturb's. */
+val RECENT_CALL_RETENTION_MILLIS = maxOf(30 * 60_000L, DND_REPEAT_CALLERS_MILLIS)
+
+/** [calls] without anything older than [RECENT_CALL_RETENTION_MILLIS] or dated in the future. */
+fun keepRecent(
+    calls: List<RecentCall>,
+    nowMillis: Long,
+): List<RecentCall> = calls.filter { call -> nowMillis - call.atMillis in 0..RECENT_CALL_RETENTION_MILLIS }
+
+/** One stored entry, `millis|number`: a number never contains `|`, so the split is unambiguous. */
+fun encodeRecentCall(call: RecentCall): String = "${call.atMillis}|${call.number}"
+
+fun decodeRecentCall(entry: String): RecentCall? {
+    val millis = entry.substringBefore('|', "").toLongOrNull() ?: return null
+    val number = entry.substringAfter('|', "").takeIf { it.isNotEmpty() } ?: return null
+    return RecentCall(number, millis)
+}
 
 fun isChosenCaller(
     incoming: String,
