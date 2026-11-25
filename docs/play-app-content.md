@@ -229,6 +229,19 @@ at once*:
 
 > Device automation. User-set trigger (Home): the same number calls again within 5, 10, 15 or 30 min. Automatic action: Urgent checks the call log for that number's last call and rings at alarm volume through silent/vibrate. Video (real phone, sound on): 0:02 call log permission; 0:04 battery Unrestricted; 1:04 phone silent; 1:05 first call stays silent; 1:22 it shows as missed; 1:23 same number again rings aloud. To verify: same steps, call twice from another phone within 5 min.
 
+**Rejected a fourth time on 2026-11-24**, about three and a half hours after it was sent, on the same
+two findings, with one added line under the second: "your in-app experience does not match the core
+functionality for your declared use case". Play's SMS and Call Log policy lists "SMS or phone
+notification enhancement and alerts (when the app is not the default handler or an eligible
+exception)" as an invalid use case, which is the most likely reason no wording has passed.
+
+An appeal was filed on 2026-11-25 against *Unable to verify core functionality* (ticket
+6-7138000041278, answer within 7 days), arguing the user-set rule, the on-device use of the log, and
+that only two real calls can show the feature. A second appeal on the listing finding did not submit
+from the Console form. The road that does not depend on the appeal is
+[ADR 0007](adr/0007-urgent-remembers-recent-calls-instead-of-reading-the-call-log.md): a build
+without `READ_CALL_LOG`, after which this declaration is removed.
+
 Would change: another refusal (read the reason first; the fallback is distribution off Play, or an
 ADR on replacing `READ_CALL_LOG`), the window choices, a new trigger, or any use of the call log
 beyond comparing one number.
