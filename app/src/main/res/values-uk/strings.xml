@@ -44,8 +44,6 @@
         <item quantity="many">%d хвилин</item>
         <item quantity="other">%d хвилини</item>
     </plurals>
-    <string name="home_count_declined">Враховувати відхилені дзвінки</string>
-    <string name="home_count_declined_hint">Відхилений тобою дзвінок вважається першим. Якщо це вимкнути, після відхилення наступний дзвінок від того самого абонента залишиться тихим.</string>
     <string name="home_permissions_missing_title">Повторні дзвінки не лунатимуть</string>
     <string name="home_permissions_missing_action">Відкрити дозволи застосунку</string>
     <string name="home_setup_missing_body">Щоб бачити, хто дзвонить, Urgent потрібен дозвіл на телефон, а від Android 10 — роль додатка для визначення номера та захисту від спаму. Він пропускає кожен дзвінок без змін і перебирає цю роль від будь-якого іншого додатка, що її має.</string>

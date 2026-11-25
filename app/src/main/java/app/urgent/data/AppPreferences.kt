@@ -66,7 +66,6 @@ class AppPreferences(
         val MATERIAL_YOU = booleanPreferencesKey("material_you")
         val RING_THROUGH = booleanPreferencesKey("ring_through")
         val REPEAT_WINDOW_MINUTES = intPreferencesKey("repeat_window_minutes")
-        val COUNT_DECLINED_CALLS = booleanPreferencesKey("count_declined_calls")
         val CHOSEN_CALLERS = stringSetPreferencesKey("chosen_callers")
         val USE_CHOSEN_CALLERS = booleanPreferencesKey("use_chosen_callers")
         val CONTACT_SCOPE = stringPreferencesKey("contact_scope")
@@ -114,12 +113,6 @@ class AppPreferences(
         store.data.map { prefs ->
             prefs[Keys.REPEAT_WINDOW_MINUTES]?.takeIf { it in REPEAT_WINDOW_CHOICES } ?: DEFAULT_REPEAT_WINDOW_MINUTES
         }
-
-    /**
-     * Whether a call the user declined counts as the earlier call. Defaults **on**: a decline is often
-     * a reflex at an unknown number, and the second attempt is the one Urgent exists for.
-     */
-    val countDeclinedCalls: Flow<Boolean> = store.data.map { it[Keys.COUNT_DECLINED_CALLS] ?: true }
 
     /**
      * The caller rules, read from one snapshot so the lists, the switch and the contacts setting always
@@ -182,10 +175,6 @@ class AppPreferences(
 
     suspend fun setRepeatWindowMinutes(minutes: Int) {
         store.edit { it[Keys.REPEAT_WINDOW_MINUTES] = minutes }
-    }
-
-    suspend fun setCountDeclinedCalls(enabled: Boolean) {
-        store.edit { it[Keys.COUNT_DECLINED_CALLS] = enabled }
     }
 
     suspend fun setUseChosenCallers(enabled: Boolean) {

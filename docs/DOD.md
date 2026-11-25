@@ -134,9 +134,11 @@ template's `docs/DOD.md` the day a feature adds a table.
             logged, notified, contact exists]`, and Android allowed the ringing service from the
             background (`PROC_STATE_BFGS`). Screen recording kept by the owner
       - [ ] the same with autostart off
-      - [ ] decide *Count declined calls*, which cannot be honoured without the call log
-      - [ ] the listing in nine locales without the call log, then the Console: remove the SMS and
-            call log declaration once a build without the permission is live
+      - [x] *Count declined calls* removed, 2026-11-25: without the call log a declined call cannot be
+            told from a missed one (ADR 0007)
+      - [x] the listing in nine locales without the call log
+      - [ ] the Console: remove the SMS and call log declaration once a build without the permission
+            is live
 - [ ] **Appeal — filed 2026-11-25** (ticket 6-7138000041278, against *Unable to verify core
       functionality*), answer due within 7 days. A second appeal on the listing finding did not
       submit from the Console form.

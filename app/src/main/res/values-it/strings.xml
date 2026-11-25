@@ -41,8 +41,6 @@
         <item quantity="many">%d minuti</item>
         <item quantity="other">%d minuti</item>
     </plurals>
-    <string name="home_count_declined">Conta le chiamate rifiutate</string>
-    <string name="home_count_declined_hint">Una chiamata che hai rifiutato conta come prima chiamata. Se lo disattivi, rifiutare una chiamata lascia silenziosa la successiva dallo stesso numero.</string>
     <string name="home_permissions_missing_title">Le chiamate ripetute non suoneranno</string>
     <string name="home_permissions_missing_action">Apri autorizzazioni app</string>
     <string name="home_setup_missing_body">Per vedere chi chiama, Urgent ha bisogno dell’autorizzazione Telefono e, da Android 10, di essere la tua app ID chiamante e spam. Lascia passare ogni chiamata senza modificarla e prende quel ruolo da qualsiasi altra app che lo abbia.</string>

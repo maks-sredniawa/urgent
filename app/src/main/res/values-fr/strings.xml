@@ -45,8 +45,6 @@
         <item quantity="many">%d minutes</item>
         <item quantity="other">%d minutes</item>
     </plurals>
-    <string name="home_count_declined">Compter les appels refusés</string>
-    <string name="home_count_declined_hint">Un appel que tu as refusé compte comme premier appel. Si tu désactives cette option, refuser un appel laisse silencieux le prochain appel de la même personne.</string>
     <string name="home_permissions_missing_title">Les appels répétés ne sonneront pas</string>
     <string name="home_permissions_missing_action">Ouvrir les autorisations de l’application</string>
     <string name="home_setup_missing_body">Pour voir qui appelle, Urgent a besoin de l’autorisation Téléphone et, depuis Android 10, d’être votre application d’identification de l’appelant et anti-spam. Il laisse passer chaque appel sans le modifier et reprend ce rôle à toute autre application qui l’a.</string>
