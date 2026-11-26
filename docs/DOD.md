@@ -157,11 +157,11 @@ template's `docs/DOD.md` the day a feature adds a table.
       `READ_CALL_LOG`, was sent for review on 2026-11-26 as one submission of 13 changes: production
       and closed testing at full rollout, the listing in seven new languages, and new English and
       Polish descriptions and screenshots. Internal, closed and production were each committed held
-      (`changes_not_sent_for_review`), then sent from Publishing overview. Once approved, check that the live listing matches
-      [`store-listing.md`](store-listing.md) and that the closed track (`alpha`) carries the same build.
-      Then update the public status together: the README *Status* section, the `maksforge:`
-      `status` in [`_config.yml`](_config.yml), the entry in the home page repo's
-      `apps/web/src/app/catalog/projects.ts`, and the profile README.
+      (`changes_not_sent_for_review`), then sent from Publishing overview. Once approved, check that
+      the live listing matches [`store-listing.md`](store-listing.md) and that the closed track
+      (`alpha`) carries the same build. Then update the public status together: the README *Status*
+      section, the `maksforge:` `status` in [`_config.yml`](_config.yml), the entry in the home page
+      repo's `apps/web/src/app/catalog/projects.ts`, and the profile README.
 - [ ] **Read Xiaomi's own words in each new language on a HyperOS phone.** The translators took the
       AOSP terms from source, but Xiaomi's *autostart*, *Recents* and its battery option name could
       not be checked from a document in cs, de, es, fr, it, pt-BR and uk. Set the phone to each

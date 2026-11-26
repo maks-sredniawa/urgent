@@ -479,11 +479,12 @@ production runs fail because they pass `--rescue_changes_not_sent_for_review fal
 `supply` defaults that option to `true`, which catches this error and quietly recommits the edit
 held. With the input on, they pass `--changes_not_sent_for_review true` instead.
 
-⚠ **A production dry run cannot pass in this state.** `--validate_only` asks Play to validate the
-edit, and fastlane makes that call without the held flag, so Play answers with the same error even
-with the input on (1.2.0, 2026-11-26). Everything before the validation, the build lookup, the listing
-and the screenshots, has already gone through by then. Run for real with the input on instead: the
-edit is committed held, and nothing is reviewed or published until it is sent from the Console.
+⚠ **A dry run, production or closed testing, cannot pass in this state.** Both workflows add
+`--validate_only` from their `dry_run` input, which asks Play to validate the edit, and fastlane makes
+that call without the held flag, so Play answers with the same error even with the input on (1.2.0,
+2026-11-26). Everything before the validation has already gone through by then: the build lookup, and
+on production the listing and the screenshots too. Run for real with the input on instead: the edit
+is committed held, and nothing is reviewed or published until it is sent from the Console.
 
 ### Why fastlane here and Python everywhere else
 
