@@ -19,5 +19,6 @@ title: Urgent call
 description: Rings your phone when the same number calls twice within a few minutes, even on silent.
 maksforge:
   icon: /assets/icons/urgent.webp
-  status: building
+  status: live
+  play: https://play.google.com/store/apps/details?id=io.github.srednimax.urgent
   kind: Android app

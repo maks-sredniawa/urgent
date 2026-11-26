@@ -12,8 +12,9 @@ Free, no ads, no server, no account. Nothing leaves the phone.
 
 ## Status
 
-In closed testing on Google Play. Play refused production access to the call log four times, so
-Urgent no longer reads it ([ADR 0007](docs/adr/0007-urgent-remembers-recent-calls-instead-of-reading-the-call-log.md)).
+Live on [Google Play](https://play.google.com/store/apps/details?id=io.github.srednimax.urgent) since
+1.2.0 (2026-11-26). Play refused production access to the call log four times, so Urgent no longer
+reads it ([ADR 0007](docs/adr/0007-urgent-remembers-recent-calls-instead-of-reading-the-call-log.md)).
 
 ## Setup on the phone
 
