@@ -140,28 +140,27 @@ template's `docs/DOD.md` the day a feature adds a table.
       - [x] an update leaves someone who switched on before the role existed without it: the update
             receiver posts a *Repeated calls will not ring through* notification, cleared once Home
             sees the setup complete. Read on `pixel-api36`, 2026-11-25
-      - [ ] the Console: the SMS and call log declaration. On 2026-11-26 its page still said "Your app
-            uses READ_CALL_LOG", while *View app bundles and APKs* said no bundle accesses a sensitive
-            permission, and the declaration update from the fourth attempt was listed under "What
-            you've told us" in the 1.2.0 submission. Once 1.2.0 is live, check that the page clears
-- [ ] **Appeal — filed 2026-11-25** (ticket 6-7138000041278, against *Unable to verify core
-      functionality*), answer due within 7 days. A second appeal on the listing finding did not
-      submit from the Console form.
+      - [x] the Console: the SMS and call log declaration. Before 1.2.0 went live its page still said
+            "Your app uses READ_CALL_LOG", although no bundle accessed a sensitive permission. Once 1.2.0
+            was live on 2026-11-26, App content read "You've caught up with everything" and Policy
+            status "No issues found"
+- [x] **Appeal — filed 2026-11-25** (ticket 6-7138000041278, against *Unable to verify core
+      functionality*). Moot since 1.2.0 went live without `READ_CALL_LOG` on 2026-11-26.
 - [x] **Fourth attempt — rejected 2026-11-24**, about three and a half hours after it was sent,
       on the same two findings, now also saying "your in-app experience does not match". It linked a
       real-phone video of the repeated-call path only, from cleared app data, and instructions that
       dropped *Ring at once*. The same submission carried production 1.1.0 (versionCode 146), seven
       new listing languages and new English and Polish screenshots; none of it was published.
       Details in [`play-app-content.md`](play-app-content.md#sms-and-call-log-permissions).
-- [ ] **Ship to production once Play approves.** 1.2.0 (versionCode 172), the build without
+- [x] **Shipped to production on 2026-11-26**, approved about 12 minutes after it was sent. 1.2.0 (versionCode 172), the build without
       `READ_CALL_LOG`, was sent for review on 2026-11-26 as one submission of 13 changes: production
       and closed testing at full rollout, the listing in seven new languages, and new English and
       Polish descriptions and screenshots. Internal, closed and production were each committed held
-      (`changes_not_sent_for_review`), then sent from Publishing overview. Once approved, check that
-      the live listing matches [`store-listing.md`](store-listing.md) and that the closed track
-      (`alpha`) carries the same build. Then update the public status together: the README *Status*
-      section, the `maksforge:` `status` in [`_config.yml`](_config.yml), the entry in the home page
-      repo's `apps/web/src/app/catalog/projects.ts`, and the profile README.
+      (`changes_not_sent_for_review`), then sent from Publishing overview. The public store page shows
+      the listing from [`store-listing.md`](store-listing.md); the closed track (`alpha`) got the same
+      build in the same submission. The public status moved to live in the README *Status* section,
+      the `maksforge:` `status` in [`_config.yml`](_config.yml), the home page repo's
+      `apps/web/src/app/catalog/projects.ts`, and the profile README.
 - [ ] **Read Xiaomi's own words in each new language on a HyperOS phone.** The translators took the
       AOSP terms from source, but Xiaomi's *autostart*, *Recents* and its battery option name could
       not be checked from a document in cs, de, es, fr, it, pt-BR and uk. Set the phone to each
