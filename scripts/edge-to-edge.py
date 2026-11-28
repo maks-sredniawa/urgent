@@ -1776,9 +1776,9 @@ def main() -> int:
         default=0,
         metavar="N",
         help=(
-            "re-walk a scene up to N more times when the driver fails to reach it. For the nightly, "
-            "where a missed tap on a slow emulator is the common red and re-running the whole cell "
-            "costs half an hour to repair one scene. Default 0: on real hardware a scene that "
+            "re-walk a scene up to N more times when the driver fails to reach it. For the weekly "
+            "run, where a missed tap on a slow emulator is the common red and re-running the whole "
+            "cell costs half an hour to repair one scene. Default 0: on real hardware a scene that "
             "cannot be reached is a finding, and the run should say so the first time"
         ),
     )

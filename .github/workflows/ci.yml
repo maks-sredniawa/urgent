@@ -288,7 +288,7 @@ jobs:
     # go. The old shape put all four configurations of API 36 in a single job that was still going
     # after 13 minutes with no cell finished, against a 240-minute ceiling it would plausibly have
     # reached. Fanning out costs an emulator boot and a build per job — minutes are free on a public
-    # repository — and buys a wall clock a nightly can actually finish in, plus a red that names the
+    # repository — and buys a wall clock a weekly run can finish in, plus a red that names the
     # configuration that broke instead of the API level that contained it.
     timeout-minutes: 90
     strategy:
